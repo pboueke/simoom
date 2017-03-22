@@ -29,5 +29,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-# Blender useless files
+# Blender backup files
 *.blend1
+*.blend1.meta
