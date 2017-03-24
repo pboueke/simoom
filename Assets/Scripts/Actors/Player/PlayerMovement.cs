@@ -23,10 +23,11 @@ public class PlayerMovement : MonoBehaviour {
 	void FixedUpdate () {
 		float h = Input.GetAxisRaw("Horizontal");
 		float v = Input.GetAxisRaw("Vertical");
+		float f = Input.GetAxisRaw("Fire1");
 		
 		Move(h,v);
 		Turning();
-		Animating(h,v);
+		Animating(h,v,f);
 	}
 
 	void Move (float h, float v) {
@@ -47,9 +48,10 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	void Animating (float h, float v) {
+	void Animating (float h, float v, float f) {
 		bool running = h!=0f || v!=0f;
 		anim.SetBool("isRunning", running);
+		anim.SetBool("isShooting", f!=0f);
 	}
 
 

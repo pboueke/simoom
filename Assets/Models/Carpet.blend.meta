@@ -62,6 +62,11 @@ ModelImporter:
     4300000: Cube
     4300002: Cube_001
     7400000: Default Take
+    7400002: fly
+    7400004: idleUpper
+    7400006: idleUpper_001
+    7400008: shoot
+    7400010: idleCarpet
     9500000: //RootNode
     13700000: Cube
     13700002: Cube_001
@@ -85,7 +90,335 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: fly
+      takeName: fly
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/MasterBody
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_L/Forearm_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_R/Forearm_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Head
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L/Leg_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L/Leg_L/Foot_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R/Leg_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R/Leg_R/Foot_R
+        weight: 1
+      - path: Armature/Master/MasterCarpet
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet0
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet1
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet2
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet3
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet4
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet5
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet6
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idleUpper
+      takeName: idleUpper
+      firstFrame: -1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/MasterBody
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_L/Forearm_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_R/Forearm_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Head
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L/Leg_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L/Leg_L/Foot_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R/Leg_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R/Leg_R/Foot_R
+        weight: 1
+      - path: Armature/Master/MasterCarpet
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet0
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet1
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet2
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet3
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet4
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet5
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet6
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: shoot
+      takeName: shoot
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/MasterBody
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_L/Forearm_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_R/Forearm_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Head
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L/Leg_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L/Leg_L/Foot_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R/Leg_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R/Leg_R/Foot_R
+        weight: 1
+      - path: Armature/Master/MasterCarpet
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet0
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet1
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet2
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet3
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet4
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet5
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet6
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idleCarpet
+      takeName: idleCarpet
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/MasterBody
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_L/Forearm_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Bicep_R/Forearm_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Torso/Head
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L/Leg_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_L/Leg_L/Foot_L
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R/Leg_R
+        weight: 1
+      - path: Armature/Master/MasterBody/Belly/Upperleg_R/Leg_R/Foot_R
+        weight: 1
+      - path: Armature/Master/MasterCarpet
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet0
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet1
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet2
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet3
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet4
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet5
+        weight: 1
+      - path: Armature/Master/MasterCarpet/Carpet6
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
