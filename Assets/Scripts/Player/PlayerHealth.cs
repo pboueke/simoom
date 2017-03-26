@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour {
         //Destroy(gameObject);
     }
 
-    public float getHealth()
+    public float GetHealth()
     {
         return _currentHealth;
     }

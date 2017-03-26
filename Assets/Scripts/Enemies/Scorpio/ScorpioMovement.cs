@@ -27,7 +27,7 @@ public class ScorpioMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (_enemyHealth.getHealth() > 0f && _playerHealth.getHealth() > 0f) {
+        if (_enemyHealth.GetHealth() > 0f && _playerHealth.GetHealth() > 0f) {
             if (
                 Vector3.Distance(
                     gameObject.transform.position,
