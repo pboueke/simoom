@@ -4,24 +4,39 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    // Player movement speed
 	public float _speed = 6f;
 
+    // How much speed boost does the player get when dashing?
     public float _dashMultiplier = 3f;
+    // For how much time does it dash?
     public float _dashDuration = 1f;
+    // How many consecutive times can he dash?
     public int _dashLimit = 2;
+    // How long does it take to recover a dash?
     public float _dashCooldown = 2f;
 
+    // Is the player dashing?
     private bool _dashing;
+    // Direction of the current dash
     private Vector3 _dashDirection;
+    // For how long has the player been dashing
     private float _dashDurationTimer;
+    // Timer to reload dashes
     private float _dashCooldownTimer;
+    // How many dashes does the player have left?
     private int _dashesAvailable;
 
-    Vector3 _movement;
-	Animator _anim;
-	Rigidbody _playerRigidbody;
-	int _floorMask;
-	float _camRayLength = 100f;
+    // Direction of current movement
+    private Vector3 _movement;
+    // Player's Animator Controller
+    private Animator _anim;
+    // Player's Rigid Body
+    private Rigidbody _playerRigidbody;
+    // Layer mask for floor, used for mouse position fetching
+    private int _floorMask;
+    // Maximum distance that camera ray can reach to find intersection with floor and thus the mouse position
+    private float _camRayLength = 100f;
 
 	// Gets called regardless of wether the script is enabled or not
 	void Awake () {
@@ -117,16 +132,5 @@ public class PlayerMovement : MonoBehaviour {
         if (f) {
             _anim.SetTrigger("triggerShot");
         }
-	}
-
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
