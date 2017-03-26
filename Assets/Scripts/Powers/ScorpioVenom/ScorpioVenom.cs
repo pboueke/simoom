@@ -11,7 +11,7 @@ public class ScorpioVenom : MonoBehaviour {
     // Use this for initialization
     private void Start()
     {
-        //Destroy(gameObject, _maxLifeTime);
+        Destroy(gameObject, _maxLifeTime);
     }
 
     private void Awake()
@@ -21,8 +21,8 @@ public class ScorpioVenom : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        //PlayerHealth health = other.GetComponent<PlayerHealth>();
-        //health.TakeDamage(_damage);
+        PlayerHealth health = other.GetComponent<PlayerHealth>();      
+        health.TakeDamage(_damage);
         //detach particle system from power
         _explosionParticles.transform.parent = null;
         //play particle animation

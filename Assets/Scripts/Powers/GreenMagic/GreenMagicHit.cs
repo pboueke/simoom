@@ -10,7 +10,7 @@ public class GreenMagicHit: MonoBehaviour {
 
 	// Use this for initialization
 	private void Start () {
-        //Destroy(gameObject, _maxLifeTime);
+        Destroy(gameObject, _maxLifeTime);
 	}
 
     private void Awake()

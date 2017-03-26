@@ -32,7 +32,7 @@ public class EnemyHealth : MonoBehaviour {
     }
 
     private void OnDeath() {
-        Debug.Log("Dead!");
+        _dead = true;
         //detach particles from enemy
         _deathParticles.transform.parent = null;
         //play particle effect
@@ -40,7 +40,6 @@ public class EnemyHealth : MonoBehaviour {
         //destroy stuff
         Destroy(_deathParticles.gameObject, _deathParticles.main.duration);
         Destroy(gameObject);
-        _dead = true;
     }
 
 	// Update is called once per frame

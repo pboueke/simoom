@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosionParticles: {fileID: 198745750218670024}
   _damage: 10
-  _maxLifeTime: 2
+  _maxLifeTime: 5
 --- !u!135 &135072719499728230
 SphereCollider:
   m_ObjectHideFlags: 1

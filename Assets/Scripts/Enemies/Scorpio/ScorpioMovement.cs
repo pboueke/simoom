@@ -8,6 +8,7 @@ public class ScorpioMovement : MonoBehaviour {
     public float _securityRadius;
 
     private Transform _player;
+    PlayerHealth _playerHealth;
     EnemyHealth _enemyHealth;
     NavMeshAgent _nav;
     Animator _anim;
@@ -15,6 +16,7 @@ public class ScorpioMovement : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _playerHealth = _player.GetComponent<PlayerHealth>();
         _enemyHealth = GetComponent<EnemyHealth>();
         _nav = GetComponent<NavMeshAgent>();
         _anim = GetComponent<Animator>();
@@ -25,7 +27,7 @@ public class ScorpioMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (_enemyHealth.getHealth() > 0f) {
+        if (_enemyHealth.getHealth() > 0f && _playerHealth.getHealth() > 0f) {
             if (
                 Vector3.Distance(
                     gameObject.transform.position,

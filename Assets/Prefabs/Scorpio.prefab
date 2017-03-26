@@ -1453,8 +1453,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shot: {fileID: 54844617648907134, guid: 1e80a933d4166624cb924e4c6c3739c8, type: 2}
   _fireTransform: {fileID: 4802371427085814}
-  _shotVelocity: 20
-  _timeBetweenShots: 1
+  _shotVelocity: 25
+  _timeBetweenShots: 0.5
 --- !u!114 &114993580102129648
 MonoBehaviour:
   m_ObjectHideFlags: 1
