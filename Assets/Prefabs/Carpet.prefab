@@ -886,6 +886,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 25
+  _dashMultiplier: 10
+  _dashDuration: 0.1
+  _dashLimit: 2
+  _dashCooldown: 2
 --- !u!114 &114354724723972618
 MonoBehaviour:
   m_ObjectHideFlags: 1
