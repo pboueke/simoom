@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-	public float speed = 6f;
-	Vector3 movement;
-	Animator anim;
-	Rigidbody playerRigidbody;
-	int floorMask;
-	float camRayLength = 100f;
+	public float _speed = 6f;
+	Vector3 _movement;
+	Animator _anim;
+	Rigidbody _playerRigidbody;
+	int _floorMask;
+	float _camRayLength = 100f;
 
 	// Gets called regardless of wether the script is enabled or not
 	void Awake () {
-		floorMask = LayerMask.GetMask("Floor");
-		anim = GetComponent <Animator> ();
-		playerRigidbody = GetComponent <Rigidbody> ();
+		_floorMask = LayerMask.GetMask("Floor");
+		_anim = GetComponent <Animator> ();
+		_playerRigidbody = GetComponent <Rigidbody> ();
 	}
 
 	// Function which Unity will automatically call on its scripts
@@ -31,28 +31,28 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void Move (float h, float v) {
-		movement.Set(h, 0f, v);
-		movement = movement.normalized * speed * Time.deltaTime;
-		playerRigidbody.MovePosition(transform.position + movement);
+		_movement.Set(h, 0f, v);
+		_movement = _movement.normalized * _speed * Time.deltaTime;
+		_playerRigidbody.MovePosition(transform.position + _movement);
 	}
 
 	void Turning () {
 		Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit floorHit;
-		if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask)) {
+		if (Physics.Raycast(camRay, out floorHit, _camRayLength, _floorMask)) {
 			Vector3 playerToMouse = floorHit.point - transform.position;
 			playerToMouse.y = 0f;
 
 			Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
-			playerRigidbody.MoveRotation(newRotation);
+			_playerRigidbody.MoveRotation(newRotation);
 		}
 	}
 
 	void Animating (float h, float v, float f) {
 		bool running = h!=0f || v!=0f;
-		anim.SetBool("isRunning", running);
+		_anim.SetBool("isRunning", running);
         if (f != 0f) {
-            anim.SetTrigger("triggerShot");
+            _anim.SetTrigger("triggerShot");
         }
 	}
 

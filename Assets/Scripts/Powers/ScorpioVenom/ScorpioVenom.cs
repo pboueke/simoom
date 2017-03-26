@@ -21,8 +21,11 @@ public class ScorpioVenom : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerHealth health = other.GetComponent<PlayerHealth>();      
-        health.TakeDamage(_damage);
+        PlayerHealth health = other.GetComponent<PlayerHealth>();
+        if (health) {
+            health.TakeDamage(_damage);
+        }
+        
         //detach particle system from power
         _explosionParticles.transform.parent = null;
         //play particle animation

@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8f385da446549658f2b3c5334d1a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 24
+  _speed: 25
 --- !u!114 &114354724723972618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -900,6 +900,7 @@ MonoBehaviour:
   _shot: {fileID: 54793709191995976, guid: 960c268eb237c314ba72a1af91a2e372, type: 2}
   _fireTransform: {fileID: 4864759347118426}
   _shotVelocity: 30
+  _timeBetweenShots: 0.2
 --- !u!114 &114376464293985106
 MonoBehaviour:
   m_ObjectHideFlags: 1

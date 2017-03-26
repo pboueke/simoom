@@ -21,7 +21,10 @@ public class GreenMagicHit: MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         EnemyHealth health = other.GetComponent<EnemyHealth>();
-        health.TakeDamage(_damage);
+        if (health) {
+            health.TakeDamage(_damage);
+        }
+        
         //detach particle system from power
         _explosionParticles.transform.parent = null;
         //play particle animation
