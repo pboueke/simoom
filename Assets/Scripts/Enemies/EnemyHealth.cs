@@ -40,6 +40,7 @@ public class EnemyHealth : MonoBehaviour {
         //destroy stuff
         Destroy(_deathParticles.gameObject, _deathParticles.main.duration);
         Destroy(gameObject);
+		gameObject.SendMessageUpwards("AlertDeath");
     }
 
 	// Update is called once per frame
@@ -50,4 +51,8 @@ public class EnemyHealth : MonoBehaviour {
     public float GetHealth() {
         return _currentHealth;
     }
+
+	public void SetHealth(float hp) {
+		_currentHealth = hp;
+	}
 }

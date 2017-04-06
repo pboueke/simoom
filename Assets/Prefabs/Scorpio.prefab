@@ -1439,7 +1439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138d0c2a4a41c2940b3f3534a97c9ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _securityRadius: 20
+  _securityRadius: 40
 --- !u!114 &114950623203553922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1453,8 +1453,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shot: {fileID: 54844617648907134, guid: 1e80a933d4166624cb924e4c6c3739c8, type: 2}
   _fireTransform: {fileID: 4802371427085814}
-  _shotVelocity: 25
+  _shotVelocity: 30
   _timeBetweenShots: 0.5
+  _boss: 0
 --- !u!114 &114993580102129648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1562,11 +1563,12 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1791108407314920}
   m_Enabled: 1
+  m_AgentTypeID: 0
   m_Radius: 3.94
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 15
+  m_Acceleration: 15
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 100
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

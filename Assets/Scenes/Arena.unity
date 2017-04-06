@@ -185,7 +185,7 @@ MonoBehaviour:
   _playerHealth: {fileID: 483333707}
   _enemyPrefab: {fileID: 1791108407314920, guid: 0a22636642e0f054eb50ba3184d3ed7b,
     type: 2}
-  _spawnTime: 3
+  _spawnTime: 30000
   _spawnPoints:
   - {fileID: 1906580870}
 --- !u!4 &404788649
@@ -369,6 +369,16 @@ Prefab:
     - target: {fileID: 4347151821675068, guid: d37d398a02f66124c97729b39126265f, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114354724723972618, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: _timeBetweenShots
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114376464293985106, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: _startingHealth
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d37d398a02f66124c97729b39126265f, type: 2}
