@@ -56,22 +56,43 @@ public class ScorpioShooting : MonoBehaviour {
 
         if (_aggroLevel == 2) ShootFrenzy();
         else {
-		  ShootRegular(_boss, 0);
-		  if (_aggroLevel > 0) ShootRegular(false, 0);
+            _shotCount++;
+            if (_shotCount == 10) {
+                _shotCount = 0;
+                ShootMultiple(_boss);
+            } else {
+                ShootRegular(_boss, 0);
+                if (_aggroLevel > 0) ShootRegular(false, 0);
+            }
         }
     }
 
+    private Rigidbody Shot() {
+        return Instantiate(_shot, _fireTransform.position, _fireTransform.rotation) as Rigidbody;
+    }
+
 	private void ShootRegular(bool bossShot, float angle) {
-		Rigidbody shotInstance = Instantiate(_shot, _fireTransform.position, _fireTransform.rotation) as Rigidbody;
+		Rigidbody shotInstance = Shot();
         Vector3 velocity = _fireTransform.forward;
         velocity = Quaternion.AngleAxis(angle, Vector3.up) * velocity;
         shotInstance.velocity = _shotVelocity * velocity;
         if (bossShot) AugmentShot(shotInstance);
 	}
 
+    private void ShootMultiple(bool bossShot) {
+        for (int i = 0; i < 3; i++) {
+            Rigidbody shotInstance = Shot();
+            Vector3 velocity = _fireTransform.forward;
+            velocity = Quaternion.AngleAxis((i-1)*20, Vector3.up) * velocity;
+            shotInstance.velocity = _shotVelocity * velocity;
+            AugmentShot(shotInstance);
+            if (bossShot) AugmentShot(shotInstance);
+        }
+    }
+
     private void ShootFrenzy() {
         foreach (int angle in _angles) {
-            Rigidbody shotInstance = Instantiate(_shot, _fireTransform.position, _fireTransform.rotation) as Rigidbody;
+            Rigidbody shotInstance = Shot();
             Vector3 velocity = Vector3.forward;
             velocity = Quaternion.AngleAxis(angle+_lastAngle, Vector3.up) * velocity;
             shotInstance.velocity = _shotVelocity * velocity;
