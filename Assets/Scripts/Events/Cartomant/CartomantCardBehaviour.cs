@@ -14,6 +14,8 @@ public class CartomantCardBehaviour : MonoBehaviour {
     void Start () {
         rend = GetComponent<Renderer>();
         deck = transform.parent.gameObject.GetComponent<CartomantDeckBehaviour>();
+
+        hideHighLight();
     }
 	
 	void Update () {
@@ -48,11 +50,14 @@ public class CartomantCardBehaviour : MonoBehaviour {
     private void showHighlight()
     {
         // shader defined at /assets/shaders/$self_illuminated_outlined_diffuse_113.shader
-        rend.material.shader = Shader.Find("Self-Illumin/Outlined Diffuse");
+        //rend.material.shader = Shader.Find("Self-Illumin/Outlined Diffuse");
+        rend.material.color = Color.HSVToRGB(0.5f,1.0f,0.8f);
+
     }
 
     private void hideHighLight()
     {
-        rend.material.shader = Shader.Find("Diffuse");
+        //rend.material.shader = Shader.Find("Diffuse");
+        rend.material.color = Color.HSVToRGB(0.0f, 1.0f, 0.8f);
     }
 }
