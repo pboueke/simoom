@@ -15,6 +15,11 @@ public class ScorpioShooting : MonoBehaviour {
     private PlayerHealth _playerHealth;
     private EnemyHealth _enemyHealth;
 	private int _aggroLevel = 0;
+    private int _shotCount = 0;
+    private float _lastAngle = 0;
+    private float _step = 7.5f;
+
+    private static int[] _angles =  {0, 45, -45, 90, -90, 135, -135, 180};
 
     // Use this for initialization
     void Awake() {
@@ -32,36 +37,52 @@ public class ScorpioShooting : MonoBehaviour {
         }
     }
 
-	private void AugmentShot() {
-		_shot.transform.localScale *= 2;
-		_shotVelocity *= 0.5f;
-		ScorpioVenom venom = (ScorpioVenom) _shot.GetComponent ("ScorpioVenom");
+	private void AugmentShot(Rigidbody shotInstance) {
+		shotInstance.transform.localScale *= 2;
+		shotInstance.velocity *= 0.5f;
+		ScorpioVenom venom = shotInstance.GetComponent("ScorpioVenom") as ScorpioVenom;
 		venom._damage *= 10;
-	}
-
-	private void NormalizeShot() {
-		_shot.transform.localScale *= 0.5f;
-		_shotVelocity *= 2;
-		ScorpioVenom venom = (ScorpioVenom) _shot.GetComponent ("ScorpioVenom");
-		venom._damage *= 0.1f;
 	}
 
 	public void ReceiveDeathAlert() {
 		_aggroLevel += 1;
+        if (_aggroLevel == 2) {
+            _timeBetweenShots /= 4;
+        }
 	}
 
     private void Fire() {
         _timer = 0f;
 
-		if (_boss) AugmentShot ();
-		Shoot ();
-		if (_boss) NormalizeShot ();
-		if (_aggroLevel > 0) Shoot ();
+        if (_aggroLevel == 2) ShootFrenzy();
+        else {
+		  ShootRegular(_boss, 0);
+		  if (_aggroLevel > 0) ShootRegular(false, 0);
+        }
     }
 
-	private void Shoot() {
-		Debug.Log (_aggroLevel.ToString ());Debug.Log (_aggroLevel.ToString ());
+	private void ShootRegular(bool bossShot, float angle) {
 		Rigidbody shotInstance = Instantiate(_shot, _fireTransform.position, _fireTransform.rotation) as Rigidbody;
-		shotInstance.velocity = _shotVelocity * _fireTransform.forward;
+        Vector3 velocity = _fireTransform.forward;
+        velocity = Quaternion.AngleAxis(angle, Vector3.up) * velocity;
+        shotInstance.velocity = _shotVelocity * velocity;
+        if (bossShot) AugmentShot(shotInstance);
 	}
+
+    private void ShootFrenzy() {
+        foreach (int angle in _angles) {
+            Rigidbody shotInstance = Instantiate(_shot, _fireTransform.position, _fireTransform.rotation) as Rigidbody;
+            Vector3 velocity = Vector3.forward;
+            velocity = Quaternion.AngleAxis(angle+_lastAngle, Vector3.up) * velocity;
+            shotInstance.velocity = _shotVelocity * velocity;
+        }
+        if (_shotCount == 4) {
+            ShootRegular(_boss, 0);
+            ShootRegular(_boss, Random.Range(-15f, 15f));
+            _shotCount = 0;
+        }
+        _shotCount++;
+        _lastAngle += _step;
+        if (Mathf.Abs(_lastAngle) > 30) _step = -_step;
+    }
 }

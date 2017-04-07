@@ -20,8 +20,8 @@ public class EnemyManager : MonoBehaviour {
 
 	void MakeBoss(GameObject instance) {
 		instance.transform.localScale *= 2;
-		EnemyHealth hp = (EnemyHealth) instance.GetComponent ("EnemyHealth");
-		ScorpioShooting ss = (ScorpioShooting) instance.GetComponent ("ScorpioShooting");
+		EnemyHealth hp = (EnemyHealth) instance.GetComponent("EnemyHealth");
+		ScorpioShooting ss = (ScorpioShooting) instance.GetComponent("ScorpioShooting");
 		hp.SetHealth(hp._startingHealth*5);
 		ss._boss = true;
 	}
@@ -32,8 +32,8 @@ public class EnemyManager : MonoBehaviour {
 
 	void AlertDeath() {
 		if (_enemies [1]) {
-			ScorpioShooting ss = (ScorpioShooting)_enemies [1].GetComponent ("ScorpioShooting");
-			ss.ReceiveDeathAlert ();
+			ScorpioShooting ss = (ScorpioShooting)_enemies [1].GetComponent("ScorpioShooting");
+			ss.ReceiveDeathAlert();
 		}
 	}
 
@@ -46,12 +46,12 @@ public class EnemyManager : MonoBehaviour {
 
 		Vector3 basePos = _spawnPoints[spawnPointIndex].position;
 		for (int i = 0; i < 3; i++) {
-			Vector3 position = basePos + new Vector3 ((i-1)*3, 0, 0);
-			GameObject instance = MakeEnemy (position, spawnPointIndex);
+			Vector3 position = basePos + new Vector3((i-1)*3, 0, 0);
+			GameObject instance = MakeEnemy(position, spawnPointIndex);
 			instance.transform.parent = this.transform;
 			_enemies [i] = instance;
 			if (i == 1)
-				MakeBoss (instance);
+				MakeBoss(instance);
 		}
     }
 }
