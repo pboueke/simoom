@@ -1,0 +1,337 @@
+fileFormatVersion: 2
+guid: d21e10d9ff9455344bf31837e8aed463
+timeCreated: 1489968601
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: bicep_L
+    100004: bicep_R
+    100006: claw_L
+    100008: claw_R
+    100010: core
+    100012: Cube
+    100014: foreclaw_L
+    100016: foreclaw_R
+    100018: head
+    100020: hip
+    100022: legbot0_L
+    100024: legbot0_R
+    100026: legbot1_L
+    100028: legbot1_R
+    100030: legbot2_L
+    100032: legbot2_R
+    100034: legbot3_L
+    100036: legbot3_R
+    100038: legmid0_L
+    100040: legmid0_R
+    100042: legmid1_L
+    100044: legmid1_R
+    100046: legmid2_L
+    100048: legmid2_R
+    100050: legmid3_L
+    100052: legmid3_R
+    100054: legtop0_L
+    100056: legtop0_R
+    100058: legtop1_L
+    100060: legtop1_R
+    100062: legtop2_L
+    100064: legtop2_R
+    100066: legtop3_L
+    100068: legtop3_R
+    100070: master
+    100072: masterclaw_L
+    100074: masterclaw_R
+    100076: //RootNode
+    100078: tail1
+    100080: tail2
+    100082: tail3
+    100084: tail4
+    100086: tail5
+    100088: tailtip
+    100090: Arm_L
+    100092: Arm_R
+    100094: Armature_001
+    100096: Core
+    100098: Cube_001
+    100100: Head
+    100102: Leg_L
+    100104: Leg_R
+    100106: Master
+    400000: Armature
+    400002: bicep_L
+    400004: bicep_R
+    400006: claw_L
+    400008: claw_R
+    400010: core
+    400012: Cube
+    400014: foreclaw_L
+    400016: foreclaw_R
+    400018: head
+    400020: hip
+    400022: legbot0_L
+    400024: legbot0_R
+    400026: legbot1_L
+    400028: legbot1_R
+    400030: legbot2_L
+    400032: legbot2_R
+    400034: legbot3_L
+    400036: legbot3_R
+    400038: legmid0_L
+    400040: legmid0_R
+    400042: legmid1_L
+    400044: legmid1_R
+    400046: legmid2_L
+    400048: legmid2_R
+    400050: legmid3_L
+    400052: legmid3_R
+    400054: legtop0_L
+    400056: legtop0_R
+    400058: legtop1_L
+    400060: legtop1_R
+    400062: legtop2_L
+    400064: legtop2_R
+    400066: legtop3_L
+    400068: legtop3_R
+    400070: master
+    400072: masterclaw_L
+    400074: masterclaw_R
+    400076: //RootNode
+    400078: tail1
+    400080: tail2
+    400082: tail3
+    400084: tail4
+    400086: tail5
+    400088: tailtip
+    400090: Arm_L
+    400092: Arm_R
+    400094: Armature_001
+    400096: Core
+    400098: Cube_001
+    400100: Head
+    400102: Leg_L
+    400104: Leg_R
+    400106: Master
+    4300000: Cube
+    4300002: Cube_001
+    7400000: Default Take
+    7400002: walk
+    7400004: PlayerRun
+    7400006: PlayerShoot
+    7400008: PlayerIdle
+    9500000: //RootNode
+    13700000: Cube
+    13700002: Cube_001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: PlayerRun
+      takeName: Run
+      firstFrame: -1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Master
+        weight: 1
+      - path: Armature_001/Master/Core
+        weight: 1
+      - path: Armature_001/Master/Core/Arm_L
+        weight: 1
+      - path: Armature_001/Master/Core/Arm_R
+        weight: 1
+      - path: Armature_001/Master/Core/Head
+        weight: 1
+      - path: Armature_001/Master/Leg_L
+        weight: 1
+      - path: Armature_001/Master/Leg_R
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: PlayerShoot
+      takeName: Shoot
+      firstFrame: -1
+      lastFrame: 7
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Master
+        weight: 1
+      - path: Armature_001/Master/Core
+        weight: 1
+      - path: Armature_001/Master/Core/Arm_L
+        weight: 1
+      - path: Armature_001/Master/Core/Arm_R
+        weight: 1
+      - path: Armature_001/Master/Core/Head
+        weight: 1
+      - path: Armature_001/Master/Leg_L
+        weight: 1
+      - path: Armature_001/Master/Leg_R
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: PlayerIdle
+      takeName: Idle
+      firstFrame: -1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Master
+        weight: 1
+      - path: Armature_001/Master/Core
+        weight: 1
+      - path: Armature_001/Master/Core/Arm_L
+        weight: 1
+      - path: Armature_001/Master/Core/Arm_R
+        weight: 1
+      - path: Armature_001/Master/Core/Head
+        weight: 1
+      - path: Armature_001/Master/Leg_L
+        weight: 1
+      - path: Armature_001/Master/Leg_R
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
