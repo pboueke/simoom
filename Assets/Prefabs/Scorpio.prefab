@@ -1467,7 +1467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3e9258daca1a247a85869baddc8073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingHealth: 100
+  _startingHealth: 10
   _deathParticles: {fileID: 198027949653214268}
 --- !u!137 &137854826990768838
 SkinnedMeshRenderer:
@@ -1563,7 +1563,6 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1791108407314920}
   m_Enabled: 1
-  m_AgentTypeID: 0
   m_Radius: 3.94
   m_Speed: 15
   m_Acceleration: 15
