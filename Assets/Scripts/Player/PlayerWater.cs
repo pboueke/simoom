@@ -52,16 +52,9 @@ public class PlayerWater : MonoBehaviour {
 
     public void Fill(float amount)
     {
-        _currentWater += amount;
-        _dry = false;
-
+        _currentWater = Mathf.Min(_currentWater + amount, _startingWater);
         // Change the UI elements appropriately.
         SetWaterUI();
-
-        if (_currentWater <= 0f && !_dry)
-        {
-            OnDry();
-        }
     }
 
     public float Drink(float amount) {
@@ -77,7 +70,13 @@ public class PlayerWater : MonoBehaviour {
     // Return whether we are dried out
     public bool isDry() {
         return _dry;
-    } 
+    }
+
+    // Return whether we are full of water
+    public bool isFull()
+    {
+        return _currentWater >= _startingWater;
+    }
 
     // Return amount of available water
     public float GetWater()
