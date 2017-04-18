@@ -28,6 +28,22 @@ public class PlayerHealth : MonoBehaviour {
         SetHealthUI();
     }
 
+    private void OnDeath()
+    {
+        _dead = true;
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
+    }
+
+    private void SetHealthUI()
+    {
+        // Set the slider's value appropriately.
+        _slider.value = _currentHealth;
+
+        // Interpolate the color of the bar between the choosen colours based on the current percentage of the starting health.
+        _fillImage.color = Color.Lerp(_zeroHealthColor, _fullHealthColor, _currentHealth / _startingHealth);
+    }
+
     public void TakeDamage(float amount)
     {
         _currentHealth -= amount;
@@ -41,24 +57,22 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
-    private void OnDeath()
+    public void Heal(float amount)
     {
-        _dead = true;
-        gameObject.SetActive(false);
-        //Destroy(gameObject);
+        // Heal as much as possible until health is full
+        _currentHealth = Mathf.Min(_currentHealth+amount, _startingHealth);
+        SetHealthUI();
     }
 
+    // return whether health is full or not
+    public bool isFull()
+    {
+        return _currentHealth >= _startingHealth;
+    }
+
+    // get current health value
     public float GetHealth()
     {
         return _currentHealth;
-    }
-
-    private void SetHealthUI ()
-    {
-        // Set the slider's value appropriately.
-        _slider.value = _currentHealth;
-
-        // Interpolate the color of the bar between the choosen colours based on the current percentage of the starting health.
-        _fillImage.color = Color.Lerp (_zeroHealthColor, _fullHealthColor, _currentHealth / _startingHealth);
     }
 }
