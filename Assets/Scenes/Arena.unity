@@ -99,80 +99,45 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
+    - target: {fileID: 4580302497209080, guid: 0c4b32c74040a8f4eb92b598c2f300c3, type: 2}
       propertyPath: m_LocalPosition.x
       value: -10.418569
       objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
+    - target: {fileID: 4580302497209080, guid: 0c4b32c74040a8f4eb92b598c2f300c3, type: 2}
       propertyPath: m_LocalPosition.y
       value: -0.03
       objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
+    - target: {fileID: 4580302497209080, guid: 0c4b32c74040a8f4eb92b598c2f300c3, type: 2}
       propertyPath: m_LocalPosition.z
       value: 6.629265
       objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
+    - target: {fileID: 4580302497209080, guid: 0c4b32c74040a8f4eb92b598c2f300c3, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
+    - target: {fileID: 4580302497209080, guid: 0c4b32c74040a8f4eb92b598c2f300c3, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
+    - target: {fileID: 4580302497209080, guid: 0c4b32c74040a8f4eb92b598c2f300c3, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
+    - target: {fileID: 4580302497209080, guid: 0c4b32c74040a8f4eb92b598c2f300c3, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
+    - target: {fileID: 4580302497209080, guid: 0c4b32c74040a8f4eb92b598c2f300c3, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300002, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+    - target: {fileID: 114333838333394262, guid: 0c4b32c74040a8f4eb92b598c2f300c3,
+        type: 2}
+      propertyPath: playerWater
       value: 
-      objectReference: {fileID: 2100000, guid: b941c20e01a7d9b4f91a485d52db3383, type: 2}
-    - target: {fileID: 400004, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-      propertyPath: m_Name
-      value: Dunes
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-      propertyPath: m_Name
-      value: Water
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b941c20e01a7d9b4f91a485d52db3383, type: 2}
-    - target: {fileID: 400010, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 303231680}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
+  m_ParentPrefab: {fileID: 100100000, guid: 0c4b32c74040a8f4eb92b598c2f300c3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &34303555
 GameObject:
@@ -733,38 +698,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 58a449101267bc343870c15dbef3b76a, type: 3}
---- !u!1 &1287354440 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100006, guid: 8977bb74fe749ae4eaf2e40adc61ce64, type: 3}
-  m_PrefabInternal: {fileID: 30343868}
---- !u!114 &1287354443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1287354440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c39fb69bdf032254588c7fe78ac631aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerEventColliderName: PlayerEventCollider
-  playerWater: {fileID: 303231680}
-  waterVolume: 50
-  fillingRate: 25
---- !u!136 &1287354444
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1287354440}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.98961604
-  m_Height: 0.00001
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1365027800
 GameObject:
   m_ObjectHideFlags: 0
