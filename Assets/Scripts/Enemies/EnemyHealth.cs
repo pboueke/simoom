@@ -6,7 +6,8 @@ public class EnemyHealth : MonoBehaviour {
 
     public float _startingHealth = 100f;
     public ParticleSystem _deathParticles;
-    private float _currentHealth;
+	public Renderer rend;
+	private float _currentHealth;
     private bool _dead;
 
 	// Use this for initialization
@@ -16,16 +17,18 @@ public class EnemyHealth : MonoBehaviour {
 
     private void Awake() {
         //_deathParticles = GetComponent<ParticleSystem> ();
+		//rend = GetComponent<Renderer>();
         _deathParticles.Pause();
     } 
 
     private void OnEnable() {
-        _currentHealth = _startingHealth;
+		SetHealth(_startingHealth);
         _dead = false;
     }
 
     public void TakeDamage(float amount) {
         _currentHealth -= amount;
+		updateHealthIndication ();
         if (_currentHealth <= 0f && !_dead) {
             OnDeath();
         }
@@ -54,5 +57,16 @@ public class EnemyHealth : MonoBehaviour {
 
 	public void SetHealth(float hp) {
 		_currentHealth = hp;
+		updateHealthIndication ();
+	}
+
+	void updateHealthIndication() {
+		Material[] ms = rend.materials;
+		float healthLeft = _currentHealth / _startingHealth;
+		float H, S, V;
+		for (int i = 0; i < ms.Length; i++) {
+			Color.RGBToHSV (ms [i].color, out H, out S, out V);
+			rend.materials [i].color = Color.HSVToRGB (H, S*healthLeft, V);
+		}
 	}
 }

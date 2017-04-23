@@ -16,7 +16,7 @@ public class PlayerWater : MonoBehaviour {
     private void OnEnable()
     {
         _currentWater = _startingWater;
-
+		_dry = false;
         // Update the health slider's value and color.
         SetWaterUI();
     }
@@ -38,6 +38,9 @@ public class PlayerWater : MonoBehaviour {
 
     public void Drain(float amount)
     {
+		if (_dry) {
+			return;
+		}
         _currentWater -= amount;
         _dry = false;
 
@@ -53,11 +56,15 @@ public class PlayerWater : MonoBehaviour {
     public void Fill(float amount)
     {
         _currentWater = Mathf.Min(_currentWater + amount, _startingWater);
+		_dry = false;
         // Change the UI elements appropriately.
         SetWaterUI();
     }
 
     public float Drink(float amount) {
+		if (_dry) {
+			return 0.0f;
+		}
         // If amount we wanted to drink is greater than how
         //much water we have, drink all the remaining water.
         float sip = Mathf.Min(amount, _currentWater);
