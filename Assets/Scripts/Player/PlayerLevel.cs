@@ -8,7 +8,7 @@ public class PlayerLevel : MonoBehaviour {
     public int _xp;
 
     public Text playerLevelDisplay;
-    public Slider playerLevelBar;
+    public Image playerXpCircle;
 
     // Use this for initialization
     void Start () {
@@ -30,8 +30,8 @@ public class PlayerLevel : MonoBehaviour {
         int currentLevel = getLevel();
         int xpForCurrentLevel = getXpForLevel(currentLevel);
         int xpForNextLevel = getXpForLevel(currentLevel + 1);
-        playerLevelDisplay.text = currentLevel.ToString();
-        playerLevelBar.value = (float)(_xp - xpForCurrentLevel) / (float)(xpForNextLevel - xpForCurrentLevel);
+        playerLevelDisplay.text = (currentLevel < 10) ? "0" + currentLevel.ToString() : currentLevel.ToString();
+        playerXpCircle.fillAmount = (float)(_xp - xpForCurrentLevel) / (float)(xpForNextLevel - xpForCurrentLevel);
     }
 
     /// <summary>
