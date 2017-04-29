@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Billboard : MonoBehaviour
 {
-	public Camera _camera;
+	private Camera _camera;
 
     private void Awake()
     {
