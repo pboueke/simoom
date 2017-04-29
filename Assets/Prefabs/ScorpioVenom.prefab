@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114642855595267260}
   - component: {fileID: 33364991268844322}
   - component: {fileID: 23311761837428566}
+  - component: {fileID: 199811153216257750}
   m_Layer: 12
   m_Name: ScorpioVenom
   m_TagString: Untagged
@@ -105,7 +106,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33364991268844322
 MeshFilter:
@@ -2795,7 +2795,7 @@ ParticleSystem:
 --- !u!199 &199811153216257750
 ParticleSystemRenderer:
   serializedVersion: 2
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1863635509811982}

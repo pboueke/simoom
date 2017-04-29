@@ -22,7 +22,8 @@ public class EnemyManager : MonoBehaviour {
 		instance.transform.localScale *= 2;
 		EnemyHealth hp = (EnemyHealth) instance.GetComponent("EnemyHealth");
 		ScorpioShooting ss = (ScorpioShooting) instance.GetComponent("ScorpioShooting");
-		hp.SetHealth(hp._startingHealth*5);
+        hp._startingHealth = hp._startingHealth * 5;
+        hp.SetHealth(hp._startingHealth);
 		ss._boss = true;
 	}
 
