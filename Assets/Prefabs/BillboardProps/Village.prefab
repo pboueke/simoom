@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f1d7104de8946febf24d6acd67ee84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Camera: {fileID: 0}
+  _camera: {fileID: 0}
 --- !u!212 &212069639245905778
 SpriteRenderer:
   m_ObjectHideFlags: 1

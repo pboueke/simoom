@@ -3,11 +3,16 @@ using System.Collections;
 
 public class Billboard : MonoBehaviour
 {
-	public Camera m_Camera;
+	public Camera _camera;
 
-	void Update()
+    private void Awake()
+    {
+        _camera = Camera.main;
+    }
+
+    void Update()
 	{
-		transform.LookAt(transform.position + m_Camera.transform.rotation * Vector3.forward,
-			m_Camera.transform.rotation * Vector3.up);
+		transform.LookAt(transform.position + _camera.transform.rotation * Vector3.forward,
+			_camera.transform.rotation * Vector3.up);
 	}
 }
