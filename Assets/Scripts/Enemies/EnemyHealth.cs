@@ -40,10 +40,12 @@ public class EnemyHealth : MonoBehaviour {
         _deathParticles.transform.parent = null;
         //play particle effect
         _deathParticles.Play();
+        // get it`s experience value
+        int xp = gameObject.GetComponent<EnemyExperience>()._experienceValue;
         //destroy stuff
         Destroy(_deathParticles.gameObject, _deathParticles.main.duration);
         Destroy(gameObject);
-		gameObject.SendMessageUpwards("AlertDeath");
+		gameObject.SendMessageUpwards("AlertDeath", xp);
     }
 
 	// Update is called once per frame

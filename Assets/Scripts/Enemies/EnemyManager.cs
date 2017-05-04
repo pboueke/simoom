@@ -5,8 +5,10 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
 
     public PlayerHealth _playerHealth;
+    public PlayerLevel _playerLevel;
     public GameObject _enemyPrefab;
     public float _spawnTime = 3f;
+    public float _bossExperienceMultiplier = 5;
     public Transform[] _spawnPoints;
 
 	private GameObject[] _enemies;
@@ -21,9 +23,10 @@ public class EnemyManager : MonoBehaviour {
 	void MakeBoss(GameObject instance) {
 		instance.transform.localScale *= 2;
 		EnemyHealth hp = (EnemyHealth) instance.GetComponent("EnemyHealth");
+        EnemyExperience xp = (EnemyExperience)instance.GetComponent("EnemyExperience");
 		ScorpioShooting ss = (ScorpioShooting) instance.GetComponent("ScorpioShooting");
-        hp._startingHealth = hp._startingHealth * 5;
-        hp.SetHealth(hp._startingHealth);
+		hp.SetHealth(hp._startingHealth*5);
+        xp._experienceValue = (int)((float)xp._experienceValue * _bossExperienceMultiplier);
 		ss._boss = true;
 	}
 
@@ -31,7 +34,10 @@ public class EnemyManager : MonoBehaviour {
 		return Instantiate(_enemyPrefab, position, _spawnPoints[spawnPointIndex].rotation);
 	}
 
-	void AlertDeath() {
+	void AlertDeath(int experienceGained) {
+        //add experience
+        _playerLevel.addXp(experienceGained);
+
 		if (_enemies [1]) {
 			ScorpioShooting ss = (ScorpioShooting)_enemies [1].GetComponent("ScorpioShooting");
 			ss.ReceiveDeathAlert();

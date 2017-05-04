@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e1a17ca855d7efa42a47aa5c932d39ed
+timeCreated: 1493856610
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Rakkas
+  fontNames:
+  - Rakkas
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

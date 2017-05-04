@@ -584,6 +584,7 @@ GameObject:
   - component: {fileID: 195494039782933336}
   - component: {fileID: 114864131491824092}
   - component: {fileID: 114950623203553922}
+  - component: {fileID: 114328023636310140}
   m_Layer: 10
   m_Name: Scorpio
   m_TagString: Untagged
@@ -1428,6 +1429,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114328023636310140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1791108407314920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8207a613eafb2d64398d7d7962020446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _experienceValue: 1
 --- !u!114 &114864131491824092
 MonoBehaviour:
   m_ObjectHideFlags: 1
