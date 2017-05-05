@@ -1,0 +1,591 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Anim",
+				"Animating"
+			],
+			[
+				"player",
+				"playerRigidbody"
+			],
+			[
+				"play",
+				"playerToMouse"
+			],
+			[
+				"floor",
+				"floorHit"
+			],
+			[
+				"floo",
+				"floorMask"
+			],
+			[
+				"cam",
+				"camRayLength"
+			],
+			[
+				"cur",
+				"curValue"
+			],
+			[
+				"upp",
+				"upperLevelDimensions"
+			],
+			[
+				"upe",
+				"upperLevelDimensions"
+			],
+			[
+				"add",
+				"addShade"
+			],
+			[
+				"node",
+				"nodeDist"
+			],
+			[
+				"n",
+				"nlevels"
+			],
+			[
+				"u",
+				"uPtToLight"
+			],
+			[
+				"angl",
+				"angleDir180"
+			],
+			[
+				"vec",
+				"vecLen"
+			],
+			[
+				"ptTo",
+				"ptToLightLen2"
+			],
+			[
+				"cone",
+				"coneTrace"
+			],
+			[
+				"pixel",
+				"pixelCoords"
+			],
+			[
+				"ptT",
+				"ptToLightLen2"
+			],
+			[
+				"vecL",
+				"vecLen2"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"occlusion",
+				"occlusion_amount"
+			],
+			[
+				"calcu",
+				"calculateShadow"
+			],
+			[
+				"hard",
+				"hardShadow"
+			],
+			[
+				"bre",
+				"bresenhamShading"
+			],
+			[
+				"light",
+				"lightSource"
+			],
+			[
+				"ligh",
+				"lightRadius2"
+			],
+			[
+				"tran",
+				"transformed"
+			],
+			[
+				"impli",
+				"implicitLine"
+			],
+			[
+				"wind",
+				"windingNumber"
+			],
+			[
+				"accE",
+				"accelElement"
+			],
+			[
+				"imlp",
+				"implicitLine"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "simoom.sublime-project",
+			"settings":
+			{
+				"buffer_size": 181,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class EnemyHealth : MonoBehaviour {\n\n    public float _startingHealth = 100f;\n    public ParticleSystem _deathParticles;\n    private float _currentHealth;\n    private bool _dead;\n\n\t// Use this for initialization\n\tvoid Start () {\n\t\t\n\t}\n\n    private void Awake() {\n        //_deathParticles = GetComponent<ParticleSystem> ();\n        _deathParticles.Pause();\n    } \n\n    private void OnEnable() {\n        _currentHealth = _startingHealth;\n        _dead = false;\n    }\n\n    public void TakeDamage(float amount) {\n        _currentHealth -= amount;\n        if (_currentHealth <= 0f && !_dead) {\n            OnDeath();\n        }\n    }\n\n    private void OnDeath() {\n        _dead = true;\n        //detach particles from enemy\n        _deathParticles.transform.parent = null;\n        //play particle effect\n        _deathParticles.Play();\n        //destroy stuff\n        Destroy(_deathParticles.gameObject, _deathParticles.main.duration);\n        Destroy(gameObject);\n\t\tgameObject.SendMessageUpwards(\"AlertDeath\");\n    }\n\n\t// Update is called once per frame\n\tvoid Update () {\n\t\t\n\t}\n\n    public float GetHealth() {\n        return _currentHealth;\n    }\n\n\tpublic void SetHealth(float hp) {\n\t\t_currentHealth = hp;\n\t}\n}\n",
+			"file": "Assets/Scripts/Enemies/EnemyHealth.cs",
+			"file_size": 1297,
+			"file_write_time": 131360371298156930,
+			"settings":
+			{
+				"buffer_size": 1294,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "packa",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/mseefelder/workspace/simoom/Assets/Scripts",
+		"/home/mseefelder/workspace/simoom/Assets/Scripts/Enemies",
+		"/home/mseefelder/workspace/simoom/Assets/Scripts/Player"
+	],
+	"file_history":
+	[
+		"/opt/Unity/MonoDevelop/bin/monodevelop",
+		"/home/mseefelder/workspace/simoom/Assets/Scripts/Enemies/EnemyManager.cs",
+		"/home/mseefelder/workspace/simoom/\"/home/mseefelder/workspace/simoom/Assets/Scripts/Enemies/EnemyHealth.cs\"",
+		"/home/mseefelder/workspace/simoom/.gitignore",
+		"/home/mseefelder/workspace/simoom/Assets/Scripts/Enemies/EnemyHealth.cs",
+		"/home/mseefelder/workspace/simoom/Assets/Scripts/Player/PlayerHealth.cs",
+		"/home/mseefelder/workspace/blog/_posts/2017-03-31-week-2.md",
+		"/home/mseefelder/workspace/instanced/Assets/Scripts/SphereSpawner.cs",
+		"/home/mseefelder/workspace/sublime-projects/simoom.sublime-project",
+		"/home/mseefelder/workspace/simoom/Assets/Scripts/Actors/Player/PlayerMovement.cs",
+		"/home/mseefelder/workspace/simoom-tests/desert/Assets/Scripts/Actors/Player/PlayerMovement.cs",
+		"/home/mseefelder/workspace/simoom-tests/desert/Assets/Models/Scorpio.blend",
+		"/home/mseefelder/workspace/4s/build.sh",
+		"/home/mseefelder/Documents/CURRICULO/friggeri-cv.cls",
+		"/home/mseefelder/Documents/CURRICULO/cv.tex",
+		"/home/mseefelder/Documents/CURRICULO/cv-english.tex",
+		"/home/mseefelder/workspace/4s/tests/coneraster.cpp",
+		"/home/mseefelder/workspace/4s/include/utils/4s.hpp",
+		"/home/mseefelder/workspace/4s/tests/build.sh",
+		"/home/mseefelder/workspace/4s/include/tests/unilateralcone.hpp",
+		"/home/mseefelder/workspace/4s/tests_build.sh",
+		"/home/mseefelder/workspace/4s/buildtests.sh",
+		"/home/mseefelder/workspace/4s/bresenham.cpp",
+		"/home/mseefelder/workspace/4s/coneraster.cpp",
+		"/home/mseefelder/workspace/4s/include/tests/bresenham.hpp",
+		"/home/mseefelder/workspace/4s/include/utils/utils.hpp",
+		"/home/mseefelder/workspace/4s/include/tests/bilateralcone.hpp",
+		"/home/mseefelder/workspace/4s/include/utils/4s.cpp",
+		"/home/mseefelder/workspace/4s/include/utils/bresenham-octants.txt",
+		"/home/mseefelder/workspace/4s/include/pyramid/pyramid.hpp",
+		"/home/mseefelder/workspace/4s/main.cpp",
+		"/home/mseefelder/workspace/oranpple/main.cpp",
+		"/home/mseefelder/workspace/oranpple/pyramid.hpp",
+		"/home/mseefelder/workspace/pyramids/CImg.h",
+		"/home/mseefelder/workspace/4s/include/utils/scenne.hpp",
+		"/home/mseefelder/workspace/4s/include/CImg/README.md",
+		"/home/mseefelder/workspace/4s/dependencies.sh",
+		"/home/mseefelder/workspace/pyramids/CImg/examples/pde_TschumperleDeriche2d.cpp",
+		"/home/mseefelder/workspace/pyramids/main.cpp",
+		"/home/mseefelder/workspace/impa/src-1.02/driver/png.cpp",
+		"/home/mseefelder/workspace/impa/src-1.02/driver/png.h",
+		"/home/mseefelder/workspace/impa/src-1.02/xformable.lua",
+		"/home/mseefelder/workspace/lua-snippets/binsearch-insert.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/png.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/xform.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/circle.lua",
+		"/home/mseefelder/workspace/impa/assign-1-1.0/assign-1.txt",
+		"/home/mseefelder/workspace/extempore/proto.xtm",
+		"/home/mseefelder/apps/extempore/examples/core/midi_synth.xtm",
+		"/home/mseefelder/apps/extempore/examples/core/extempore_lang.xtm",
+		"/home/mseefelder/apps/extempore/examples/core/audio_101.xtm",
+		"/home/mseefelder/apps/extempore/examples/external/electrofunk.xtm",
+		"/home/mseefelder/workspace/impa/src-1.02/cpp.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/path.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/rvg.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/testerinput.txt",
+		"/home/mseefelder/workspace/impa/src-1.02/tester.sh",
+		"/home/mseefelder/workspace/impa/src-1.02/polygon.lua",
+		"/home/mseefelder/workspace/impa/rvgs-1.01/xformedcircle.rvg",
+		"/home/mseefelder/workspace/impa/rvgs-1.01/circle.rvg",
+		"/home/mseefelder/workspace/impa/rvgs-1.01/icozahedron.rvg",
+		"/home/mseefelder/workspace/impa/src-1.02/util.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/scene.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/triangle.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/paint.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/color.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/process.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/cpp.vcxproj",
+		"/home/mseefelder/workspace/impa/src-1.02/viewport.lua",
+		"/home/mseefelder/workspace/impa/src-1.02/driver.lua",
+		"/home/mseefelder/workspace/volumeViewer-laptop/CMakeLists.txt",
+		"/media/mseefelder/MARCOSTERA/Ubuntu-2017-1/.bashrc",
+		"/media/mseefelder/MARCOSTERA/Ubuntu-2017-1/workspace/defaultProject/CMakeLists.txt"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"/home/mseefelder/workspace/impa/src-1.02"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"m_",
+			"´",
+			"**",
+			"nodeOut",
+			"RADIUS",
+			"bib",
+			"nodes",
+			"emplace_back",
+			"float",
+			"vec2",
+			"push",
+			"or",
+			"current",
+			"i",
+			"scene.light",
+			"light",
+			"light()",
+			"scene.light",
+			"20",
+			"scalar",
+			"angle",
+			"and",
+			"angle",
+			"lightRadius",
+			"vec2",
+			"vec2d",
+			"v[0])+(",
+			"[0]",
+			"y2",
+			"y1",
+			"x2",
+			"x1",
+			"int",
+			"auto",
+			"double",
+			"int",
+			"s",
+			"o",
+			"b",
+			"addShade",
+			"stack",
+			"v",
+			"updateShadow",
+			"shadecalc",
+			"addShade",
+			"shadecalc",
+			"10",
+			"01",
+			"11",
+			"00",
+			"100",
+			"00",
+			"fillNormalized",
+			"createArraysAndFillNormalized",
+			"x",
+			"cimg_forXY",
+			"veloc",
+			"Display",
+			"view_t",
+			"implicitLineWindingNumber",
+			"s.conic",
+			"s.",
+			"winding_rule",
+			"miny",
+			"minx",
+			"maxy",
+			"maxx",
+			"[i]",
+			"i",
+			"minx",
+			"maxx",
+			"shapes",
+			"shape",
+			"shapes",
+			"shape",
+			"Scene",
+			"write[",
+			"element",
+			"transformPoint",
+			")\n",
+			"max",
+			"x",
+			"t",
+			"xf",
+			"shape",
+			"bracket",
+			"require"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "simoom.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								174,
+								174
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/Enemies/EnemyHealth.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1294,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								318,
+								318
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 88.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "simoom.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 306.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

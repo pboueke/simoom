@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 65282327868553656}
   - component: {fileID: 23317698587269778}
   - component: {fileID: 208418572041776924}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ColliderShader1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 65732099597923080}
   - component: {fileID: 23388051917199304}
   - component: {fileID: 208159447885024612}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ColliderShader3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 65787320792056582}
   - component: {fileID: 23942800545695230}
   - component: {fileID: 208229444281121700}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ColliderShader2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1123134729285926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.609932, y: 4, z: 4.001154}
+  m_LocalPosition: {x: -50.5, y: 4, z: 58.2}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4014454972580438}
