@@ -25,7 +25,8 @@ public class EnemyManager : MonoBehaviour {
 		EnemyHealth hp = (EnemyHealth) instance.GetComponent("EnemyHealth");
         EnemyExperience xp = (EnemyExperience)instance.GetComponent("EnemyExperience");
 		ScorpioShooting ss = (ScorpioShooting) instance.GetComponent("ScorpioShooting");
-		hp.SetHealth(hp._startingHealth*5);
+        hp._startingHealth = hp._startingHealth * 5;
+        hp.SetHealth(hp._startingHealth);
         xp._experienceValue = (int)((float)xp._experienceValue * _bossExperienceMultiplier);
 		ss._boss = true;
 	}
