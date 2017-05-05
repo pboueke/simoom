@@ -1453,7 +1453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _securityRadius: 40
-  _visionRadius: 60
+  _visionRadius: 100
 --- !u!114 &114950623203553922
 MonoBehaviour:
   m_ObjectHideFlags: 1
