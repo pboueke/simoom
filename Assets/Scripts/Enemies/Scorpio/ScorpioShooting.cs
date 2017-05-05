@@ -14,6 +14,7 @@ public class ScorpioShooting : MonoBehaviour {
     private Transform _player;
     private PlayerHealth _playerHealth;
     private EnemyHealth _enemyHealth;
+    private ScorpioMovement _enemyMovement;
 	private int _aggroLevel = 0;
     private int _shotCount = 0;
     private float _lastAngle = 0;
@@ -26,13 +27,21 @@ public class ScorpioShooting : MonoBehaviour {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _playerHealth = _player.GetComponent<PlayerHealth>();
         _enemyHealth = GetComponent<EnemyHealth>();
+        _enemyMovement = GetComponent<ScorpioMovement>();
     }
 
     // Update is called once per frame
     void Update() {
         _timer += Time.deltaTime;
 
-        if (_enemyHealth.GetHealth() > 0f && _playerHealth.GetHealth() > 0f && _timer >= _timeBetweenShots) {
+        Vector3 enemyPos = gameObject.transform.position;
+        Vector3 playerPos = _player.transform.position;
+        float distance = Vector3.Distance(enemyPos, playerPos);
+
+        if (_timer >= _timeBetweenShots &&
+                _enemyHealth.GetHealth() > 0f &&
+                _playerHealth.GetHealth() > 0f &&
+                distance <= _enemyMovement._visionRadius) {
             Fire();
         }
     }
