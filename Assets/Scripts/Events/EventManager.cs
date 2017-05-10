@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour {
-
+	
+	//list of event gameopbjects, set at the inspector
 	public GameObject oasis_one;
 
 	// Use this for initialization
@@ -15,8 +16,9 @@ public class EventManager : MonoBehaviour {
 
 		foreach (eventPositions spawn in eventPoints) {
 
-			// scorpio handler
+			// oasis handler
 			if (spawn.type.Equals ("oasis")) {
+				// if spawn.config is set, it can be used to configure this event
 				Instantiate (oasis_one, spawn.position, new Quaternion ());
 				continue;
 			}

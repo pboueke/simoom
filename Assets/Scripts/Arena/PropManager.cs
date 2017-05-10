@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PropManager : MonoBehaviour {
 
+	//list of prop gameopbjects, set at the inspector
 	public GameObject village_one;
 
 	// Use this for initialization
@@ -15,7 +16,7 @@ public class PropManager : MonoBehaviour {
 
 		foreach (propPositions spawn in propPoints) {
 
-			// scorpio handler
+			// village type one handler
 			if (spawn.type.Equals ("village 1")) {
 				Instantiate (village_one, spawn.position, new Quaternion ());
 				continue;
