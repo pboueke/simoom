@@ -20,11 +20,6 @@ public class ScorpioManager : MonoBehaviour {
 		_scorpio_bosses = new List<GameObject> ();
 		_em = this.transform.parent.GetComponent<EnemyManager> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	/// <summary>
 	/// Receives every death alert from dying scorpios and redirects the message where it needs to go.

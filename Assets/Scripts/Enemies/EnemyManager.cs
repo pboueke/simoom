@@ -45,7 +45,7 @@ public class EnemyManager : MonoBehaviour {
 			// other enemy handlers
 			// else if...
 			else {
-				Debug.LogWarning ("Specified enemy spawn is not recognizable.", spawn.type);
+				Debug.LogWarning ("Specified enemy spawn is not recognizable: "+ spawn.type);
 			}
 
 		}

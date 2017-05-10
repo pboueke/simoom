@@ -24,7 +24,7 @@ public struct eventPositions {
 
 public class ArenaConfig : MonoBehaviour {
 
-	public float arenaRadius = -1f;
+	public float arenaDiscScale = 140f;
 
 	// This may change. Could be a good a idea to read configs from a file.
 	// vvvvvvvvv
