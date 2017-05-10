@@ -27,6 +27,8 @@ public class ScorpioManager : MonoBehaviour {
 	/// </summary>
 	void AlertDeath(int experienceGained) {
 		foreach (GameObject boss in _scorpio_bosses) {
+			if (boss == null)
+				continue; //boss is dead
 			ScorpioShooting ss = boss.GetComponent<ScorpioShooting>();
 			ss.ReceiveDeathAlert();
 		}

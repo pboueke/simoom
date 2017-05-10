@@ -21,7 +21,7 @@ public class PropManager : MonoBehaviour {
 				continue;
 			}
 			else {
-				Debug.LogWarning ("Specified enemy spawn is not recognizable: "+ spawn.type);
+				Debug.LogWarning ("Specified prop is not recognizable: "+ spawn.type);
 			}
 
 		}

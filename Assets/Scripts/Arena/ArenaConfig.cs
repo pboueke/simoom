@@ -33,7 +33,7 @@ public class ArenaConfig : MonoBehaviour {
 
 	public enemySpawns[] spawnPoints;
 	public propPositions[] propPoints;
-	public enemySpawns[] eventPoints;
+	public eventPositions[] eventPoints;
 
 	// Use this for initialization
 	void Start () {
