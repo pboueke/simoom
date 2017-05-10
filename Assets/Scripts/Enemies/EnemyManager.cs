@@ -32,16 +32,22 @@ public class EnemyManager : MonoBehaviour {
 		foreach (enemySpawns spawn in _config.spawnPoints) {
 			
 			// scorpio handler
-			if (spawn.type.IndexOf ("scorpio")  > -1) {
-				string[] cfg = spawn.config.Split (new char[] {' '});
+			if (spawn.type.IndexOf ("scorpio") > -1) {
+				string[] cfg = spawn.config.Split (new char[] { ' ' });
 				int units = int.Parse (cfg [0]);
 				int bosses = 0;
 				if (cfg.Length > 1) {
 					bosses = int.Parse (cfg [1]);
 				}
 				scorpios.Spawn (spawn.position, units, bosses);
+				continue;
 			}
 			// other enemy handlers
+			// else if...
+			else {
+				Debug.LogWarning ("Specified enemy spawn is not recognizable.", spawn.type);
+			}
+
 		}
 	}
 }
