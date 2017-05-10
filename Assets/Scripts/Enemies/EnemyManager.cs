@@ -6,60 +6,42 @@ public class EnemyManager : MonoBehaviour {
 
     public PlayerHealth _playerHealth;
     public PlayerLevel _playerLevel;
-    public GameObject _enemyPrefab;
-    public float _spawnTime = 3f;
-    public float _bossExperienceMultiplier = 5;
-    public Transform[] _spawnPoints;
 
-	private GameObject[] _enemies;
+	public ArenaConfig _config;
+
+	// Enemy Handlers
+	public ScorpioManager scorpios;
 
 	// Use this for initialization
 	void Start () {
-        //Keep spawning enemies from _spawnTime to _spawnTime
-		_enemies = new GameObject[3];
-        InvokeRepeating("Spawn", 0.5f, _spawnTime);
+		SpawnAll ();
 	}
+		
 
-	void MakeBoss(GameObject instance) {
-		instance.transform.localScale *= 2;
-		EnemyHealth hp = (EnemyHealth) instance.GetComponent("EnemyHealth");
-        EnemyExperience xp = (EnemyExperience)instance.GetComponent("EnemyExperience");
-		ScorpioShooting ss = (ScorpioShooting) instance.GetComponent("ScorpioShooting");
-        hp._startingHealth = hp._startingHealth * 5;
-        hp.SetHealth(hp._startingHealth);
-        xp._experienceValue = (int)((float)xp._experienceValue * _bossExperienceMultiplier);
-		ss._boss = true;
-	}
-
-	GameObject MakeEnemy(Vector3 position, int spawnPointIndex) {
-		return Instantiate(_enemyPrefab, position, _spawnPoints[spawnPointIndex].rotation);
-	}
-
-	void AlertDeath(int experienceGained) {
+	public void AlertDeath(int experienceGained) {
         //add experience
         _playerLevel.addXp(experienceGained);
-
-		if (_enemies [1]) {
-			ScorpioShooting ss = (ScorpioShooting)_enemies [1].GetComponent("ScorpioShooting");
-			ss.ReceiveDeathAlert();
-		}
 	}
 
-    void Spawn() {
-        if (_playerHealth.GetHealth() <= 0f) {
-            return;
-        }
-
-        int spawnPointIndex = Random.Range(0, _spawnPoints.Length);
-
-		Vector3 basePos = _spawnPoints[spawnPointIndex].position;
-		for (int i = 0; i < 3; i++) {
-			Vector3 position = basePos + new Vector3((i-1)*3, 0, 0);
-			GameObject instance = MakeEnemy(position, spawnPointIndex);
-			instance.transform.parent = this.transform;
-			_enemies [i] = instance;
-			if (i == 1)
-				MakeBoss(instance);
+	void SpawnAll () {
+		if (_playerHealth.GetHealth () <= 0f) {
+			return;
 		}
-    }
+
+		// iterates over all the configured spawn points
+		foreach (enemySpawns spawn in _config.spawnPoints) {
+			
+			// scorpio handler
+			if (spawn.type.IndexOf ("scorpio")  > -1) {
+				string[] cfg = spawn.config.Split (new char[] {' '});
+				int units = int.Parse (cfg [0]);
+				int bosses = 0;
+				if (cfg.Length > 1) {
+					bosses = int.Parse (cfg [1]);
+				}
+				scorpios.Spawn (spawn.position, units, bosses);
+			}
+			// other enemy handlers
+		}
+	}
 }

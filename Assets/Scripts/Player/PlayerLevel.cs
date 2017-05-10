@@ -24,7 +24,6 @@ public class PlayerLevel : MonoBehaviour {
     /// <param name="experience"> The amount of e_xperience to be added.</param>
     public void addXp(int experience)
     {
-        int initialLevel = getLevel();
         _xp += experience;
         // update UI
         int currentLevel = getLevel();

@@ -45,6 +45,8 @@ public class EnemyHealth : MonoBehaviour {
         //destroy stuff
         Destroy(_deathParticles.gameObject, _deathParticles.main.duration);
         Destroy(gameObject);
+
+		// sends the message to this enemy manager (the one that spawned this instance)
 		gameObject.SendMessageUpwards("AlertDeath", xp);
     }
 
