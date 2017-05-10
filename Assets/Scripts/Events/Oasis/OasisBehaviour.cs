@@ -5,10 +5,11 @@ using UnityEngine;
 public class OasisBehaviour : MonoBehaviour {
 
     public string playerEventColliderName = "PlayerEventCollider";
-    public PlayerWater playerWater;
+	public string playerObjectName = "Carpet";
     public float waterVolume = 50.0f;
     public float fillingRate = 25.0f;
 
+	private PlayerWater _playerWater;
     private bool inTrigger = false;
     private Transform water;
     private float waterLeft;
@@ -18,7 +19,7 @@ public class OasisBehaviour : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+		_playerWater = GameObject.Find (playerObjectName).GetComponent<PlayerWater> ();
 	}
 
     private void Awake()
@@ -35,11 +36,11 @@ public class OasisBehaviour : MonoBehaviour {
     void Update () {
         float dTime = Time.deltaTime;
 
-        if (inTrigger && waterLeft >= 0.0 && !playerWater.isFull()) {
+        if (inTrigger && waterLeft >= 0.0 && !_playerWater.isFull()) {
             // Fill up player water
             float amount = Mathf.Min(fillingRate * dTime, waterLeft);
             waterLeft -= amount;
-            playerWater.Fill(amount);
+            _playerWater.Fill(amount);
             // Update water level
             float percentageLeft = waterLeft / waterVolume;
             water.localPosition = Vector3.Lerp(waterEmpty, waterFull, percentageLeft);
