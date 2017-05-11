@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GateController : MonoBehaviour {
 
@@ -23,7 +24,7 @@ public class GateController : MonoBehaviour {
 	void Update () {
 		if (inTrigger && Input.GetKeyDown(KeyCode.E))
 		{
-			// load next scene
+			SceneManager.LoadScene (referencedSceneName);
 		}
 	}
 		

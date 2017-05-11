@@ -332,6 +332,11 @@ Prefab:
       propertyPath: gatePoints.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: propPoints.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4928579801753314, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -372,17 +377,66 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: gatePoints.Array.data[0].scene
-      value: PrototypeM2
+      value: PrototypeM3
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: gatePoints.Array.data[0].angle
-      value: 90
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
-      propertyPath: arenaDiscScale
-      value: 140
+      propertyPath: propPoints.Array.data[3].type
+      value: village 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: propPoints.Array.data[3].position.x
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: propPoints.Array.data[3].position.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: propPoints.Array.data[3].position.z
+      value: -81
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: propPoints.Array.data[4].type
+      value: village 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: propPoints.Array.data[4].position.x
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: propPoints.Array.data[4].position.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: propPoints.Array.data[4].position.z
+      value: -107
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493394152509006, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53, type: 2}
+      propertyPath: m_Name
+      value: ArenaConfiguration_PrototypeM2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: eventPoints.Array.data[0].position.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: eventPoints.Array.data[0].position.z
+      value: -36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53, type: 2}
