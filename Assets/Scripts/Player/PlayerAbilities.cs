@@ -14,6 +14,8 @@ public class PlayerAbilities : MonoBehaviour
     {
         _playerHealth = GetComponent<PlayerHealth>();
         _playerWater = GetComponent<PlayerWater>();
+
+		DontDestroyOnLoad (this.gameObject);
     }
 
     // Use this for initialization

@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 178148755}
   - component: {fileID: 178148754}
   - component: {fileID: 178148753}
+  - component: {fileID: 178148757}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -482,6 +483,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &178148757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178148752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d842692564a4afe4792e9d160bd6839e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &303231674 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1690501558085298, guid: d37d398a02f66124c97729b39126265f,
@@ -573,12 +585,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &483333707 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114502392263905886, guid: d37d398a02f66124c97729b39126265f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1571003189}
-  m_Script: {fileID: 11500000, guid: 9eb780c8146a66e45abaacdd684dfbfb, type: 3}
 --- !u!4 &483333713 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4298716970264624, guid: d37d398a02f66124c97729b39126265f,
@@ -904,8 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 868d60b52c5484e4299dd44bd0709bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerHealth: {fileID: 483333707}
-  _playerLevel: {fileID: 303231682}
+  playerObjectName: Carpet
   _config: {fileID: 679162887}
   scorpios: {fileID: 1704201844}
 --- !u!1 &966916709

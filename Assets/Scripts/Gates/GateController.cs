@@ -26,7 +26,7 @@ public class GateController : MonoBehaviour {
 	void Update () {
 		if (inTrigger && Input.GetKeyDown(KeyCode.E))
 		{
-			DontDestroyOnLoad (GameObject.Find(playerObjectName));
+			//DontDestroyOnLoad (GameObject.Find(playerObjectName));
 			SceneManager.LoadScene (referencedSceneName);
 		}
 	}

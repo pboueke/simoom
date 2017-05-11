@@ -12,6 +12,7 @@ public class CameraControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _offset = transform.position - _target.position;
+		DontDestroyOnLoad (this.gameObject);
 	}
 	
 	// Update is called once per frame

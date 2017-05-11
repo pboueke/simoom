@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
-    public PlayerHealth _playerHealth;
-    public PlayerLevel _playerLevel;
-
+	public string playerObjectName = "Carpet";
 	public ArenaConfig _config;
+
+	private GameObject _player;
+	private PlayerHealth _playerHealth;
+	private PlayerLevel _playerLevel;
 
 	// Enemy Handlers
 	public ScorpioManager scorpios;
 
 	// Use this for initialization
 	void Start () {
+		_player = GameObject.Find (playerObjectName);
+		_playerHealth = _player.GetComponent<PlayerHealth> ();
+		_playerLevel = _player.GetComponent<PlayerLevel> ();
 		SpawnAll ();
 	}
 		
