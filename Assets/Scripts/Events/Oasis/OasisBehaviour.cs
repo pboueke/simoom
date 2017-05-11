@@ -26,7 +26,6 @@ public class OasisBehaviour : MonoBehaviour {
     {
         waterLeft = waterVolume;
         water = transform.Find("Water");
-        Debug.Log(water.localPosition);
         waterFull.Set(0f, 0.09f, 0f);
         waterEmpty.Set(0f, 0f, 0f);
         water.localPosition = waterFull;

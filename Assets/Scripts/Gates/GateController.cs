@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class GateController : MonoBehaviour {
 
 	public string playerEventColliderName = "PlayerEventCollider";
+	public string playerObjectName = "Carpet";
 	public string referencedSceneName;
 	public string type;
+
 
 	private bool inTrigger = false;
 	private Renderer rend;
@@ -24,6 +26,7 @@ public class GateController : MonoBehaviour {
 	void Update () {
 		if (inTrigger && Input.GetKeyDown(KeyCode.E))
 		{
+			DontDestroyOnLoad (GameObject.Find(playerObjectName));
 			SceneManager.LoadScene (referencedSceneName);
 		}
 	}
