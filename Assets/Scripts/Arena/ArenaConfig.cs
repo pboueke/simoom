@@ -3,37 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct enemySpawns {
+public struct enemySpawn {
 	public string type;
 	public string config;
 	public Vector3 position;
 }
 
 [System.Serializable]
-public struct propPositions {
+public struct propPosition {
 	public string type;
 	public Vector3 position;
 }
 
 [System.Serializable]
-public struct eventPositions {
+public struct eventPosition {
 	public string type;
 	public string config;
 	public Vector3 position;
+}
+
+[System.Serializable]
+public struct gatePosition {
+	public string type;
+	public string scene;
+	public float angle;
 }
 
 public class ArenaConfig : MonoBehaviour {
 
 	public float arenaDiscScale = 140f;
 
-	// This may change. Could be a good a idea to read configs from a file.
-	// vvvvvvvvv
 	// Currently:
 	// For each type of thing, there is a position where it must be located.
 
-	public enemySpawns[] spawnPoints;
-	public propPositions[] propPoints;
-	public eventPositions[] eventPoints;
+	public gatePosition[] gatePoints;
+	public enemySpawn[] spawnPoints;
+	public propPosition[] propPoints;
+	public eventPosition[] eventPoints;
 
 	// Use this for initialization
 	void Start () {

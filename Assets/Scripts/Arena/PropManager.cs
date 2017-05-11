@@ -12,9 +12,9 @@ public class PropManager : MonoBehaviour {
 		
 	}
 	
-	public void SpawnAllProps (propPositions[] propPoints) {
+	public void SpawnAllProps (propPosition[] propPoints) {
 
-		foreach (propPositions spawn in propPoints) {
+		foreach (propPosition spawn in propPoints) {
 
 			// village type one handler
 			if (spawn.type.Equals ("village 1")) {

@@ -7,6 +7,7 @@ public class ArenaManager : MonoBehaviour {
 	public ArenaConfig _config;
 	public PropManager _propManager;
 	public EventManager _eventManager;
+	public GateManager _gateManager;
 	public GameObject _arenaFloor;
 
 	// Use this for initialization
@@ -18,5 +19,6 @@ public class ArenaManager : MonoBehaviour {
 		// add things to the arena
 		_propManager.SpawnAllProps (_config.propPoints);
 		_eventManager.SpawnAllEvents (_config.eventPoints);
+		_gateManager.SpawnAllGates (_config.gatePoints, _config.arenaDiscScale);
 	}
 }

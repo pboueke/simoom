@@ -29,7 +29,7 @@ public class EnemyManager : MonoBehaviour {
 		}
 
 		// iterates over all the configured spawn points
-		foreach (enemySpawns spawn in _config.spawnPoints) {
+		foreach (enemySpawn spawn in _config.spawnPoints) {
 			
 			// scorpio handler
 			if (spawn.type.IndexOf ("scorpio") > -1) {

@@ -12,9 +12,9 @@ public class EventManager : MonoBehaviour {
 		
 	}
 	
-	public void SpawnAllEvents (eventPositions[] eventPoints) {
+	public void SpawnAllEvents (eventPosition[] eventPoints) {
 
-		foreach (eventPositions spawn in eventPoints) {
+		foreach (eventPosition spawn in eventPoints) {
 
 			// oasis handler
 			if (spawn.type.Equals ("oasis")) {
