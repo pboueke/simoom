@@ -1487,6 +1487,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 58a449101267bc343870c15dbef3b76a, type: 3}
+      propertyPath: m_Name
+      value: Disc
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 58a449101267bc343870c15dbef3b76a, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 58a449101267bc343870c15dbef3b76a, type: 3}
@@ -1723,7 +1727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 13.299988, y: -17.149994}
+  m_AnchoredPosition: {x: 13.300049, y: -17.149994}
   m_SizeDelta: {x: 25, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829161532
