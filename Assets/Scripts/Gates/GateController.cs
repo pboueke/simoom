@@ -26,7 +26,10 @@ public class GateController : MonoBehaviour {
 	void Update () {
 		if (inTrigger && Input.GetKeyDown(KeyCode.E))
 		{
-			//DontDestroyOnLoad (GameObject.Find(playerObjectName));
+			// set the direction where the player will be sent to in the new level
+			GameObject player = GameObject.Find(playerObjectName);
+			player.transform.position = (Vector3.zero - player.transform.position).normalized;
+
 			SceneManager.LoadScene (referencedSceneName);
 		}
 	}
