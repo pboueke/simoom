@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -48,6 +49,14 @@ public class PlayerMovement : MonoBehaviour {
 		_playerRigidbody = GetComponent <Rigidbody> ();
         _dashing = false;
         _dashesAvailable = _dashLimit;
+	}
+
+	void Start() {
+		SceneManager.sceneLoaded += OnSceneLoaded;
+	}
+
+	private void OnSceneLoaded(Scene aScene, LoadSceneMode aMode) {
+		_arenaConfig = GameObject.Find ("GameManager").GetComponentInChildren<ArenaConfig> ();
 	}
 
 	// Function which Unity will automatically call on its scripts
