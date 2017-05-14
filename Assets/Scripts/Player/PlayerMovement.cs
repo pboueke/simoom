@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour {
     private float _dashCooldownTimer;
     // How many dashes does the player have left?
     private int _dashesAvailable;
+	//
+	private ArenaConfig _arenaConfig;
 
     // Direction of current movement
     private Vector3 _movement;
@@ -41,6 +43,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Gets called regardless of wether the script is enabled or not
 	void Awake () {
 		_floorMask = LayerMask.GetMask("Floor");
+		_arenaConfig = GameObject.Find ("GameManager").GetComponentInChildren<ArenaConfig> ();
 		_anim = GetComponent <Animator> ();
 		_playerRigidbody = GetComponent <Rigidbody> ();
         _dashing = false;
@@ -62,6 +65,13 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Move (float h, float v, bool d) {
         float dTime = Time.deltaTime;
+
+		if (!InArena ()) {
+			// if the player is not in the arena, lets put him there
+			float distance = Vector3.Distance(Vector3.zero, transform.position) - _arenaConfig.arenaDiscScale;
+			Vector3 direction = (Vector3.zero - transform.position).normalized;
+			transform.position += distance * direction;
+		}
 
         if (_dashing) {
             _dashDurationTimer += dTime;
@@ -132,5 +142,12 @@ public class PlayerMovement : MonoBehaviour {
         if (f) {
             _anim.SetTrigger("triggerShot");
         }
+	}
+
+	bool InArena () {
+		// if within the radius
+		return (Mathf.Pow (_arenaConfig.arenaDiscScale, 2) >
+				Mathf.Pow (transform.position.x, 2) +
+				Mathf.Pow (transform.position.z, 2) );
 	}
 }
