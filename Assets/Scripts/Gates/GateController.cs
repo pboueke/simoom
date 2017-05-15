@@ -9,6 +9,7 @@ public class GateController : MonoBehaviour {
 	public string playerObjectName = "Carpet";
 	public string referencedSceneName;
 	public string type;
+	public float transitionTime = 1f;
 
 
 	private bool inTrigger = false;
@@ -26,12 +27,31 @@ public class GateController : MonoBehaviour {
 	void Update () {
 		if (inTrigger && Input.GetKeyDown(KeyCode.E))
 		{
-			// set the direction where the player will be sent to in the new level
-			GameObject player = GameObject.Find(playerObjectName);
-			player.transform.position = (Vector3.zero - player.transform.position).normalized;
-
-			SceneManager.LoadScene (referencedSceneName);
+			doTransition ();
 		}
+	}
+
+	void doTransition () {
+
+		GameObject player = GameObject.Find(playerObjectName);
+		GameObject camera = GameObject.Find ("Main Camera");
+
+		// new position, as if the camera is following the player direction moving away from the arena
+		Vector3 newPos = transform.position * 3;
+
+		// disable the camera target
+		camera.GetComponent<CameraControl>()._following = false;
+
+		// move the camera - moves it away
+		StartCoroutine (MoveOverSeconds (camera, newPos, transitionTime * 0.9f));
+		// set camera for the next scene
+		StartCoroutine (MoveAfterSeconds (camera, -newPos, transitionTime * 0.95f));
+
+		// set the direction where the player will be sent to in the new level
+		player.transform.position = (Vector3.zero - player.transform.position).normalized;
+
+		StartCoroutine(ChangeLevel(referencedSceneName, transitionTime));
+		//SceneManager.LoadScene (referencedSceneName);
 	}
 		
 	void OnTriggerEnter(Collider col)
@@ -65,4 +85,33 @@ public class GateController : MonoBehaviour {
 	{
 		rend.material.color = Color.HSVToRGB(0.0f, 1.0f, 0.8f);
 	}
+
+	public IEnumerator ChangeLevel(string levelName, float seconds) {
+		yield return new WaitForSeconds (seconds);
+		SceneManager.LoadScene (levelName);
+	}
+
+	public IEnumerator MoveAfterSeconds (GameObject obj, Vector3 pos, float seconds) {
+		yield return new WaitForSeconds (seconds);
+		obj.transform.position = pos;
+	}
+
+	public IEnumerator MoveOverSpeed (GameObject obj, Vector3 pos, float speed) {
+		while (obj.transform.position != pos) {
+			obj.transform.position = Vector3.MoveTowards (obj.transform.position, pos, speed * Time.deltaTime);
+			yield return new WaitForEndOfFrame ();
+		}
+	}
+
+	public IEnumerator MoveOverSeconds (GameObject obj, Vector3 pos, float seconds) {
+		float elapsedTime = 0;
+		Vector3 startingPos = obj.transform.position;
+		while (elapsedTime < seconds) {
+			obj.transform.position = Vector3.Lerp (startingPos, pos, (elapsedTime / seconds));
+			elapsedTime += Time.deltaTime;
+			yield return new WaitForEndOfFrame ();
+		}
+		obj.transform.position = pos;
+	}
+
 }
