@@ -58,11 +58,9 @@ public class PlayerMovement : MonoBehaviour {
 	private void OnSceneLoaded(Scene aScene, LoadSceneMode aMode) {
 		_arenaConfig = GameObject.Find ("GameManager").GetComponentInChildren<ArenaConfig> ();
 
-		// The player new position is the diametrically opposite of the current one, so:
-		// After loading, the player is set at a position (set by the previous gate controller)
-		// that points to the direction where he must be positioned, but normalized.
-		// Now we multiply the direction by the radius of the current scene to find its new position
-		transform.position *= (_arenaConfig.arenaDiscScale - 1f);
+		// The player new position is the diametrically opposite of the current one.
+		this.gameObject.SetActive(true);
+		transform.position = -1 * transform.position.normalized * (_arenaConfig.arenaDiscScale - 1f);
 	}
 
 	// Function which Unity will automatically call on its scripts

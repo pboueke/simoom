@@ -41,14 +41,13 @@ public class GateController : MonoBehaviour {
 
 		// disable the camera target
 		camera.GetComponent<CameraControl>()._following = false;
-
 		// move the camera - moves it away
 		StartCoroutine (MoveOverSeconds (camera, newPos, transitionTime * 0.9f));
 		// set camera for the next scene
 		StartCoroutine (MoveAfterSeconds (camera, -newPos, transitionTime * 0.95f));
 
-		// set the direction where the player will be sent to in the new level
-		player.transform.position = (Vector3.zero - player.transform.position).normalized;
+		// disable player functions
+		StartCoroutine (InactiveAfterSeconds(player, 0.1f));
 
 		StartCoroutine(ChangeLevel(referencedSceneName, transitionTime));
 		//SceneManager.LoadScene (referencedSceneName);
@@ -94,6 +93,11 @@ public class GateController : MonoBehaviour {
 	public IEnumerator MoveAfterSeconds (GameObject obj, Vector3 pos, float seconds) {
 		yield return new WaitForSeconds (seconds);
 		obj.transform.position = pos;
+	}
+
+	public IEnumerator InactiveAfterSeconds (GameObject obj, float seconds) {
+		yield return new WaitForSeconds (seconds);
+		obj.SetActive (false);
 	}
 
 	public IEnumerator MoveOverSpeed (GameObject obj, Vector3 pos, float speed) {
