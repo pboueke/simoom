@@ -12,10 +12,6 @@ public class PlayerMovement : MonoBehaviour {
     public float _dashMultiplier = 3f;
     // For how much time does it dash?
     public float _dashDuration = 1f;
-    // How many consecutive times can he dash?
-    public int _dashLimit = 2;
-    // How long does it take to recover a dash?
-    public float _dashCooldown = 2f;
 
     // Is the player dashing?
     private bool _dashing;
@@ -23,10 +19,6 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 _dashDirection;
     // For how long has the player been dashing
     private float _dashDurationTimer;
-    // Timer to reload dashes
-    private float _dashCooldownTimer;
-    // How many dashes does the player have left?
-    private int _dashesAvailable;
 	//
 	private ArenaConfig _arenaConfig;
 
@@ -36,6 +28,8 @@ public class PlayerMovement : MonoBehaviour {
     private Animator _anim;
     // Player's Rigid Body
     private Rigidbody _playerRigidbody;
+    // Player's Dash Info
+    private PlayerDash _playerDash;
     // Layer mask for floor, used for mouse position fetching
     private int _floorMask;
     // Maximum distance that camera ray can reach to find intersection with floor and thus the mouse position
@@ -46,9 +40,9 @@ public class PlayerMovement : MonoBehaviour {
 		_floorMask = LayerMask.GetMask("Floor");
 		_arenaConfig = GameObject.Find ("GameManager").GetComponentInChildren<ArenaConfig> ();
 		_anim = GetComponent <Animator> ();
-		_playerRigidbody = GetComponent <Rigidbody> ();
+        _playerRigidbody = GetComponent <Rigidbody> ();
+        _playerDash = GetComponent <PlayerDash> ();
         _dashing = false;
-        _dashesAvailable = _dashLimit;
 	}
 
 	void Start() {
@@ -102,31 +96,19 @@ public class PlayerMovement : MonoBehaviour {
                 _movement += _dashDirection * _speed * _dashMultiplier * dashTimeLeft;
                 _playerRigidbody.MovePosition(transform.position + _movement);
                 _dashing = false;
-                _dashCooldownTimer = 0f;
             }
         }
         else {
-            // if player has spent dashes, reload them on cooldown
-            if (_dashesAvailable < _dashLimit) {
-                _dashCooldownTimer += dTime;
-                if (_dashCooldownTimer >= _dashCooldown) {
-                    _dashCooldownTimer = _dashCooldownTimer - _dashCooldown;
-                    _dashesAvailable = Mathf.Min(_dashesAvailable + 1, _dashLimit);
-                    if (_dashesAvailable >= _dashLimit) {
-                        _dashCooldownTimer = 0f;
-                    }
-                }
-            }
 
-            if (d && _dashesAvailable > 0) {
+            if (d && _playerDash.hasDash()) {
                 // player is trying to dash and can dash
                 _dashing = true;
-                _dashesAvailable--;
                 _dashDurationTimer = dTime;
                 _dashDirection.Set(h, 0f, v);
                 _dashDirection = _dashDirection.normalized;
                 _movement = _dashDirection * _speed * _dashMultiplier * dTime;
                 _playerRigidbody.MovePosition(transform.position + _movement);
+                _playerDash.Consume();
             }
             else {
                 // player is not dashing nor trying to dash
