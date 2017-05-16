@@ -13,6 +13,7 @@ public class EnemyManager : MonoBehaviour {
 
 	// Enemy Handlers
 	public ScorpioManager scorpios;
+	public GuilaManager guilas;
 
 	// Use this for initialization
 	void Start () {
@@ -46,6 +47,8 @@ public class EnemyManager : MonoBehaviour {
 				}
 				scorpios.Spawn (spawn.position, units, bosses);
 				continue;
+			} else if (spawn.type.IndexOf ("guila") > -1) {
+				guilas.Spawn (spawn.position);
 			}
 			// other enemy handlers
 			// else if...
