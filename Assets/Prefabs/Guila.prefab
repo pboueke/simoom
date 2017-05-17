@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookSphereCastRadius: 5
-  lookRange: 50
+  lookRange: 15
 --- !u!114 &114653437194587666
 MonoBehaviour:
   m_ObjectHideFlags: 1

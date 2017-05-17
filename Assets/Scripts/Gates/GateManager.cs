@@ -6,11 +6,11 @@ public class GateManager : MonoBehaviour {
 
 	public GameObject EmptyGate;
 
-	private List<GameObject> _gates;
+	//private List<GameObject> _gates;
 
 	// Use this for initialization
 	void Start () {
-		_gates = new List<GameObject> ();
+		//_gates = new List<GameObject> ();
 	}
 	
 	// Update is called once per frame

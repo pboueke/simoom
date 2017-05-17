@@ -16,7 +16,6 @@ public class GuilaBite : Action {
 		// * guila is over ground and
 		// * is in range and
 		// * has not acted in the last interval
-		Debug.Log(Time.deltaTime);
 		GuilaBehaviour gb = controller.gameObject.GetComponent<GuilaBehaviour> ();
 		gb.lastBiteTime += Time.deltaTime;
 		if (gb.emerged && controller.navMeshAgent.remainingDistance < gb.distanceToBite &&

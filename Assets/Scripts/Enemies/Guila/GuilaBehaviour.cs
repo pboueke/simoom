@@ -15,7 +15,7 @@ public class GuilaBehaviour : MonoBehaviour {
 	[HideInInspector] public float lastBiteTime;
 	[HideInInspector] public bool emerged = false;
 	[HideInInspector] public bool isEmerging = false;
-	[HideInInspector]public GameObject target;
+	[HideInInspector] public GameObject target;
 
 	private NavMeshAgent _nav;
 
