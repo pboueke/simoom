@@ -22,7 +22,7 @@ public class GreenMagicHit: MonoBehaviour {
     {
         EnemyHealth health = other.GetComponent<EnemyHealth>();
         if (health) {
-            health.TakeDamage(_damage);
+			health.TakeDamage(_damage, transform.position.normalized);
         }
         
         //detach particle system from power

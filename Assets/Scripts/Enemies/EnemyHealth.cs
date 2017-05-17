@@ -7,8 +7,10 @@ public class EnemyHealth : MonoBehaviour {
     public float _startingHealth = 100f;
     public ParticleSystem _deathParticles;
 	public Renderer rend;
-	private float _currentHealth;
-    private bool _dead;
+
+	// public for access of derived classes
+	[HideInInspector] public float _currentHealth;
+	[HideInInspector] public bool _dead;
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +28,7 @@ public class EnemyHealth : MonoBehaviour {
         _dead = false;
     }
 
-    public void TakeDamage(float amount) {
+    public virtual void TakeDamage(float amount, Vector3 direction) {
         _currentHealth -= amount;
 		updateHealthIndication ();
         if (_currentHealth <= 0f && !_dead) {
@@ -34,7 +36,7 @@ public class EnemyHealth : MonoBehaviour {
         }
     }
 
-    private void OnDeath() {
+    public void OnDeath() {
         _dead = true;
         //detach particles from enemy
         _deathParticles.transform.parent = null;
@@ -64,7 +66,7 @@ public class EnemyHealth : MonoBehaviour {
 		updateHealthIndication ();
 	}
 
-	void updateHealthIndication() {
+	public void updateHealthIndication() {
 		Material[] ms = rend.materials;
 		float healthLeft = _currentHealth / _startingHealth;
 		float H, S, V;

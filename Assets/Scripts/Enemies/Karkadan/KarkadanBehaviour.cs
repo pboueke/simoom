@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class KarkadanBehaviour : MonoBehaviour {
 
+	public float backDamageMultiplier = 5f;
 	public float chargeDamage = 10f;
 	public float damageSecondsInterval = 1f;
 	public float chargePeriodInSeconds = 3f;
