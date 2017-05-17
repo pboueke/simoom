@@ -15,6 +15,7 @@ public class EnemyManager : MonoBehaviour {
 	public ScorpioManager scorpios;
 	public GuilaManager guilas;
 	public KarkadanManager karkadans;
+	public SnekManager sneks;
 
 	// Use this for initialization
 	void Start () {
@@ -47,11 +48,13 @@ public class EnemyManager : MonoBehaviour {
 					bosses = int.Parse (cfg [1]);
 				}
 				scorpios.Spawn (spawn.position, units, bosses);
-				continue;
 			} else if (spawn.type.IndexOf ("guila") > -1) {
 				guilas.Spawn (spawn.position);
 			} else if (spawn.type.IndexOf ("karkadan") > -1) {
 				karkadans.Spawn (spawn.position);
+			} else if (spawn.type.IndexOf ("snek") > -1) {
+				int units = int.Parse (spawn.config);
+				sneks.Spawn (spawn.position, units);
 			}
 			// other enemy handlers
 			// else if...
