@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu (menuName = "PluggableAI/Karkadan/Decisions/Look")]
-public class KarkadanLook : Decision {
+public class KarkadanLookDecision : Decision {
 
 	public override bool Decide (StateController controller) 
 	{

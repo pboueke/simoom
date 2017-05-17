@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu (menuName = "PluggableAI/Karkadan/Actions/Charge")]
-public class KarkadanCharge : Action {
+public class KarkadanChargeAction : Action {
 
 	public override void Act(StateController controller)
 	{
