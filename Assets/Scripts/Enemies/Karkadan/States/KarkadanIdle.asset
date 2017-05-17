@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: KarkadanIdle
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 22e901badca05ad4392d65e6d2f68455, type: 2}
+  - {fileID: 11400000, guid: d3ebb61f738f6d54aa132f1f9c08a36a, type: 2}
   transitions:
-  - decision: {fileID: 11400000, guid: dcaaaf870c85b0d49a11ef787a5d8229, type: 2}
+  - decision: {fileID: 11400000, guid: 675f7c5d597a9ab41895f15e632a694b, type: 2}
     trueState: {fileID: 11400000, guid: dc44695ec7d52424cb387bc22fd635f2, type: 2}
     falseState: {fileID: 11400000, guid: 0d54f99fc229ba042ac7288930346a56, type: 2}
   sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
