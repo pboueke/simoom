@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: KarkadanCharge
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 7a40f77aa38a34348941ea90f4a05990, type: 2}
-  - {fileID: 11400000, guid: 5c7bcf9119407df4a85a8491de10eaf3, type: 2}
+  - {fileID: 11400000, guid: 99c7f9612e9ed3d4bac07044bae61bc7, type: 2}
+  - {fileID: 11400000, guid: e125771be31c4014897e973df05a39bc, type: 2}
   transitions:
   - decision: {fileID: 11400000, guid: bfe28b287520a914abcbbd88b89a8cec, type: 2}
     trueState: {fileID: 11400000, guid: f3cd4e515c68e384b8edb06778174b97, type: 2}
