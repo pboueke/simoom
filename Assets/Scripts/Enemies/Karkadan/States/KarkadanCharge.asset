@@ -11,6 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadb694a0f653e54ca2fae49a9dfff2b, type: 3}
   m_Name: KarkadanCharge
   m_EditorClassIdentifier: 
-  actions: []
-  transitions: []
+  actions:
+  - {fileID: 11400000, guid: 9bf910ca5778042478d4811d95bd0b7d, type: 2}
+  - {fileID: 11400000, guid: d23762e9349c5154f971b98537eaaa12, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: 748dfdb3f89708d409f0f8858999f590, type: 2}
+    trueState: {fileID: 11400000, guid: f3cd4e515c68e384b8edb06778174b97, type: 2}
+    falseState: {fileID: 11400000, guid: 0d54f99fc229ba042ac7288930346a56, type: 2}
   sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

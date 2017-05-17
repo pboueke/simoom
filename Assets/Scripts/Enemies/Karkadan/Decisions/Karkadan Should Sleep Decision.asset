@@ -9,5 +9,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fccc97dbaafe1494d9008ddd6f720c47, type: 3}
-  m_Name: Should Karkadan Sleep Decision
+  m_Name: Karkadan Should Sleep Decision
   m_EditorClassIdentifier: 

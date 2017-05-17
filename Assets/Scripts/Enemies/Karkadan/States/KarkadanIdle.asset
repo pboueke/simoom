@@ -11,6 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadb694a0f653e54ca2fae49a9dfff2b, type: 3}
   m_Name: KarkadanIdle
   m_EditorClassIdentifier: 
-  actions: []
-  transitions: []
+  actions:
+  - {fileID: 11400000, guid: 22e901badca05ad4392d65e6d2f68455, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: dcaaaf870c85b0d49a11ef787a5d8229, type: 2}
+    trueState: {fileID: 11400000, guid: dc44695ec7d52424cb387bc22fd635f2, type: 2}
+    falseState: {fileID: 11400000, guid: 0d54f99fc229ba042ac7288930346a56, type: 2}
   sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
