@@ -9,11 +9,10 @@ public class KarkadanHealth : EnemyHealth {
 		float damageMultiplier = 1;
 
 		// adds extra damage if the shot hit from behind
-		if (Vector3.Angle (direction, transform.forward) < 120) {
+		if (Vector3.Angle (direction, transform.forward) < 60) {
 			damageMultiplier = GetComponent<KarkadanBehaviour> ().backDamageMultiplier;
 		}
-
-		Debug.Log( amount * damageMultiplier);
+			
 		_currentHealth -= amount * damageMultiplier;
 		updateHealthIndication ();
 		if (_currentHealth <= 0f && !_dead) {
