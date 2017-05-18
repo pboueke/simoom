@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33539730459864640}
   - component: {fileID: 23584264411755382}
   - component: {fileID: 95671794247994638}
+  - component: {fileID: 65723189966868872}
   m_Layer: 0
   m_Name: cactos
   m_TagString: Untagged
@@ -80,6 +81,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1173269376138572}
   m_Mesh: {fileID: 4300000, guid: 7046d0f6b39b144119f862c1ccc0d88c, type: 3}
+--- !u!65 &65723189966868872
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173269376138572}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.111677, y: 8.413638, z: 9.467919}
+  m_Center: {x: 0.042601056, y: -0.3121513, z: 4.4628677}
 --- !u!95 &95671794247994638
 Animator:
   serializedVersion: 3

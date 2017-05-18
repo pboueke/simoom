@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33508990149695946}
   - component: {fileID: 23977288092489306}
   - component: {fileID: 95969210162595954}
+  - component: {fileID: 65773467708444548}
   m_Layer: 0
   m_Name: arbusto2
   m_TagString: Untagged
@@ -80,6 +81,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1410130006248160}
   m_Mesh: {fileID: 4300000, guid: 31337c21c617b4c519fc08750b9d1827, type: 3}
+--- !u!65 &65773467708444548
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1410130006248160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2228947, y: 3.6227674, z: 5.1646028}
+  m_Center: {x: 0.0000052303076, y: 1.2316414, z: 2.391571}
 --- !u!95 &95969210162595954
 Animator:
   serializedVersion: 3

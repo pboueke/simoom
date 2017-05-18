@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33527626944663246}
   - component: {fileID: 23753811321800764}
   - component: {fileID: 95809574152150436}
+  - component: {fileID: 65372607757481568}
   m_Layer: 0
   m_Name: pedra2
   m_TagString: Untagged
@@ -80,6 +81,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1697825743588378}
   m_Mesh: {fileID: 4300000, guid: ada357ecf107d4fd492121c94f3081f8, type: 3}
+--- !u!65 &65372607757481568
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697825743588378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5558939, y: 1.7477074, z: 1.4181243}
+  m_Center: {x: -0.041826993, y: -0.030216523, z: 0.5184121}
 --- !u!95 &95809574152150436
 Animator:
   serializedVersion: 3
