@@ -302,11 +302,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38a8266525f53b478c735e5edb97522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backDamageMultiplier: 5
-  chargeDamage: 25
+  backDamageMultiplier: 7
+  chargeDamage: 10
   damageSecondsInterval: 0.5
-  chargePeriodInSeconds: 1
-  chargeResetTimeInSeconds: 1.5
+  chargePeriodInSeconds: 1.2
+  chargeResetTimeInSeconds: 2
   playerObjectName: Carpet
   lastDamageTime: 0
   isCharging: 0
@@ -436,8 +436,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 1555626684185434}
   m_Enabled: 1
   m_Radius: 2
-  m_Speed: 250
-  m_Acceleration: 150
+  m_Speed: 400
+  m_Acceleration: 140
   avoidancePriority: 50
   m_AngularSpeed: 500
   m_StoppingDistance: 5
