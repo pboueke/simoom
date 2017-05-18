@@ -421,7 +421,7 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.size
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4928579801753314, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53, type: 2}
       propertyPath: m_LocalPosition.x
@@ -468,7 +468,7 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: gatePoints.Array.data[0].angle
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
@@ -478,77 +478,77 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[0].config
-      value: 6 2
+      value: 2 1
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[1].config
-      value: 
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[2].type
-      value: guila
+      value: snek
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[2].config
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[2].position.x
-      value: 17
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[2].position.y
-      value: -0.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
-        type: 2}
-      propertyPath: spawnPoints.Array.data[2].position.z
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
-        type: 2}
-      propertyPath: spawnPoints.Array.data[3].type
-      value: guila
-      objectReference: {fileID: 0}
-    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
-        type: 2}
-      propertyPath: spawnPoints.Array.data[3].position.x
-      value: -62.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
-        type: 2}
-      propertyPath: spawnPoints.Array.data[3].position.y
-      value: -0.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
-        type: 2}
-      propertyPath: spawnPoints.Array.data[3].position.z
-      value: -24
-      objectReference: {fileID: 0}
-    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
-        type: 2}
-      propertyPath: spawnPoints.Array.data[4].type
-      value: karkadan
-      objectReference: {fileID: 0}
-    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
-        type: 2}
-      propertyPath: spawnPoints.Array.data[4].position.x
-      value: -33
-      objectReference: {fileID: 0}
-    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
-        type: 2}
-      propertyPath: spawnPoints.Array.data[4].position.y
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
+      propertyPath: spawnPoints.Array.data[2].position.z
+      value: 59.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[3].type
+      value: karkadan
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[3].position.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[3].position.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[3].position.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[4].type
+      value: snek
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[4].position.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[4].position.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
       propertyPath: spawnPoints.Array.data[4].position.z
-      value: 24.6
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
@@ -568,22 +568,22 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[1].type
-      value: guila
+      value: snek
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[1].position.x
-      value: 31.4
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[1].position.y
-      value: -0.99
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[1].position.z
-      value: -27.7
+      value: 59.2
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
@@ -593,12 +593,12 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[3].config
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[4].config
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
@@ -608,7 +608,7 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[5].config
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
@@ -618,7 +618,7 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[5].position.z
-      value: 90
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
@@ -638,6 +638,21 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.data[6].position.z
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[7].type
+      value: snek
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[7].config
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[7].position.z
       value: -100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
