@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: 9136cde53552a4465ac93482d1b39724
+timeCreated: 1495119491
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: asa1
+    100002: asa10
+    100004: asa11
+    100006: asa2
+    100008: asa3
+    100010: asa4
+    100012: asa5
+    100014: asa6
+    100016: asa7
+    100018: asa8
+    100020: asa9
+    100022: cabe_a
+    100024: calda1
+    100026: calda2
+    100028: calda3
+    100030: calda4
+    100032: calda5
+    100034: calda6
+    100036: calda7
+    100038: mandibula
+    100040: PERNA4
+    100042: PERNA7
+    100044: PERNA_3
+    100046: PERNA_5
+    100048: //RootNode
+    100050: tronco2_001
+    100052: tronco3
+    100054: tronco4
+    100056: tronco5
+    400000: asa1
+    400002: asa10
+    400004: asa11
+    400006: asa2
+    400008: asa3
+    400010: asa4
+    400012: asa5
+    400014: asa6
+    400016: asa7
+    400018: asa8
+    400020: asa9
+    400022: cabe_a
+    400024: calda1
+    400026: calda2
+    400028: calda3
+    400030: calda4
+    400032: calda5
+    400034: calda6
+    400036: calda7
+    400038: mandibula
+    400040: PERNA4
+    400042: PERNA7
+    400044: PERNA_3
+    400046: PERNA_5
+    400048: //RootNode
+    400050: tronco2_001
+    400052: tronco3
+    400054: tronco4
+    400056: tronco5
+    2300000: asa1
+    2300002: asa10
+    2300004: asa11
+    2300006: asa2
+    2300008: asa3
+    2300010: asa4
+    2300012: asa5
+    2300014: asa6
+    2300016: asa7
+    2300018: asa8
+    2300020: asa9
+    2300022: cabe_a
+    2300024: calda1
+    2300026: calda2
+    2300028: calda3
+    2300030: calda4
+    2300032: calda5
+    2300034: calda6
+    2300036: calda7
+    2300038: mandibula
+    2300040: PERNA4
+    2300042: PERNA7
+    2300044: PERNA_3
+    2300046: PERNA_5
+    2300048: tronco2_001
+    2300050: tronco3
+    2300052: tronco4
+    2300054: tronco5
+    2300056: //RootNode
+    3300000: asa1
+    3300002: asa10
+    3300004: asa11
+    3300006: asa2
+    3300008: asa3
+    3300010: asa4
+    3300012: asa5
+    3300014: asa6
+    3300016: asa7
+    3300018: asa8
+    3300020: asa9
+    3300022: cabe_a
+    3300024: calda1
+    3300026: calda2
+    3300028: calda3
+    3300030: calda4
+    3300032: calda5
+    3300034: calda6
+    3300036: calda7
+    3300038: mandibula
+    3300040: PERNA4
+    3300042: PERNA7
+    3300044: PERNA_3
+    3300046: PERNA_5
+    3300048: tronco2_001
+    3300050: tronco3
+    3300052: tronco4
+    3300054: tronco5
+    3300056: //RootNode
+    4300000: asa11
+    4300002: asa10
+    4300004: asa9
+    4300006: asa8
+    4300008: asa7
+    4300010: asa6
+    4300012: asa5
+    4300014: asa4
+    4300016: asa3
+    4300018: asa2
+    4300020: asa1
+    4300022: calda7
+    4300024: PERNA7
+    4300026: PERNA_5
+    4300028: PERNA4
+    4300030: PERNA_3
+    4300032: tronco3
+    4300034: mandibula
+    4300036: calda6
+    4300038: calda5
+    4300040: calda4
+    4300042: calda3
+    4300044: calda2
+    4300046: calda1
+    4300048: tronco2_001
+    4300050: cabe_a
+    4300052: tronco5
+    4300054: tronco4
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
