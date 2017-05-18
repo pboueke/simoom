@@ -48,22 +48,22 @@ public class ScorpioShooting : MonoBehaviour {
 
 	private void AugmentShot(Rigidbody shotInstance) {
 		shotInstance.transform.localScale *= 2;
-		shotInstance.velocity *= 0.5f;
+		shotInstance.velocity *= 0.8f;
 		ScorpioVenom venom = shotInstance.GetComponent("ScorpioVenom") as ScorpioVenom;
-		venom._damage *= 10;
+		venom._damage *= 2;
 	}
 
 	public void ReceiveDeathAlert() {
-		_aggroLevel += 1;
-        if (_aggroLevel == 2) {
-            _timeBetweenShots /= 4;
+		_aggroLevel++;
+        if (_aggroLevel > 2 && _aggroLevel < 6) {
+            _timeBetweenShots /= 2;
         }
 	}
 
     private void Fire() {
         _timer = 0f;
 
-        if (_aggroLevel == 2) ShootFrenzy();
+        if (_aggroLevel >= 2) ShootFrenzy();
         else {
             _shotCount++;
             if (_shotCount == 10) {
@@ -106,8 +106,11 @@ public class ScorpioShooting : MonoBehaviour {
             velocity = Quaternion.AngleAxis(angle+_lastAngle, Vector3.up) * velocity;
             shotInstance.velocity = _shotVelocity * velocity;
         }
-        if (_shotCount == 4) {
+        if (_shotCount == 7) {
             ShootRegular(_boss, 0);
+            ShootRegular(_boss, Random.Range(-15f, 15f));
+            ShootRegular(_boss, Random.Range(-15f, 15f));
+            ShootRegular(_boss, Random.Range(-15f, 15f));
             ShootRegular(_boss, Random.Range(-15f, 15f));
             _shotCount = 0;
         }
