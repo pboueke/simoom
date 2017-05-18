@@ -301,8 +301,8 @@ MonoBehaviour:
   forwardChasingRange: 40
   shotBody: {fileID: 54874463077590546, guid: 6b26a6df72c93cf4c9ebfdbc75979daa, type: 2}
   firePointTransform: {fileID: 4445220743975348}
-  shotVelocity: 50
-  intervalBetweenShots: 1
+  shotVelocity: 55
+  intervalBetweenShots: 2
   lastTargetSetTime: 0
   targetSetInterval: 0.2
   lastShotTime: 0

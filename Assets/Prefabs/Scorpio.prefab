@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138d0c2a4a41c2940b3f3534a97c9ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _securityRadius: 40
+  _securityRadius: 30
   _visionRadius: 100
 --- !u!114 &114950623203553922
 MonoBehaviour:
@@ -1467,7 +1467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shot: {fileID: 54844617648907134, guid: 1e80a933d4166624cb924e4c6c3739c8, type: 2}
   _fireTransform: {fileID: 4802371427085814}
-  _shotVelocity: 30
+  _shotVelocity: 50
   _timeBetweenShots: 0.5
   _boss: 0
 --- !u!114 &114993580102129648
@@ -1481,9 +1481,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3e9258daca1a247a85869baddc8073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingHealth: 10
+  _startingHealth: 15
   _deathParticles: {fileID: 198027949653214268}
   rend: {fileID: 137854826990768838}
+  _currentHealth: 0
+  _dead: 0
 --- !u!137 &137854826990768838
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

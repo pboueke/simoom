@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScorpioManager : MonoBehaviour {
 	
-	public float _bossMultiplier = 5;
+	public float _bossMultiplier = 3;
 	public GameObject _enemyPrefab;
 
 	[HideInInspector]
@@ -16,8 +16,6 @@ public class ScorpioManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		_scorpios = new List<GameObject> ();
-		_scorpio_bosses = new List<GameObject> ();
 		_em = this.transform.parent.GetComponent<EnemyManager> ();
 	}
 
@@ -26,7 +24,7 @@ public class ScorpioManager : MonoBehaviour {
 	/// In this case, any alive boss instance and the enemy manager.
 	/// </summary>
 	void AlertDeath(int experienceGained) {
-		foreach (GameObject boss in _scorpio_bosses) {
+        foreach (GameObject boss in _scorpio_bosses) {
 			if (boss == null)
 				continue; //boss is dead
 			ScorpioShooting ss = boss.GetComponent<ScorpioShooting>();
@@ -68,14 +66,13 @@ public class ScorpioManager : MonoBehaviour {
 	/// <param name="enemyNumber"> Number of enemies to be created.</param>
 	/// <param name="bossNumber"> Number of the enemies to be converted to a boss.</param>
 	public void Spawn(Vector3 spawnPoint, int enemyNumber, int bossNumber) {
-
 		for (int i = 0; i < enemyNumber; i++) {
 			Vector3 position = spawnPoint + new Vector3((i-1)*3, 0, 0);
 			GameObject instance = MakeEnemy(position);
 			instance.transform.parent = this.transform;
 
 			if (i < bossNumber) {
-				_scorpio_bosses.Add (instance);
+                _scorpio_bosses.Add (instance);
 				MakeBoss (instance);
 			} else {
 				_scorpios.Add (instance);

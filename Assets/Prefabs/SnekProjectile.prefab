@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 1085217547830748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.974812, y: 0.49999848, z: 12.772177}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4995582233379806}
   m_Father: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explosionParticles: {fileID: 198950265852018020}
-  _damage: 2
+  _damage: 0.5
   _maxLifeTime: 5
 --- !u!114 &114388511603040646
 MonoBehaviour:
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explosionParticles: {fileID: 198950265852018020}
-  _damage: 5
+  _damage: 2
   _maxLifeTime: 2
 --- !u!135 &135962874827307924
 SphereCollider:
