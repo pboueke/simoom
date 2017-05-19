@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3e9258daca1a247a85869baddc8073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingHealth: 7
+  _startingHealth: 12
   _deathParticles: {fileID: 198917064680649002}
   rend: {fileID: 137289127777670332}
   _currentHealth: 0
