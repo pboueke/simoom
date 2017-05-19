@@ -53,8 +53,8 @@ public class ScorpioShooting : MonoBehaviour {
 		venom._damage *= 2;
 	}
 
-	public void ReceiveDeathAlert() {
-		_aggroLevel++;
+	public void ReceiveDeathAlert(int dead) {
+		_aggroLevel = dead;
         if (_aggroLevel > 2 && _aggroLevel < 6) {
             _timeBetweenShots /= 2;
         }
