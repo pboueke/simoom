@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 23712026476992592}
   - component: {fileID: 95645191033142320}
   - component: {fileID: 65879812006310938}
-  m_Layer: 0
+  - component: {fileID: 208038143856041390}
+  m_Layer: 13
   m_Name: arbusto1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,3 +111,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!208 &208038143856041390
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068819185396378}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.6330001, y: 2.5730002, z: 2.532}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.39200002, y: 1.9930001, z: 2.312}
+  m_TimeToStationary: 0.5

@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 23279451119555432}
   - component: {fileID: 95468910299790624}
   - component: {fileID: 65638013902821486}
-  m_Layer: 0
+  - component: {fileID: 208305421279490264}
+  m_Layer: 13
   m_Name: pedra3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,3 +111,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!208 &208305421279490264
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090295499826162}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.542, y: 1.718, z: 1.534}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.063, y: -0.054, z: 1.2}
+  m_TimeToStationary: 0.5

@@ -360,7 +360,9 @@ GameObject:
   - component: {fileID: 114502392263905886}
   - component: {fileID: 114796926411144156}
   - component: {fileID: 114436102410192680}
-  - component: {fileID: 114187492082666814}
+  - component: {fileID: 208401371768672126}
+  - component: {fileID: 114797806750002472}
+  - component: {fileID: 114708904056747770}
   m_Layer: 8
   m_Name: Carpet
   m_TagString: Player
@@ -907,18 +909,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114187492082666814
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690501558085298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bf82cd75085a824b95736d01b1aaa73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelMultiplier: 1
 --- !u!114 &114324524857496372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -962,6 +952,20 @@ MonoBehaviour:
   _fillImage: {fileID: 0}
   _fullHealthColor: {r: 1, g: 0, b: 0, a: 1}
   _zeroHealthColor: {r: 0.41176468, g: 0, b: 0, a: 1}
+--- !u!114 &114708904056747770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690501558085298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf82cd75085a824b95736d01b1aaa73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _xp: 0
+  playerLevelDisplay: {fileID: 0}
+  playerXpCircle: {fileID: 0}
 --- !u!114 &114796926411144156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -978,6 +982,25 @@ MonoBehaviour:
   _fillImage: {fileID: 0}
   _fullWaterColor: {r: 0, g: 0.751724, b: 1, a: 1}
   _zeroWaterColor: {r: 0, g: 0.19842805, b: 0.31617647, a: 1}
+--- !u!114 &114797806750002472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690501558085298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2b5df8abe7d4eb2b6fa1abbf03bf94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startingDash: 200
+  _neededDash: 100
+  _dashCooldownTime: 2
+  _slider: {fileID: 0}
+  _fillImage: {fileID: 0}
+  _fullDashColor: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 1}
+  _emptyDashColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
+  _chargeDashColor: {r: 0.53676474, g: 0.53676474, b: 0.53676474, a: 1}
 --- !u!114 &114879704226493628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -992,8 +1015,6 @@ MonoBehaviour:
   _speed: 25
   _dashMultiplier: 10
   _dashDuration: 0.1
-  _dashLimit: 2
-  _dashCooldown: 2
 --- !u!135 &135559145652280024
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1138,3 +1159,18 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.010264993, y: -1.1880158, z: -0.0000017285347}
     m_Extent: {x: 2.6280713, y: 0.19823655, z: 1.6071231}
   m_DirtyAABB: 0
+--- !u!208 &208401371768672126
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690501558085298}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.65, y: 2.5, z: 2.6}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2, z: 0}
+  m_TimeToStationary: 0.5
