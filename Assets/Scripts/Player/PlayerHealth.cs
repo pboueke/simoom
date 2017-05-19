@@ -18,11 +18,11 @@ public class PlayerHealth : MonoBehaviour {
     // Use this for initialization
     private void Awake()
     {
+		_currentHealth = _startingHealth;
     }
 
     private void OnEnable()
     {
-        _currentHealth = _startingHealth;
         _dead = false;
 
         // Update the health slider's value and color.
