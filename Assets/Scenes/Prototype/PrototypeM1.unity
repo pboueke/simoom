@@ -2967,6 +2967,16 @@ Prefab:
       propertyPath: m_Center.z
       value: -0.18
       objectReference: {fileID: 0}
+    - target: {fileID: 114324524857496372, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: _shotVelocity
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114324524857496372, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: _timeBetweenShots
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d37d398a02f66124c97729b39126265f, type: 2}
   m_IsPrefabParent: 0
