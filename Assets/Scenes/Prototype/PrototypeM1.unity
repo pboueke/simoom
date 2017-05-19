@@ -1943,34 +1943,6 @@ MonoBehaviour:
   _eventManager: {fileID: 404382918}
   _gateManager: {fileID: 546461473}
   _arenaFloor: {fileID: 1264296081}
---- !u!1 &967568668
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 967568669}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &967568669
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 967568668}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 105.6, y: 0, z: 27.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &976786476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,7 +2878,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4298716970264624, guid: d37d398a02f66124c97729b39126265f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4298716970264624, guid: d37d398a02f66124c97729b39126265f, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2979,6 +2951,16 @@ Prefab:
     - target: {fileID: 4347268224130314, guid: d37d398a02f66124c97729b39126265f, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 65760612834706172, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 65760612834706172, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: m_Center.z
+      value: -0.18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d37d398a02f66124c97729b39126265f, type: 2}
