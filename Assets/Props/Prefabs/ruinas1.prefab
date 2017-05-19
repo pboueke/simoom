@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 23828515341305834}
   - component: {fileID: 95857952809576198}
   - component: {fileID: 65734735246049430}
-  m_Layer: 0
+  - component: {fileID: 208916411850571414}
+  m_Layer: 13
   m_Name: ruinas1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1514733858003586}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -10.499297, y: 0.0000018186337, z: -15.255808}
+  m_LocalPosition: {x: 6.4047046, y: 0.6529284, z: -3.718475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,3 +111,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!208 &208916411850571414
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514733858003586}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.5180001, y: 1.8720001, z: 3.344}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 2.4850001, y: 0.87200004, z: 2.6910002}
+  m_TimeToStationary: 0.5

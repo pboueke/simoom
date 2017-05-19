@@ -1809,7 +1809,7 @@ Transform:
   m_GameObject: {fileID: 1340140403}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.9}
   m_Children: []
   m_Father: {fileID: 966916710}
   m_RootOrder: 0
@@ -1825,8 +1825,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396147b6fde0e5549966e75585eaf2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  village_one: {fileID: 1123134729285926, guid: bf0541ebeb9c64604ac952ace6066d3e,
-    type: 2}
+  propList:
+  - name: arbusto
+    obj: {fileID: 1495112916225552, guid: 6bb54350479a742c1a9b79547ff75c05, type: 2}
+  - name: skull
+    obj: {fileID: 1877304270747582, guid: 07b8afb1937634c58914b5e9ce43b6ce, type: 2}
+  - name: arbusto1
+    obj: {fileID: 1068819185396378, guid: 5271d8ccc92f64fe1b868032cd29adba, type: 2}
+  - name: arbusto2
+    obj: {fileID: 1410130006248160, guid: 024b2512225c940bd965f7ebec4d0102, type: 2}
+  - name: bone
+    obj: {fileID: 1488439458417592, guid: 334fb1561053f4b30a40e98c4b5b88e5, type: 2}
+  - name: cactos
+    obj: {fileID: 1173269376138572, guid: 032500e7aab114025a2ec89ff9db7e6c, type: 2}
+  - name: obelisco1
+    obj: {fileID: 1256163339246232, guid: 988561eea9e2449cba4cec83dbb6acb1, type: 2}
+  - name: obelisco2
+    obj: {fileID: 1029272944038430, guid: 6a158f456887048a29bfbdb2f4ba5bb3, type: 2}
+  - name: pedra1
+    obj: {fileID: 1956753618869796, guid: d48e0a786f21d4f7183d052d1a48334e, type: 2}
+  - name: pedra2
+    obj: {fileID: 1697825743588378, guid: de940486ccc764332bfbe28daf374fc2, type: 2}
+  - name: pedra3
+    obj: {fileID: 1090295499826162, guid: 2a1c95b2226e74497be17bc60f81fe44, type: 2}
+  - name: pedra4
+    obj: {fileID: 1975166183782352, guid: da87e67bd203647b2abcb58c42d4a508, type: 2}
+  - name: rib
+    obj: {fileID: 1747986938561940, guid: afa03a5bc2d204b939e6f8bebe80e5fb, type: 2}
+  - name: ruinas1
+    obj: {fileID: 1514733858003586, guid: 7cb20c8ed166a4a958405feb3864e9c1, type: 2}
+  - name: ruinas2
+    obj: {fileID: 1010901772203794, guid: 047bd6ee604c1459e8ff76b8a384d0fd, type: 2}
 --- !u!1 &1362950926
 GameObject:
   m_ObjectHideFlags: 0

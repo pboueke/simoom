@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 23265650682809842}
   - component: {fileID: 95391058105102966}
   - component: {fileID: 65086667740676462}
-  m_Layer: 0
+  - component: {fileID: 208353200918371422}
+  m_Layer: 13
   m_Name: pedra4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1975166183782352}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 16.330193, y: 0.00000029078888, z: -2.4393144}
+  m_LocalPosition: {x: 12.942956, y: 0.5941487, z: -5.4951825}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,3 +111,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!208 &208353200918371422
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1975166183782352}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.328, y: 2.3730001, z: 2.236}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.125, y: -0.19900002, z: 1.6420001}
+  m_TimeToStationary: 0.5

@@ -12,6 +12,7 @@ public struct enemySpawn {
 [System.Serializable]
 public struct propPosition {
 	public string type;
+	public bool randomRotation;
 	public Vector3 position;
 }
 
