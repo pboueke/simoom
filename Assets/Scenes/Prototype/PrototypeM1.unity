@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 315348060}
   - component: {fileID: 315348059}
   m_Layer: 5
-  m_Name: Cursor
+  m_Name: AimCursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3193,8 +3193,6 @@ MonoBehaviour:
   _bossMultiplier: 5
   _enemyPrefab: {fileID: 1791108407314920, guid: 0a22636642e0f054eb50ba3184d3ed7b,
     type: 2}
-  _scorpios: []
-  _scorpio_bosses: []
 --- !u!4 &1704201845
 Transform:
   m_ObjectHideFlags: 0
