@@ -24,7 +24,6 @@ public class GreenMagicHit: MonoBehaviour {
         if (health) {
 			health.TakeDamage(_damage, transform.position.normalized);
         }
-			        
         //detach particle system from power
         _explosionParticles.transform.parent = null;
         //play particle animation
