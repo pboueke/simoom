@@ -32,9 +32,14 @@ public class GateController : MonoBehaviour {
 	}
 
 	void doTransition () {
+		
 
 		GameObject player = GameObject.Find(playerObjectName);
 		GameObject camera = GameObject.Find ("Main Camera");
+		GameObject aim = GameObject.Find ("AimCursor");
+
+		// disable aim
+		aim.SetActive(false);
 
 		// new position, as if the camera is following the player direction moving away from the arena
 		Vector3 newPos = transform.position * 3;
