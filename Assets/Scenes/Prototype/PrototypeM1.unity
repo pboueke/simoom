@@ -1603,6 +1603,20 @@ MonoBehaviour:
     obj: {fileID: 1587270255258246, guid: c61c0e4485aeb7c43b6c7edd79a4dc41, type: 2}
   - name: casa3
     obj: {fileID: 1339233127785092, guid: bd12ff92f1a0db54c8295e453d2db479, type: 2}
+  - name: bushcomb1
+    obj: {fileID: 1444246074196862, guid: 687fbe96f7eebd54bba4adcbaf677638, type: 2}
+  - name: bushcomb2
+    obj: {fileID: 1677673484495428, guid: 0f8f0c6c7be686d408f10c9b98418b72, type: 2}
+  - name: bushcomb3
+    obj: {fileID: 1081699684315938, guid: 1b5cf5364e1236f41a387b91428b4db3, type: 2}
+  - name: sinking_vila1
+    obj: {fileID: 1182276091551728, guid: 076dc631833a9694aaa3a8a704cec7a6, type: 2}
+  - name: vila1
+    obj: {fileID: 1415045837928146, guid: ca1d7beddf9f8184a8f66e16e61805f2, type: 2}
+  - name: vila2
+    obj: {fileID: 1943096159022568, guid: 68f2bcb7f44eb8c4b9c702d72bddee0f, type: 2}
+  - name: vila3
+    obj: {fileID: 1233177555491934, guid: 7d54c4a7d42d3d049a395a77359e6529, type: 2}
 --- !u!1 &1362950926
 GameObject:
   m_ObjectHideFlags: 0

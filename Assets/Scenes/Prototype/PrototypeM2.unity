@@ -462,6 +462,97 @@ Transform:
   m_PrefabParentObject: {fileID: 4928579801753314, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
     type: 2}
   m_PrefabInternal: {fileID: 169364868}
+--- !u!1 &863691938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 863691939}
+  - component: {fileID: 863691940}
+  m_Layer: 0
+  m_Name: PropManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &863691939
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 863691938}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.9}
+  m_Children: []
+  m_Father: {fileID: 966916710}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &863691940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 863691938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396147b6fde0e5549966e75585eaf2ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propList:
+  - name: arbusto
+    obj: {fileID: 1495112916225552, guid: 6bb54350479a742c1a9b79547ff75c05, type: 2}
+  - name: skull
+    obj: {fileID: 1877304270747582, guid: 07b8afb1937634c58914b5e9ce43b6ce, type: 2}
+  - name: arbusto1
+    obj: {fileID: 1068819185396378, guid: 5271d8ccc92f64fe1b868032cd29adba, type: 2}
+  - name: arbusto2
+    obj: {fileID: 1410130006248160, guid: 024b2512225c940bd965f7ebec4d0102, type: 2}
+  - name: bone
+    obj: {fileID: 1488439458417592, guid: 334fb1561053f4b30a40e98c4b5b88e5, type: 2}
+  - name: cactos
+    obj: {fileID: 1173269376138572, guid: 032500e7aab114025a2ec89ff9db7e6c, type: 2}
+  - name: obelisco1
+    obj: {fileID: 1256163339246232, guid: 988561eea9e2449cba4cec83dbb6acb1, type: 2}
+  - name: obelisco2
+    obj: {fileID: 1029272944038430, guid: 6a158f456887048a29bfbdb2f4ba5bb3, type: 2}
+  - name: pedra1
+    obj: {fileID: 1956753618869796, guid: d48e0a786f21d4f7183d052d1a48334e, type: 2}
+  - name: pedra2
+    obj: {fileID: 1697825743588378, guid: de940486ccc764332bfbe28daf374fc2, type: 2}
+  - name: pedra3
+    obj: {fileID: 1090295499826162, guid: 2a1c95b2226e74497be17bc60f81fe44, type: 2}
+  - name: pedra4
+    obj: {fileID: 1975166183782352, guid: da87e67bd203647b2abcb58c42d4a508, type: 2}
+  - name: rib
+    obj: {fileID: 1747986938561940, guid: afa03a5bc2d204b939e6f8bebe80e5fb, type: 2}
+  - name: ruinas1
+    obj: {fileID: 1514733858003586, guid: 7cb20c8ed166a4a958405feb3864e9c1, type: 2}
+  - name: ruinas2
+    obj: {fileID: 1010901772203794, guid: 047bd6ee604c1459e8ff76b8a384d0fd, type: 2}
+  - name: casa1
+    obj: {fileID: 1718389551144794, guid: b252d155b6872ac498571456bae38288, type: 2}
+  - name: casa2
+    obj: {fileID: 1587270255258246, guid: c61c0e4485aeb7c43b6c7edd79a4dc41, type: 2}
+  - name: casa3
+    obj: {fileID: 1339233127785092, guid: bd12ff92f1a0db54c8295e453d2db479, type: 2}
+  - name: bushcomb1
+    obj: {fileID: 1444246074196862, guid: 687fbe96f7eebd54bba4adcbaf677638, type: 2}
+  - name: bushcomb2
+    obj: {fileID: 1677673484495428, guid: 0f8f0c6c7be686d408f10c9b98418b72, type: 2}
+  - name: bushcomb3
+    obj: {fileID: 1081699684315938, guid: 1b5cf5364e1236f41a387b91428b4db3, type: 2}
+  - name: sinking_vila1
+    obj: {fileID: 1182276091551728, guid: 076dc631833a9694aaa3a8a704cec7a6, type: 2}
+  - name: vila1
+    obj: {fileID: 1415045837928146, guid: ca1d7beddf9f8184a8f66e16e61805f2, type: 2}
+  - name: vila2
+    obj: {fileID: 1943096159022568, guid: 68f2bcb7f44eb8c4b9c702d72bddee0f, type: 2}
+  - name: vila3
+    obj: {fileID: 1233177555491934, guid: 7d54c4a7d42d3d049a395a77359e6529, type: 2}
 --- !u!1 &943958393
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +597,9 @@ MonoBehaviour:
   playerObjectName: Carpet
   _config: {fileID: 679162887}
   scorpios: {fileID: 1704201844}
+  guilas: {fileID: 0}
+  karkadans: {fileID: 0}
+  sneks: {fileID: 0}
 --- !u!1 &966916709
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +626,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1340140404}
+  - {fileID: 863691939}
   - {fileID: 404382917}
   - {fileID: 546461472}
   m_Father: {fileID: 404788649}
@@ -550,7 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _config: {fileID: 679162887}
-  _propManager: {fileID: 1340140405}
+  _propManager: {fileID: 863691940}
   _eventManager: {fileID: 404382918}
   _gateManager: {fileID: 546461473}
   _arenaFloor: {fileID: 1264296081}
@@ -572,48 +666,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 58a449101267bc343870c15dbef3b76a, type: 3}
---- !u!1 &1340140403
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1340140404}
-  - component: {fileID: 1340140405}
-  m_Layer: 0
-  m_Name: PropManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1340140404
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1340140403}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 966916710}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1340140405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1340140403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 396147b6fde0e5549966e75585eaf2ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  village_one: {fileID: 1123134729285926, guid: bf0541ebeb9c64604ac952ace6066d3e,
-    type: 2}
 --- !u!1001 &1628997691
 Prefab:
   m_ObjectHideFlags: 0
