@@ -2,15 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class ScorpioGroup {
+    public List<GameObject> _scorpios;
+    public List<GameObject> _bosses;
+
+    public ScorpioGroup() {
+        _scorpios = new List<GameObject>();
+        _bosses = new List<GameObject>();
+    }
+}
+
 public class ScorpioManager : MonoBehaviour {
 	
 	public float _bossMultiplier = 3;
 	public GameObject _enemyPrefab;
 
 	[HideInInspector]
-	public List<GameObject> _scorpios;
-	[HideInInspector]
-	public List<GameObject> _scorpio_bosses;
+    public List<ScorpioGroup> _groups = new List<ScorpioGroup>();
 
 	private EnemyManager _em;
 
@@ -24,12 +32,15 @@ public class ScorpioManager : MonoBehaviour {
 	/// In this case, any alive boss instance and the enemy manager.
 	/// </summary>
 	void AlertDeath(int experienceGained) {
-        foreach (GameObject boss in _scorpio_bosses) {
-			if (boss == null)
-				continue; //boss is dead
-			ScorpioShooting ss = boss.GetComponent<ScorpioShooting>();
-			ss.ReceiveDeathAlert();
-		}
+        foreach (ScorpioGroup sg in _groups) {
+            int dead = 0;
+            foreach (GameObject s in sg._scorpios) if (s == null) dead++;
+            foreach (GameObject b in sg._bosses) {
+                if (b == null) continue;
+                ScorpioShooting ss = b.GetComponent<ScorpioShooting>();
+                ss.ReceiveDeathAlert(dead);
+            }
+        }
 
 		// sends message to the nemey manager
 		_em.AlertDeath(experienceGained);
@@ -66,17 +77,19 @@ public class ScorpioManager : MonoBehaviour {
 	/// <param name="enemyNumber"> Number of enemies to be created.</param>
 	/// <param name="bossNumber"> Number of the enemies to be converted to a boss.</param>
 	public void Spawn(Vector3 spawnPoint, int enemyNumber, int bossNumber) {
+        ScorpioGroup enemyGroup = new ScorpioGroup();
 		for (int i = 0; i < enemyNumber; i++) {
 			Vector3 position = spawnPoint + new Vector3((i-1)*3, 0, 0);
 			GameObject instance = MakeEnemy(position);
 			instance.transform.parent = this.transform;
 
 			if (i < bossNumber) {
-                _scorpio_bosses.Add (instance);
+                enemyGroup._bosses.Add (instance);
 				MakeBoss (instance);
 			} else {
-				_scorpios.Add (instance);
+				enemyGroup._scorpios.Add (instance);
 			}
 		}
+        _groups.Add(enemyGroup);
 	}
 }
