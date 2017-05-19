@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4928579801753314}
   - component: {fileID: 114273687592528846}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: ArenaConfiguration_PrototypeM1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,35 +51,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ae2640f1c3af14ca7f757d05cf7a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arenaDiscScale: 140
+  arenaDiscScale: 120
   gatePoints:
   - type: out
     scene: PrototypeM2
-    angle: 0
+    angle: 135
   spawnPoints:
   - type: scorpio
-    config: 2 1
-    position: {x: 62, y: 0.5, z: 59.2}
+    config: 2 2
+    position: {x: 104.6, y: 0.5, z: 60}
+  - type: scorpio
+    config: 3 1
+    position: {x: 1.1, y: 0.5, z: 119.3}
   - type: snek
     config: 1
-    position: {x: 30, y: 0.5, z: 59.2}
+    position: {x: -18.8, y: 0.5, z: -96.2}
   - type: snek
     config: 1
-    position: {x: -10, y: 0.5, z: 59.2}
-  - type: karkadan
+    position: {x: -52.1, y: 0.5, z: -96.2}
+  - type: snek
     config: 1
-    position: {x: -10, y: 0.5, z: -10}
-  propPoints:
-  - type: casa1
-    randomRotation: 0
-    position: {x: 65.4, y: 4, z: 4.001154}
-  - type: casa2
-    randomRotation: 0
-    position: {x: -50.5, y: 4, z: 58.2}
-  - type: casa3
-    randomRotation: 0
-    position: {x: -49.8, y: 4, z: -59.5}
+    position: {x: -32.2, y: 0.5, z: -67}
+  - type: snek
+    config: 1
+    position: {x: -76.4, y: 0.5, z: -67}
+  - type: snek
+    config: 1
+    position: {x: -59.6, y: -19.6, z: -37.1}
+  - type: snek
+    config: 1
+    position: {x: -104.5, y: -19.6, z: 19}
+  - type: guila
+    config: 1
+    position: {x: -46.7, y: 0.5, z: 52.1}
+  - type: guila
+    config: 1
+    position: {x: 38.5, y: 0.5, z: -88.9}
+  - type: guila
+    config: 
+    position: {x: 82.4, y: 0.5, z: -65.3}
+  propPoints: []
   eventPoints:
   - type: oasis
     config: 
-    position: {x: -10.41857, y: -0.03, z: 6.629265}
+    position: {x: -65.6, y: 0, z: 64.8}

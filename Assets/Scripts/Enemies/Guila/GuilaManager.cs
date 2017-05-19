@@ -24,7 +24,8 @@ public class GuilaManager : MonoBehaviour {
 
 	GameObject MakeEnemy(Vector3 position) {
 		Quaternion randomQuar = Quaternion.Euler (0, Random.Range (0, 360), 0);
-		return Instantiate(_enemyPrefab, position, randomQuar);
+		Vector3 positionAdjustment = new Vector3 (0, -1.5f, 0);
+		return Instantiate(_enemyPrefab, position + positionAdjustment, randomQuar);
 	}
 
 	public void Spawn(Vector3 spawnPoint) {
