@@ -215,7 +215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &120793159
 GameObject:
@@ -368,6 +368,11 @@ Prefab:
         type: 2}
       propertyPath: gatePoints.Array.data[0].type
       value: out
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53, type: 2}
@@ -558,12 +563,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &483333707 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114502392263905886, guid: d37d398a02f66124c97729b39126265f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1571003189}
-  m_Script: {fileID: 11500000, guid: 9eb780c8146a66e45abaacdd684dfbfb, type: 3}
 --- !u!4 &483333713 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4298716970264624, guid: d37d398a02f66124c97729b39126265f,
@@ -848,10 +847,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 868d60b52c5484e4299dd44bd0709bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerHealth: {fileID: 483333707}
-  _playerLevel: {fileID: 303231682}
+  playerObjectName: Carpet
   _config: {fileID: 679162887}
   scorpios: {fileID: 1704201844}
+  guilas: {fileID: 0}
+  karkadans: {fileID: 0}
+  sneks: {fileID: 0}
 --- !u!1 &966916709
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +898,7 @@ MonoBehaviour:
   _config: {fileID: 679162887}
   _propManager: {fileID: 1340140405}
   _eventManager: {fileID: 404382918}
+  _gateManager: {fileID: 0}
   _arenaFloor: {fileID: 1264296081}
 --- !u!1 &996742797
 GameObject:
@@ -1092,8 +1094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396147b6fde0e5549966e75585eaf2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  village_one: {fileID: 1123134729285926, guid: bf0541ebeb9c64604ac952ace6066d3e,
-    type: 2}
+  propList: []
 --- !u!1 &1365027800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,6 +1196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 483333713}
   _smoothing: 5
+  _following: 1
+  playerObjectName: Carpet
 --- !u!1 &1468315740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,8 +1614,6 @@ MonoBehaviour:
   _bossMultiplier: 5
   _enemyPrefab: {fileID: 1791108407314920, guid: 0a22636642e0f054eb50ba3184d3ed7b,
     type: 2}
-  _scorpios: []
-  _scorpio_bosses: []
 --- !u!4 &1704201845
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,7 +1802,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4770598377366278, guid: 19fcfb87707373a46b47ade52f688589, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19fcfb87707373a46b47ade52f688589, type: 2}

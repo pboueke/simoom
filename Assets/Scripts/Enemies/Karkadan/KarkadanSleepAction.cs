@@ -12,9 +12,11 @@ public class KarkadanSleepAction : Action {
 
 	private void Sleep (StateController controller)
 	{
-		// Show sleep signal
-		// or do whatever sleepy karkadans do
-	}
+        // Show sleep signal
+        // or do whatever sleepy karkadans do
+        KarkadanBehaviour kb = controller.gameObject.GetComponent<KarkadanBehaviour>();
+        kb.Sleep();
+    }
 
 
 }

@@ -19,13 +19,15 @@ public class KarkadanBehaviour : MonoBehaviour {
 	[HideInInspector] public GameObject target;
 
 	private NavMeshAgent _nav;
+    private Animator _anim;
 
 	// Use this for initialization
 	void Start () {
 		target = GameObject.Find (playerObjectName);
 		_nav = GetComponent<NavMeshAgent>();
 		_nav.enabled = false;
-		isCharging = false;
+        _anim = GetComponent<Animator>();
+        isCharging = false;
 		canSleep = false;
 		canDamage = false;
 	}
@@ -50,11 +52,16 @@ public class KarkadanBehaviour : MonoBehaviour {
 	public void Charge() {
 		canSleep = false;
 		isCharging = true;
+        _anim.SetBool("isCharging", true);
 		_nav.enabled = true;
 		_nav.Resume ();
 		StartCoroutine (EndChargeAfterSeconds (chargePeriodInSeconds));
 		StartCoroutine (ReenableCharging (chargePeriodInSeconds + chargeResetTimeInSeconds));
 	}
+
+    public void Sleep() {
+        _anim.SetBool("isCharging", false);
+    }
 
 	private IEnumerator EndChargeAfterSeconds(float seconds) {
 		yield return new WaitForSeconds (seconds);
