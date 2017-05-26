@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour {
 	// public for access of derived classes
 	[HideInInspector] public float _currentHealth;
 	[HideInInspector] public bool _dead;
+    [HideInInspector] public EnemySounds _sounds;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class EnemyHealth : MonoBehaviour {
         //_deathParticles = GetComponent<ParticleSystem> ();
 		//rend = GetComponent<Renderer>();
         _deathParticles.Pause();
+        _sounds = GetComponent<EnemySounds>();
     } 
 
     private void OnEnable() {
@@ -30,6 +32,7 @@ public class EnemyHealth : MonoBehaviour {
 
     public virtual void TakeDamage(float amount, Vector3 direction) {
         _currentHealth -= amount;
+        _sounds.Hurt();
 		updateHealthIndication ();
         if (_currentHealth <= 0f && !_dead) {
             OnDeath();

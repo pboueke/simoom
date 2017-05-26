@@ -18,8 +18,14 @@ public class GuilaBehaviour : MonoBehaviour {
 	[HideInInspector] public GameObject target;
 
 	private NavMeshAgent _nav;
+    private GuilaSounds _sounds;
 
-	public void Start () 
+    private void Awake()
+    {
+        _sounds = GetComponent<GuilaSounds>();
+    }
+
+    public void Start () 
 	{
 		lastBiteTime = Time.deltaTime;
 		target = GameObject.Find (playerObjectName);
@@ -35,8 +41,12 @@ public class GuilaBehaviour : MonoBehaviour {
 		Vector3 newPos = new Vector3 (transform.position.x, holeHeight, transform.position.z);
 		StartCoroutine (EmergeOverSeconds(emergeSeconds));
 		StartCoroutine (MoveOverSeconds(this.gameObject, newPos, emergeSeconds));
-
 	}
+
+    public void Bite()
+    {
+        _sounds.Bite();
+    }
 
 	private IEnumerator EmergeOverSeconds(float seconds) {
 		yield return new WaitForSeconds (seconds);

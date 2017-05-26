@@ -16,6 +16,13 @@ public class PlayerDash : MonoBehaviour {
     public Color _emptyDashColor = Color.black; // The color the dash bar will be when empty.
     public Color _chargeDashColor = Color.red;  // The color the dash bar will be when not available.
 
+    private PlayerSounds _sound;
+
+    private void Awake()
+    {
+        _sound = GetComponent<PlayerSounds>();
+    }
+
     // Update is called once per frame
     void Update ()
     {
@@ -47,6 +54,8 @@ public class PlayerDash : MonoBehaviour {
     public void Consume()
     {
         if (!_hasDash) return;
+
+        _sound.Dash();
 
         _currentDash = Mathf.Max(_currentDash - _neededDash, 0f);
 

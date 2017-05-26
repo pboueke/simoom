@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class KarkadanHealth : EnemyHealth {
 
-	public override void TakeDamage(float amount, Vector3 direction) {
+    [HideInInspector]
+    new KarkadanSounds _sounds;
+
+    private void Awake()
+    {
+        _sounds = GetComponent<KarkadanSounds>();
+    }
+
+    public override void TakeDamage(float amount, Vector3 direction) {
 
 		float damageMultiplier = 1;
+        bool hasHitShield = true;
 
 		// adds extra damage if the shot hit from behind
 		if (Vector3.Angle (direction, transform.forward) < 60) {
 			damageMultiplier = GetComponent<KarkadanBehaviour> ().backDamageMultiplier;
+            hasHitShield = false;
 		}
+
+        _sounds.Hurt(hasHitShield);
 			
 		_currentHealth -= amount * damageMultiplier;
 		updateHealthIndication ();

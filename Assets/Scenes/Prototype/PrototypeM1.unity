@@ -2905,36 +2905,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 22
       objectReference: {fileID: 0}
-    - target: {fileID: 114502392263905886, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: _slider
-      value: 
-      objectReference: {fileID: 552230728}
-    - target: {fileID: 114502392263905886, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: _fillImage
-      value: 
-      objectReference: {fileID: 1885405073}
-    - target: {fileID: 114796926411144156, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: _slider
-      value: 
-      objectReference: {fileID: 1634223858}
-    - target: {fileID: 114796926411144156, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: _fillImage
-      value: 
-      objectReference: {fileID: 2011557013}
-    - target: {fileID: 114797806750002472, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: _slider
-      value: 
-      objectReference: {fileID: 283280004}
-    - target: {fileID: 114797806750002472, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: _fillImage
-      value: 
-      objectReference: {fileID: 1394409078}
     - target: {fileID: 114708904056747770, guid: d37d398a02f66124c97729b39126265f,
         type: 2}
       propertyPath: playerLevelDisplay
@@ -2945,38 +2915,36 @@ Prefab:
       propertyPath: playerXpCircle
       value: 
       objectReference: {fileID: 1096813113}
-    - target: {fileID: 4883227194554656, guid: d37d398a02f66124c97729b39126265f, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4004096906087336, guid: d37d398a02f66124c97729b39126265f, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4347268224130314, guid: d37d398a02f66124c97729b39126265f, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 65760612834706172, guid: d37d398a02f66124c97729b39126265f,
+    - target: {fileID: 114797806750002472, guid: d37d398a02f66124c97729b39126265f,
         type: 2}
-      propertyPath: m_Size.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 65760612834706172, guid: d37d398a02f66124c97729b39126265f,
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 283280004}
+    - target: {fileID: 114797806750002472, guid: d37d398a02f66124c97729b39126265f,
         type: 2}
-      propertyPath: m_Center.z
-      value: -0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 114324524857496372, guid: d37d398a02f66124c97729b39126265f,
+      propertyPath: _fillImage
+      value: 
+      objectReference: {fileID: 1394409078}
+    - target: {fileID: 114796926411144156, guid: d37d398a02f66124c97729b39126265f,
         type: 2}
-      propertyPath: _shotVelocity
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114324524857496372, guid: d37d398a02f66124c97729b39126265f,
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 1634223858}
+    - target: {fileID: 114796926411144156, guid: d37d398a02f66124c97729b39126265f,
         type: 2}
-      propertyPath: _timeBetweenShots
-      value: 0.15
-      objectReference: {fileID: 0}
+      propertyPath: _fillImage
+      value: 
+      objectReference: {fileID: 2011557013}
+    - target: {fileID: 114502392263905886, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 552230728}
+    - target: {fileID: 114502392263905886, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: _fillImage
+      value: 
+      objectReference: {fileID: 1885405073}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d37d398a02f66124c97729b39126265f, type: 2}
   m_IsPrefabParent: 0

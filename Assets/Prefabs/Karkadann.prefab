@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 114325531127457888}
   - component: {fileID: 114529671712121968}
   - component: {fileID: 114901969750424354}
+  - component: {fileID: 82302802144690846}
+  - component: {fileID: 114357994455553684}
   m_Layer: 10
   m_Name: Karkadann
   m_TagString: Untagged
@@ -425,7 +427,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1570739160652806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.100674, y: 0.0000029739256, z: -24.9471}
+  m_LocalPosition: {x: 39.342167, y: 0.0000025165932, z: -21.110718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4069395694407472}
@@ -601,6 +603,122 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.2690268, y: 6.136447, z: 9.399695}
   m_Center: {x: 0, y: 2.8882232, z: 0}
+--- !u!82 &82302802144690846
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1570739160652806}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.6
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 100
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.01
+      value: 1
+      inSlope: -100.03984
+      outSlope: -100.03984
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.02
+      value: 0.5
+      inSlope: -25.00996
+      outSlope: -25.00996
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.04
+      value: 0.25
+      inSlope: -6.25249
+      outSlope: -6.25249
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.09535088
+      value: 0.102419354
+      inSlope: -1.5631225
+      outSlope: -1.5631225
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.16
+      value: 0.0625
+      inSlope: -0.39078063
+      outSlope: -0.39078063
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.32
+      value: 0.03125
+      inSlope: -0.09769516
+      outSlope: -0.09769516
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.64
+      value: 0.015625
+      inSlope: -0.02442379
+      outSlope: -0.02442379
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0.01
+      inSlope: -0.010003988
+      outSlope: -0.010003988
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.06666667
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95329948519005540
 Animator:
   serializedVersion: 3
@@ -650,6 +768,24 @@ MonoBehaviour:
   nextWayPoint: 0
   chaseTarget: {fileID: 0}
   stateTimeElapsed: 0
+--- !u!114 &114357994455553684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1570739160652806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d7ca04fb7730047857de0234226312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurt: {fileID: 0}
+  _source: {fileID: 0}
+  roars:
+  - {fileID: 8300000, guid: d381fc0f417ea7947a331ef5e208a336, type: 3}
+  - {fileID: 8300000, guid: 08e58b7f1b60dd14f80cd50e30996247, type: 3}
+  shieldHit: {fileID: 8300000, guid: 1780f7b9ae7c43b4eb9e2658f382ef98, type: 3}
+  skinHit: {fileID: 8300000, guid: 068f537c6e6c6d04e8bf5d292cdb4897, type: 3}
 --- !u!114 &114529671712121968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -700,6 +836,7 @@ MonoBehaviour:
   rend: {fileID: 137444636378186934}
   _currentHealth: 0
   _dead: 0
+  _sounds: {fileID: 0}
 --- !u!135 &135161068607861860
 SphereCollider:
   m_ObjectHideFlags: 1

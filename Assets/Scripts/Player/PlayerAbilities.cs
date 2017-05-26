@@ -10,10 +10,13 @@ public class PlayerAbilities : MonoBehaviour
     // Drinking to heal 
     public float _drinkingRate = 10.0f;
 
+    private PlayerSounds _sounds;
+
     void Awake()
     {
         _playerHealth = GetComponent<PlayerHealth>();
         _playerWater = GetComponent<PlayerWater>();
+        _sounds = GetComponent<PlayerSounds>();
 
 		DontDestroyOnLoad (this.gameObject);
     }
@@ -33,7 +36,13 @@ public class PlayerAbilities : MonoBehaviour
 
         if (isDrinking && !_playerHealth.isFull() && !_playerWater.isDry())
         {
-            _playerHealth.Heal(_playerWater.Drink(_drinkingRate*dTime));
+            _playerHealth.Heal(_playerWater.Drink(_drinkingRate * dTime));
         }
+        else
+        {
+            isDrinking = false;
+        }
+
+        _sounds.Drink(isDrinking);
     }
 }

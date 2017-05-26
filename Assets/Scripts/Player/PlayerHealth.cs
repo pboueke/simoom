@@ -13,12 +13,14 @@ public class PlayerHealth : MonoBehaviour {
     public Image _fillImage;                           // The image component of the slider.
     public Color _fullHealthColor = Color.green;       // The color the health bar will be when on full health.
     public Color _zeroHealthColor = Color.red;         // The color the health bar will be when on no health.
-        
+
+    private PlayerSounds _sound; 
 
     // Use this for initialization
     private void Awake()
     {
 		_currentHealth = _startingHealth;
+        _sound = GetComponent<PlayerSounds>();
     }
 
     private void OnEnable()
@@ -48,6 +50,7 @@ public class PlayerHealth : MonoBehaviour {
     public void TakeDamage(float amount)
     {
         _currentHealth -= amount;
+        _sound.Hurt();
 
         // Change the UI elements appropriately.
         SetHealthUI ();

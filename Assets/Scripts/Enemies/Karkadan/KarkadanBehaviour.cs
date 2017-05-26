@@ -20,6 +20,7 @@ public class KarkadanBehaviour : MonoBehaviour {
 
 	private NavMeshAgent _nav;
     private Animator _anim;
+    private KarkadanSounds _sounds;
 
 	// Use this for initialization
 	void Start () {
@@ -31,9 +32,14 @@ public class KarkadanBehaviour : MonoBehaviour {
 		canSleep = false;
 		canDamage = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Awake()
+    {
+        _sounds = GetComponent<KarkadanSounds>();
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
@@ -55,6 +61,7 @@ public class KarkadanBehaviour : MonoBehaviour {
         _anim.SetBool("isCharging", true);
 		_nav.enabled = true;
 		_nav.Resume ();
+        _sounds.Roar();
 		StartCoroutine (EndChargeAfterSeconds (chargePeriodInSeconds));
 		StartCoroutine (ReenableCharging (chargePeriodInSeconds + chargeResetTimeInSeconds));
 	}

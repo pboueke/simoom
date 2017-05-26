@@ -21,6 +21,7 @@ public class GuilaBite : Action {
 		if (gb.emerged && controller.navMeshAgent.remainingDistance < gb.distanceToBite &&
 			gb.lastBiteTime > gb.biteSecondsInterval) {
 			controller.navMeshAgent.updateRotation = true;
+            gb.Bite();
 			gb.lastBiteTime = 0;
 			gb.target.GetComponent<PlayerHealth> ().TakeDamage (gb.biteDamage);
 		}
