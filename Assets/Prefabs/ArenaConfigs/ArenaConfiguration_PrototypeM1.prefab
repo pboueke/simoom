@@ -52,35 +52,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arenaDiscScale: 120
+  arenaTime: 15
   gatePoints:
   - type: out
-    scene: PrototypeM2
+    scene: PrototypeM3
     angle: 135
   spawnPoints:
   - type: scorpio
-    config: 2 2
-    position: {x: 104.6, y: 0.5, z: 60}
+    config: 2 1
+    position: {x: 105.6, y: 0.5, z: 27.2}
   - type: scorpio
     config: 3 1
     position: {x: 1.1, y: 0.5, z: 119.3}
-  - type: snek
-    config: 1
-    position: {x: -18.8, y: 0.5, z: -96.2}
-  - type: snek
-    config: 1
-    position: {x: -52.1, y: 0.5, z: -96.2}
-  - type: snek
-    config: 1
-    position: {x: -32.2, y: 0.5, z: -67}
-  - type: snek
-    config: 1
-    position: {x: -76.4, y: 0.5, z: -67}
-  - type: snek
-    config: 1
-    position: {x: -59.6, y: -19.6, z: -37.1}
-  - type: snek
-    config: 1
-    position: {x: -104.5, y: -19.6, z: 19}
   - type: guila
     config: 1
     position: {x: -46.7, y: 0.5, z: 52.1}
@@ -88,8 +71,20 @@ MonoBehaviour:
     config: 1
     position: {x: 38.5, y: 0.5, z: -88.9}
   - type: guila
-    config: 
+    config: 1
     position: {x: 82.4, y: 0.5, z: -65.3}
+  - type: snek
+    config: 1
+    position: {x: -54.17349, y: 0.5, z: -92.2}
+  - type: snek
+    config: 1
+    position: {x: -70.2, y: -19.6, z: -60.1}
+  - type: snek
+    config: 1
+    position: {x: -98.7, y: -19.6, z: -18.2}
+  - type: snek
+    config: 1
+    position: {x: 31.7, y: 0.5, z: -94.7}
   propPoints: []
   eventPoints:
   - type: oasis

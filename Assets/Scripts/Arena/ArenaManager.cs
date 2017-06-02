@@ -10,6 +10,10 @@ public class ArenaManager : MonoBehaviour {
 	public GateManager _gateManager;
 	public GameObject _arenaFloor;
 
+	private float _remainingTime;
+	[HideInInspector] public float percentageTime;
+	private Sandstorm _sandstorm;
+
 	// Use this for initialization
 	void Start () {
 
@@ -20,5 +24,20 @@ public class ArenaManager : MonoBehaviour {
 		_propManager.SpawnAllProps (_config.propPoints);
 		_eventManager.SpawnAllEvents (_config.eventPoints);
 		_gateManager.SpawnAllGates (_config.gatePoints, _config.arenaDiscScale);
+
+		// reference main camera
+		_sandstorm = Camera.main.GetComponent<Sandstorm> ();
+
+		// set remaining time
+		_remainingTime = _config.arenaTime;
+		percentageTime = 1.0f;
+	}
+
+	void Update () {
+		// Countdown logic
+		_remainingTime -= Time.deltaTime;
+		percentageTime = _remainingTime / _config.arenaTime;
+		_sandstorm.vignetteRadius = Mathf.Lerp(-1.0f, 1.0f, percentageTime);
+
 	}
 }

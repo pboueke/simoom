@@ -33,6 +33,7 @@ public struct gatePosition {
 public class ArenaConfig : MonoBehaviour {
 
 	public float arenaDiscScale = 140f;
+	public float arenaTime = 240f;
 
 	// Currently:
 	// For each type of thing, there is a position where it must be located.
