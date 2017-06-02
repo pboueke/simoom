@@ -2426,6 +2426,7 @@ GameObject:
   - component: {fileID: 1365027802}
   - component: {fileID: 1365027801}
   - component: {fileID: 1365027806}
+  - component: {fileID: 1365027807}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2516,6 +2517,22 @@ MonoBehaviour:
   _smoothing: 5
   _following: 1
   playerObjectName: Carpet
+--- !u!114 &1365027807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365027800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1415c403e8a8bd848ac06552a9bb9b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipY: 0
+  vignetteRadius: 1
+  noiseScale: 11
+  sandstormColor: {r: 0.4044118, g: 0.24264708, b: 0, a: 0}
+  sandstormShader: {fileID: 4800000, guid: 989f6d37fe7c9b4409f527754d431cb2, type: 3}
 --- !u!1 &1375201964
 GameObject:
   m_ObjectHideFlags: 0

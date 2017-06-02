@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 1415c403e8a8bd848ac06552a9bb9b48
+timeCreated: 1496347050
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - sandstormShader: {fileID: 4800000, guid: 989f6d37fe7c9b4409f527754d431cb2, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
