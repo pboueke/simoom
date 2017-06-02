@@ -11,12 +11,20 @@ public class Sandstorm : UnityStandardAssets.ImageEffects.PostEffectsBase
     public bool flipY;
     [Range(-1.0f, 1.0f)]
     public float vignetteRadius;
-    [Range(1.0f, 512.0f)]
+    [Range(1.0f, 10.0f)]
     public float noiseScale;
     public Color sandstormColor;
+	[Range(-1.0f, 1.0f)]
+	public float windStrengthX;
+	[Range(-1.0f, 1.0f)]
+	public float windStrengthY;
+	[Range(0.01f, 2.0f)]
+	public float stormSpeed;
 
     public Shader sandstormShader = null;
     private Material sandstormMaterial = null;
+	private Vector2 stormDirection;
+	private float time = 0.0f;
 
 
     public override bool CheckResources()
@@ -31,6 +39,13 @@ public class Sandstorm : UnityStandardAssets.ImageEffects.PostEffectsBase
 
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
+		time += Time.deltaTime*stormSpeed;
+		//time = time % stormCycleDuration;
+
+		stormDirection.Set(windStrengthX, windStrengthY);
+		stormDirection.Normalize ();
+		stormDirection = stormDirection*time;
+
         if (CheckResources() == false)
         {
             Graphics.Blit(source, destination);
@@ -42,6 +57,7 @@ public class Sandstorm : UnityStandardAssets.ImageEffects.PostEffectsBase
         sandstormMaterial.SetFloat("vignetteRadius", vignetteRadius);
         sandstormMaterial.SetFloat("ns", noiseScale);
         sandstormMaterial.SetColor("sc", sandstormColor);
+		sandstormMaterial.SetVector("displace", stormDirection);
         Graphics.Blit(source, destination, sandstormMaterial);
     }
     

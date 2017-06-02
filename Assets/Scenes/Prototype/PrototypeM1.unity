@@ -2530,8 +2530,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flipY: 0
   vignetteRadius: 1
-  noiseScale: 11
+  noiseScale: 8.18
   sandstormColor: {r: 0.4044118, g: 0.24264708, b: 0, a: 0}
+  windStrengthX: -0.73
+  windStrengthY: 0.18
+  stormSpeed: 0.79
   sandstormShader: {fileID: 4800000, guid: 989f6d37fe7c9b4409f527754d431cb2, type: 3}
 --- !u!1 &1375201964
 GameObject:

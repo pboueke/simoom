@@ -43,11 +43,12 @@
 			float vignetteRadius;
 			float ns;
 			float4 sc;
+			float2 displace;
 
 			float distFromCenter(float2 pt)
 			{
 				pt = pt - float2(0.5, 0.5);
-				return sqrt(dot(pt, pt));
+				return dot(pt, pt);
 			}
 
 			float rand(float3 co)
@@ -125,9 +126,16 @@
 				float2 coords = i.uv;
 				//if (flipY > 0) coords.y = 1.0 - coords.y;
 
-				float d = distFromCenter(coords);
+				//calculate pixel distance from center of screen
+				float d = 2.0*distFromCenter(coords);
+				float interp = clamp(d-vignetteRadius, 0.0, 1.0);
+				interp = clamp(interp, 0.0, 1.0);
 
+				//get pixel value
 				fixed4 col = tex2D(_MainTex, coords);
+
+				// displace coordinates for sandstorm animation
+				coords = coords+displace;
 				// vignette the color with a texture
 				float2 unit = float2(1., 0.);
 				float tex = pnoise(coords*ns, float2(ns, ns));
@@ -145,7 +153,7 @@
 
 				tex = (tex + tex2)*.5;
 				tex = tex *
-					(
+					((
 					(
 						prand(float3(coords + unit.xy, 0.0), float3(1., 1., 1.)) +
 						prand(float3(coords - unit.xy, 0.0), float3(1., 1., 1.)) +
@@ -156,10 +164,11 @@
 						prand(float3(coords + unit.xy - unit.yx, 0.0), float3(1., 1., 1.)) +
 						prand(float3(coords - unit.xy - unit.yx, 0.0), float3(1., 1., 1.))
 						)
-						*0.125);
+						*0.125) + 0.40);
+				tex = clamp(tex, 0.0, 1.0);
 				//tex = 1.0 - tex;
 				/**/
-				col = lerp(col, fixed4(tex*col.rgb, 1.0)+sc, clamp(d-vignetteRadius, 0.0, 1.0));
+				col = lerp(col, fixed4(tex*col.rgb, 1.0)+sc, interp);
 				return col;
 			}
 			ENDCG
