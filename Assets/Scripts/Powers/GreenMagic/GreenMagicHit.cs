@@ -33,6 +33,14 @@ public class GreenMagicHit: MonoBehaviour {
         Destroy(_explosionParticles.gameObject, _explosionParticles.main.duration);
     }
 
+    public void powerUp(float amount) {
+        _damage += amount;
+    }
+
+    public void powerDown() {
+        _damage /= 2f;
+    }
+
     // Update is called once per frame
     void Update () {
 		

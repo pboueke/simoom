@@ -10,12 +10,27 @@ public class PlayerLevel : MonoBehaviour {
     public Text playerLevelDisplay;
     public Image playerXpCircle;
 
+    private PlayerShooting _playerShooting;
+
     // Use this for initialization
     void Start () {
         _xp = 0;
+        _playerShooting = GetComponent<PlayerShooting>();
 
         // starting lvl: 1
         addXp(1);
+    }
+
+    private void levelUp(int level)
+    {
+        if (level == 1) return;
+        if (level % 2 == 1) {
+            // Odd level up - increase power
+            _playerShooting.increasePower();
+        } else {
+            // Even level up - increase density
+            _playerShooting.increaseDensity();
+        }
     }
 
     /// <summary>
@@ -24,12 +39,19 @@ public class PlayerLevel : MonoBehaviour {
     /// <param name="experience"> The amount of e_xperience to be added.</param>
     public void addXp(int experience)
     {
-        _xp += experience;
-        // update UI
+        // control level up
         int currentLevel = getLevel();
-        int xpForCurrentLevel = getXpForLevel(currentLevel);
-        int xpForNextLevel = getXpForLevel(currentLevel + 1);
-        playerLevelDisplay.text = (currentLevel < 10) ? "0" + currentLevel.ToString() : currentLevel.ToString();
+        _xp += experience;
+        int newLevel = getLevel();
+        if (newLevel != currentLevel) {
+            for (int i = currentLevel; i < newLevel; i++) {
+                levelUp(i + 1);
+            }
+        }
+        // update UI
+        int xpForCurrentLevel = getXpForLevel(newLevel);
+        int xpForNextLevel = getXpForLevel(newLevel + 1);
+        playerLevelDisplay.text = (newLevel < 10) ? "0" + newLevel.ToString() : newLevel.ToString();
         playerXpCircle.fillAmount = (float)(_xp - xpForCurrentLevel) / (float)(xpForNextLevel - xpForCurrentLevel);
     }
 
