@@ -37,7 +37,6 @@ public class PlayerSounds : MonoBehaviour {
     public void Drink(bool isDrinkingNow) {
         if (isDrinkingNow && !isDrinking)
         {
-            print("Started drinking!");
             _source.clip = drink;
             _source.loop = true;
             _source.Play();
@@ -45,7 +44,6 @@ public class PlayerSounds : MonoBehaviour {
         }
         else if (!isDrinkingNow && isDrinking)
         {
-            print("Stopped drinking!");
             _source.Stop();
             _source.loop = false;
             isDrinking = false;

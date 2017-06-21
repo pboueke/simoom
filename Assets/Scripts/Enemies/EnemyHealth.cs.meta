@@ -1,10 +1,15 @@
 fileFormatVersion: 2
 guid: 4c3e9258daca1a247a85869baddc8073
-timeCreated: 1490465861
+timeCreated: 1498012745
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _deathParticles: {instanceID: 0}
+  - rend: {instanceID: 0}
+  - gateKeyGameObject: {fileID: 1089600984044102, guid: 0c33fcb5b0eb0644f887a804a101dad8,
+      type: 2}
+  - _sounds: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

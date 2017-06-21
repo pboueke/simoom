@@ -1536,6 +1536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _experienceValue: 1
+  hasKey: 0
 --- !u!114 &114864131491824092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1579,8 +1580,11 @@ MonoBehaviour:
   _startingHealth: 25
   _deathParticles: {fileID: 198027949653214268}
   rend: {fileID: 137854826990768838}
+  gateKeyGameObject: {fileID: 1089600984044102, guid: 0c33fcb5b0eb0644f887a804a101dad8,
+    type: 2}
   _currentHealth: 0
   _dead: 0
+  _sounds: {fileID: 0}
 --- !u!137 &137854826990768838
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

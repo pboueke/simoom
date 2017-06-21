@@ -5,11 +5,11 @@ using UnityEngine;
 public class KarkadanHealth : EnemyHealth {
 
     [HideInInspector]
-    new KarkadanSounds _sounds;
+    new KarkadanSounds _ksounds;
 
     private void Awake()
     {
-        _sounds = GetComponent<KarkadanSounds>();
+        _ksounds = GetComponent<KarkadanSounds>();
     }
 
     public override void TakeDamage(float amount, Vector3 direction) {
@@ -23,7 +23,7 @@ public class KarkadanHealth : EnemyHealth {
             hasHitShield = false;
 		}
 
-        _sounds.Hurt(hasHitShield);
+        _ksounds.Hurt(hasHitShield);
 			
 		_currentHealth -= amount * damageMultiplier;
 		updateHealthIndication ();

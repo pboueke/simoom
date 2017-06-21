@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour {
     public float _startingHealth = 100f;
     public ParticleSystem _deathParticles;
 	public Renderer rend;
+	public GameObject gateKeyGameObject;
 
 	// public for access of derived classes
 	[HideInInspector] public float _currentHealth;
@@ -49,6 +50,10 @@ public class EnemyHealth : MonoBehaviour {
         // get it`s experience value
 		EnemyExperience exp = gameObject.GetComponent<EnemyExperience>();
 		int xp = exp._experienceValue;
+		if (exp.hasKey) {
+			Debug.Log ("asdsadadsdasdas");
+			GameObject key = GameObject.Instantiate (gateKeyGameObject, transform.position, transform.rotation);//GameObject.Find ("GateManager").transform);
+		}
         //destroy stuff
         Destroy(_deathParticles.gameObject, _deathParticles.main.duration);
         Destroy(gameObject);

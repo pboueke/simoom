@@ -820,6 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _experienceValue: 10
+  hasKey: 0
 --- !u!114 &114901969750424354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -834,6 +835,8 @@ MonoBehaviour:
   _startingHealth: 230
   _deathParticles: {fileID: 198311133236217982}
   rend: {fileID: 137444636378186934}
+  gateKeyGameObject: {fileID: 1089600984044102, guid: 0c33fcb5b0eb0644f887a804a101dad8,
+    type: 2}
   _currentHealth: 0
   _dead: 0
   _sounds: {fileID: 0}
