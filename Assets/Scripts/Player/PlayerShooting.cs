@@ -79,7 +79,5 @@ public class PlayerShooting : MonoBehaviour {
             else if (angle < 0) _steps.Add(-_baseStep);
             else _steps.Add(0f);
         }
-        Debug.Log(_angles.Count);
-        Debug.Log(_steps.Count);
     }
 }

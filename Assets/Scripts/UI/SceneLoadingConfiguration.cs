@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SceneLoadingConfiguration : MonoBehaviour {
@@ -16,5 +17,6 @@ public class SceneLoadingConfiguration : MonoBehaviour {
 
 	private void OnSceneLoaded(Scene aScene, LoadSceneMode aMode) {
 		cursor.SetActive(true);
+		GameObject.Find ("KeyIcon").GetComponent<Image> ().enabled = false;
 	}
 }

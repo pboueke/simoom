@@ -32,7 +32,8 @@ public class EnemyHealth : MonoBehaviour {
 
     public virtual void TakeDamage(float amount, Vector3 direction) {
         _currentHealth -= amount;
-        _sounds.Hurt();
+		if (_sounds != null)
+        	_sounds.Hurt();
 		updateHealthIndication ();
         if (_currentHealth <= 0f && !_dead) {
             OnDeath();
@@ -46,7 +47,8 @@ public class EnemyHealth : MonoBehaviour {
         //play particle effect
         _deathParticles.Play();
         // get it`s experience value
-        int xp = gameObject.GetComponent<EnemyExperience>()._experienceValue;
+		EnemyExperience exp = gameObject.GetComponent<EnemyExperience>();
+		int xp = exp._experienceValue;
         //destroy stuff
         Destroy(_deathParticles.gameObject, _deathParticles.main.duration);
         Destroy(gameObject);

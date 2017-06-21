@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Move (float h, float v, bool d) {
         float dTime = Time.deltaTime;
 
-		if (!InArena ()) {
+		if (!InArena (transform, _arenaConfig.arenaDiscScale)) {
 			// if the player is not in the arena, lets put him there
 			float distance = Vector3.Distance(Vector3.zero, transform.position) - _arenaConfig.arenaDiscScale;
 			Vector3 direction = (Vector3.zero - transform.position).normalized;
@@ -139,10 +139,10 @@ public class PlayerMovement : MonoBehaviour {
         }
 	}
 
-	bool InArena () {
+	public bool InArena (Transform trsfrm, float radius) {
 		// if within the radius
-		return (Mathf.Pow (_arenaConfig.arenaDiscScale, 2) >
-				Mathf.Pow (transform.position.x, 2) +
-				Mathf.Pow (transform.position.z, 2) );
+		return (Mathf.Pow (radius, 2) >
+				Mathf.Pow (trsfrm.position.x, 2) +
+				Mathf.Pow (trsfrm.position.z, 2) );
 	}
 }

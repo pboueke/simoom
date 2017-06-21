@@ -35,10 +35,13 @@ public class EnemyManager : MonoBehaviour {
 		if (_playerHealth.GetHealth () <= 0f) {
 			return;
 		}
-
+			
+		int selectedKeyHolder = Random.Range(0, _config.spawnPoints.Length);
+		int it = 0;
 		// iterates over all the configured spawn points
 		foreach (enemySpawn spawn in _config.spawnPoints) {
-			
+			bool hasKey = (it == selectedKeyHolder);
+			it += 1;
 			// scorpio handler
 			if (spawn.type.IndexOf ("scorpio") > -1) {
 				string[] cfg = spawn.config.Split (new char[] { ' ' });
@@ -47,14 +50,14 @@ public class EnemyManager : MonoBehaviour {
 				if (cfg.Length > 1) {
 					bosses = int.Parse (cfg [1]);
 				}
-				scorpios.Spawn (spawn.position, units, bosses);
+				scorpios.Spawn (spawn.position, units, bosses, hasKey);
 			} else if (spawn.type.IndexOf ("guila") > -1) {
-				guilas.Spawn (spawn.position);
+				guilas.Spawn (spawn.position, hasKey);
 			} else if (spawn.type.IndexOf ("karkadan") > -1) {
-				karkadans.Spawn (spawn.position);
+				karkadans.Spawn (spawn.position, hasKey);
 			} else if (spawn.type.IndexOf ("snek") > -1) {
 				int units = int.Parse (spawn.config);
-				sneks.Spawn (spawn.position, units);
+				sneks.Spawn (spawn.position, units, hasKey);
 			}
 			// other enemy handlers
 			// else if...

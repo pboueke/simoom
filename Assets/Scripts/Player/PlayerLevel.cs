@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerLevel : MonoBehaviour {
 
     public int _xp;
+	public bool _hasKey = false;
 
     public Text playerLevelDisplay;
     public Image playerXpCircle;
@@ -17,9 +19,16 @@ public class PlayerLevel : MonoBehaviour {
         _xp = 0;
         _playerShooting = GetComponent<PlayerShooting>();
 
+		SceneManager.sceneLoaded += OnSceneLoaded;
+
         // starting lvl: 1
         addXp(1);
     }
+
+	// delgate onsceneload function
+	private void OnSceneLoaded(Scene aScene, LoadSceneMode aMode) {
+		_hasKey = false;
+	}
 
     private void levelUp(int level)
     {

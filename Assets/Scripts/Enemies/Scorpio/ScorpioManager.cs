@@ -76,12 +76,18 @@ public class ScorpioManager : MonoBehaviour {
 	/// <param name="spawnPoint"> Position of the selected spawm point.</param>
 	/// <param name="enemyNumber"> Number of enemies to be created.</param>
 	/// <param name="bossNumber"> Number of the enemies to be converted to a boss.</param>
-	public void Spawn(Vector3 spawnPoint, int enemyNumber, int bossNumber) {
+	public void Spawn(Vector3 spawnPoint, int enemyNumber, int bossNumber, bool hasKey = false) {
+		bool usedKey = false;
         ScorpioGroup enemyGroup = new ScorpioGroup();
 		for (int i = 0; i < enemyNumber; i++) {
 			Vector3 position = spawnPoint + new Vector3((i-1)*3, 0, 0);
 			GameObject instance = MakeEnemy(position);
 			instance.transform.parent = this.transform;
+
+			if (!usedKey && hasKey) {
+				instance.GetComponent<EnemyExperience> ().hasKey = true;
+				usedKey = true;
+			}
 
 			if (i < bossNumber) {
                 enemyGroup._bosses.Add (instance);

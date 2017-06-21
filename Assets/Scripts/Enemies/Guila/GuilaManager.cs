@@ -28,8 +28,9 @@ public class GuilaManager : MonoBehaviour {
 		return Instantiate(_enemyPrefab, position + positionAdjustment, randomQuar);
 	}
 
-	public void Spawn(Vector3 spawnPoint) {
+	public void Spawn(Vector3 spawnPoint, bool hasKey=false) {
 		GameObject instance = MakeEnemy(spawnPoint);
 		instance.transform.parent = this.transform;
+		instance.GetComponent<EnemyExperience> ().hasKey = hasKey;
 	}
 }

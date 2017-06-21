@@ -26,11 +26,18 @@ public class SnekManager : MonoBehaviour {
 		return Instantiate(_enemyPrefab, position, new Quaternion());
 	}
 
-	public void Spawn(Vector3 spawnPoint, int enemyNumber) {
+	public void Spawn(Vector3 spawnPoint, int enemyNumber, bool hasKey=false) {
+		bool usedKey = false;
 		for (int i = 0; i < enemyNumber; i++) {
 			Vector3 position = spawnPoint + new Vector3((i-1)*3, 0, 0);
 			GameObject instance = MakeEnemy(position);
 			instance.transform.parent = this.transform;
+
+			if (!usedKey && hasKey) {
+				instance.GetComponent<EnemyExperience> ().hasKey = true;
+				usedKey = true;
+			}
+
 			_sneks.Add (instance);
 		}	
 	}
