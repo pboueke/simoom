@@ -49,6 +49,7 @@ ModelImporter:
     3300000: //RootNode
     4300000: PERNA2
     7400000: Default Take
+    7400002: Walk
     9500000: //RootNode
     13700000: PERNA2
   materials:
@@ -71,7 +72,143 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Body1
+        weight: 1
+      - path: Armature/Master/Body1/Body2
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3/Head
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3/Head/Jaw
+        weight: 1
+      - path: Armature/Master/Body1/Body2/UpperArm_L
+        weight: 1
+      - path: Armature/Master/Body1/Body2/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Master/Body1/Body2/UpperArm_R
+        weight: 1
+      - path: Armature/Master/Body1/Body2/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Master/Tail1
+        weight: 1
+      - path: Armature/Master/Tail1/Tail2
+        weight: 1
+      - path: Armature/Master/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Master/UpperLeg_L
+        weight: 1
+      - path: Armature/Master/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Master/UpperLeg_R
+        weight: 1
+      - path: Armature/Master/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: PERNA2
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: -1
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Body1
+        weight: 1
+      - path: Armature/Master/Body1/Body2
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3/Head
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3/Head/Jaw
+        weight: 1
+      - path: Armature/Master/Body1/Body2/UpperArm_L
+        weight: 1
+      - path: Armature/Master/Body1/Body2/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Master/Body1/Body2/UpperArm_R
+        weight: 1
+      - path: Armature/Master/Body1/Body2/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Master/Tail1
+        weight: 1
+      - path: Armature/Master/Tail1/Tail2
+        weight: 1
+      - path: Armature/Master/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Master/UpperLeg_L
+        weight: 1
+      - path: Armature/Master/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Master/UpperLeg_R
+        weight: 1
+      - path: Armature/Master/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: PERNA2
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
