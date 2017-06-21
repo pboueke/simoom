@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184be08fab3738a47bce8558b0103427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 1943282949364128, guid: 6d93d6abb9ca03e4f92c851c5b7c35d4,
+  _enemyPrefab: {fileID: 1439033969963878, guid: d2c9ff1f84bb9674c86b4ff906199581,
     type: 2}
   _sneks: []
 --- !u!1 &57037697
@@ -1025,7 +1025,7 @@ Transform:
   - {fileID: 966916710}
   - {fileID: 943958394}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &440971950
 Prefab:
@@ -1305,7 +1305,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4828063085712588, guid: 6bb54350479a742c1a9b79547ff75c05, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4828063085712588, guid: 6bb54350479a742c1a9b79547ff75c05, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1966,7 +1966,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4298145078532338, guid: d48e0a786f21d4f7183d052d1a48334e, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d48e0a786f21d4f7183d052d1a48334e, type: 2}
@@ -2545,7 +2545,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4300089703640408, guid: de940486ccc764332bfbe28daf374fc2, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de940486ccc764332bfbe28daf374fc2, type: 2}
@@ -3196,7 +3196,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4818207680908974, guid: 7cb20c8ed166a4a958405feb3864e9c1, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4818207680908974, guid: 7cb20c8ed166a4a958405feb3864e9c1, type: 2}
       propertyPath: m_LocalScale.x

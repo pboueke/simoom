@@ -6,12 +6,51 @@ ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature
+    100004: Body1
+    100006: Body2
+    100008: Body3
+    100010: Head
+    100012: Jaw
+    100014: LowerArm_L
+    100016: LowerArm_R
+    100018: LowerLeg_L
+    100020: LowerLeg_R
+    100022: Master
+    100024: PERNA2
+    100026: Tail1
+    100028: Tail2
+    100030: Tail3
+    100032: UpperArm_L
+    100034: UpperArm_R
+    100036: UpperLeg_L
+    100038: UpperLeg_R
     400000: //RootNode
+    400002: Armature
+    400004: Body1
+    400006: Body2
+    400008: Body3
+    400010: Head
+    400012: Jaw
+    400014: LowerArm_L
+    400016: LowerArm_R
+    400018: LowerLeg_L
+    400020: LowerLeg_R
+    400022: Master
+    400024: PERNA2
+    400026: Tail1
+    400028: Tail2
+    400030: Tail3
+    400032: UpperArm_L
+    400034: UpperArm_R
+    400036: UpperLeg_L
+    400038: UpperLeg_R
     2300000: //RootNode
     3300000: //RootNode
     4300000: PERNA2
     7400000: Default Take
     9500000: //RootNode
+    13700000: PERNA2
   materials:
     importMaterials: 1
     materialName: 0

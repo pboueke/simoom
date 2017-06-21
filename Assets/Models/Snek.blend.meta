@@ -34,6 +34,24 @@ ModelImporter:
     100052: tronco3
     100054: tronco4
     100056: tronco5
+    100058: Armature
+    100060: Body1
+    100062: Body2
+    100064: Body3
+    100066: Head
+    100068: Jaw
+    100070: LowerLeg_L
+    100072: LowerLeg_R
+    100074: Master
+    100076: Tail1
+    100078: Tail2
+    100080: Tail3
+    100082: UpperLeg_L
+    100084: UpperLeg_R
+    100086: Wing1_L
+    100088: Wing1_R
+    100090: Wing2_L
+    100092: Wing2_R
     400000: asa1
     400002: asa10
     400004: asa11
@@ -63,6 +81,24 @@ ModelImporter:
     400052: tronco3
     400054: tronco4
     400056: tronco5
+    400058: Armature
+    400060: Body1
+    400062: Body2
+    400064: Body3
+    400066: Head
+    400068: Jaw
+    400070: LowerLeg_L
+    400072: LowerLeg_R
+    400074: Master
+    400076: Tail1
+    400078: Tail2
+    400080: Tail3
+    400082: UpperLeg_L
+    400084: UpperLeg_R
+    400086: Wing1_L
+    400088: Wing1_R
+    400090: Wing2_L
+    400092: Wing2_R
     2300000: asa1
     2300002: asa10
     2300004: asa11
@@ -150,7 +186,9 @@ ModelImporter:
     4300052: tronco5
     4300054: tronco4
     7400000: Default Take
+    7400002: Flying
     9500000: //RootNode
+    13700000: asa3
   materials:
     importMaterials: 1
     materialName: 0
@@ -171,7 +209,143 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Body1
+        weight: 1
+      - path: Armature/Master/Body1/Body2
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3/Head
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3/Head/Jaw
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Wing1_L
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Wing1_L/Wing2_L
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Wing1_R
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Wing1_R/Wing2_R
+        weight: 1
+      - path: Armature/Master/Tail1
+        weight: 1
+      - path: Armature/Master/Tail1/Tail2
+        weight: 1
+      - path: Armature/Master/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Master/UpperLeg_L
+        weight: 1
+      - path: Armature/Master/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Master/UpperLeg_R
+        weight: 1
+      - path: Armature/Master/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: asa3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Flying
+      takeName: Flying
+      firstFrame: -1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Master
+        weight: 1
+      - path: Armature/Master/Body1
+        weight: 1
+      - path: Armature/Master/Body1/Body2
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3/Head
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Body3/Head/Jaw
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Wing1_L
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Wing1_L/Wing2_L
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Wing1_R
+        weight: 1
+      - path: Armature/Master/Body1/Body2/Wing1_R/Wing2_R
+        weight: 1
+      - path: Armature/Master/Tail1
+        weight: 1
+      - path: Armature/Master/Tail1/Tail2
+        weight: 1
+      - path: Armature/Master/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Master/UpperLeg_L
+        weight: 1
+      - path: Armature/Master/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Master/UpperLeg_R
+        weight: 1
+      - path: Armature/Master/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: asa3
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
