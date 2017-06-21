@@ -51,7 +51,9 @@ public class EnemyHealth : MonoBehaviour {
 		EnemyExperience exp = gameObject.GetComponent<EnemyExperience>();
 		int xp = exp._experienceValue;
 		if (exp.hasKey) {
-			GameObject key = GameObject.Instantiate (gateKeyGameObject, transform.position, transform.rotation);//GameObject.Find ("GateManager").transform);
+            Vector3 keyPosition = transform.position;
+            keyPosition.y = 2.0f;
+            GameObject key = GameObject.Instantiate (gateKeyGameObject, keyPosition, transform.rotation);//GameObject.Find ("GateManager").transform);
 		}
         //destroy stuff
         Destroy(_deathParticles.gameObject, _deathParticles.main.duration);
