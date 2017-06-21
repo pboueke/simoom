@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GateController : MonoBehaviour {
@@ -37,6 +38,12 @@ public class GateController : MonoBehaviour {
 		GameObject player = GameObject.Find(playerObjectName);
 		GameObject camera = GameObject.Find ("Main Camera");
 		GameObject aim = GameObject.Find ("AimCursor");
+
+		if (!player.GetComponent<PlayerLevel> ()._hasKey) 
+		{
+			StartCoroutine(Blink (gameObject.transform.GetChild(0).gameObject,0.25f,4));
+			return;
+		}
 
 		// disable aim
 		aim.SetActive(false);
@@ -102,6 +109,20 @@ public class GateController : MonoBehaviour {
 
 	public IEnumerator InactiveAfterSeconds (GameObject obj, float seconds) {
 		yield return new WaitForSeconds (seconds);
+		obj.SetActive (false);
+	}
+
+	IEnumerator Blink(GameObject obj, float delayBetweenBlinks, int numberOfBlinks )  
+	{
+		bool state = false;
+		int counter = 0;
+		while( counter <= numberOfBlinks )
+		{
+			obj.SetActive (state);
+			state = !state;
+			counter++;
+			yield return new WaitForSeconds( delayBetweenBlinks );
+		}
 		obj.SetActive (false);
 	}
 

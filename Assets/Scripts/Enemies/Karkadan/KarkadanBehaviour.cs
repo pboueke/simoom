@@ -67,7 +67,8 @@ public class KarkadanBehaviour : MonoBehaviour {
 	}
 
     public void Sleep() {
-        _anim.SetBool("isCharging", false);
+		if (_anim != null)
+        	_anim.SetBool("isCharging", false);
     }
 
 	private IEnumerator EndChargeAfterSeconds(float seconds) {
