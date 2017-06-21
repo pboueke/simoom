@@ -51,7 +51,6 @@ public class EnemyHealth : MonoBehaviour {
 		EnemyExperience exp = gameObject.GetComponent<EnemyExperience>();
 		int xp = exp._experienceValue;
 		if (exp.hasKey) {
-			Debug.Log ("asdsadadsdasdas");
 			GameObject key = GameObject.Instantiate (gateKeyGameObject, transform.position, transform.rotation);//GameObject.Find ("GateManager").transform);
 		}
         //destroy stuff
