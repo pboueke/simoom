@@ -14,13 +14,15 @@ public class PlayerHealth : MonoBehaviour {
     public Color _fullHealthColor = Color.green;       // The color the health bar will be when on full health.
     public Color _zeroHealthColor = Color.red;         // The color the health bar will be when on no health.
 
-    private PlayerSounds _sound; 
+    private PlayerSounds _sound;
+    private Camera _camera;
 
     // Use this for initialization
     private void Awake()
     {
 		_currentHealth = _startingHealth;
         _sound = GetComponent<PlayerSounds>();
+        _camera = Camera.main;
     }
 
     private void OnEnable()
@@ -35,6 +37,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         _dead = true;
         gameObject.SetActive(false);
+        _camera.GetComponent<AudioSource>().PlayOneShot(_sound.death);
         //Destroy(gameObject);
     }
 

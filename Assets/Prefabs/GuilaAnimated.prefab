@@ -156,6 +156,8 @@ GameObject:
   - component: {fileID: 4493754014086314}
   - component: {fileID: 199600991469581060}
   - component: {fileID: 198796718340366530}
+  - component: {fileID: 82874714149757178}
+  - component: {fileID: 114008068732665624}
   m_Layer: 10
   m_Name: GuilaExplosion
   m_TagString: Untagged
@@ -264,10 +266,8 @@ GameObject:
   - component: {fileID: 4374715045425628}
   - component: {fileID: 95666540977554036}
   - component: {fileID: 54535682510980924}
-  - component: {fileID: 82562269051305830}
   - component: {fileID: 65282344039752294}
   - component: {fileID: 195796649760946774}
-  - component: {fileID: 114359068613985758}
   - component: {fileID: 114227968835256406}
   - component: {fileID: 114588058812519828}
   - component: {fileID: 114654780979467272}
@@ -429,7 +429,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1669711091604098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.0887256, y: 0.0000011946023, z: -5.3}
+  m_LocalPosition: {x: -85.77106, y: 0.0000008751314, z: -7.341135}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4735803067815958}
@@ -687,14 +687,14 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.5868797, y: 6.941285, z: 10.266075}
-  m_Center: {x: 0, y: 2.534027, z: 0}
---- !u!82 &82562269051305830
+  m_Size: {x: 4.5868797, y: 4.3241186, z: 10.266075}
+  m_Center: {x: 0, y: 1.2254441, z: 0}
+--- !u!82 &82874714149757178
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1669711091604098}
+  m_GameObject: {fileID: 1484211801776938}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -786,6 +786,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114008068732665624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484211801776938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e0a8988d9e9e84e9d8941626fcece6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurt: {fileID: 8300000, guid: 7529abd7b59793e47aac90bd45a37922, type: 3}
+  death: {fileID: 8300000, guid: 9dfbc695c71d81742bb8db29026f02b4, type: 3}
+  _source: {fileID: 0}
+  bite: {fileID: 8300000, guid: 5b3178250e0ad4146bbb5ac62bd9dfd3, type: 3}
 --- !u!114 &114227968835256406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -807,20 +822,6 @@ MonoBehaviour:
   emerged: 0
   isEmerging: 0
   target: {fileID: 0}
---- !u!114 &114359068613985758
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1669711091604098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e0a8988d9e9e84e9d8941626fcece6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hurt: {fileID: 8300000, guid: 7529abd7b59793e47aac90bd45a37922, type: 3}
-  _source: {fileID: 0}
-  bite: {fileID: 8300000, guid: 5b3178250e0ad4146bbb5ac62bd9dfd3, type: 3}
 --- !u!114 &114413927864639400
 MonoBehaviour:
   m_ObjectHideFlags: 1

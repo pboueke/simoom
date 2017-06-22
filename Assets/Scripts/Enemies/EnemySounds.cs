@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySounds : MonoBehaviour {
 
     public AudioClip hurt;
+    public AudioClip death;
 
     [HideInInspector] public AudioSource _source;
 
@@ -15,6 +16,10 @@ public class EnemySounds : MonoBehaviour {
 
     virtual public void Hurt() {
         _source.PlayOneShot(hurt);
+    }
+
+    virtual public void Death() {
+        _source.PlayOneShot(death);
     }
 
     // Use this for initialization

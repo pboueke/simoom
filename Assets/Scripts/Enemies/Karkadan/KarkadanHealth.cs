@@ -9,7 +9,7 @@ public class KarkadanHealth : EnemyHealth {
 
     private void Awake()
     {
-        _ksounds = GetComponent<KarkadanSounds>();
+        _ksounds = _deathParticles.GetComponent<KarkadanSounds>();
     }
 
     public override void TakeDamage(float amount, Vector3 direction) {

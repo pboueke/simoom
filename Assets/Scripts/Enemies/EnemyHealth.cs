@@ -23,7 +23,7 @@ public class EnemyHealth : MonoBehaviour {
         //_deathParticles = GetComponent<ParticleSystem> ();
 		//rend = GetComponent<Renderer>();
         _deathParticles.Pause();
-        _sounds = GetComponent<EnemySounds>();
+        _sounds = _deathParticles.GetComponent<EnemySounds>();
     } 
 
     private void OnEnable() {
@@ -47,8 +47,11 @@ public class EnemyHealth : MonoBehaviour {
         _deathParticles.transform.parent = null;
         //play particle effect
         _deathParticles.Play();
+        //play death sound
+        if (_sounds != null)
+            _sounds.Death();
         // get it`s experience value
-		EnemyExperience exp = gameObject.GetComponent<EnemyExperience>();
+        EnemyExperience exp = gameObject.GetComponent<EnemyExperience>();
 		int xp = exp._experienceValue;
 		if (exp.hasKey) {
             Vector3 keyPosition = transform.position;
@@ -83,7 +86,7 @@ public class EnemyHealth : MonoBehaviour {
 		float H, S, V;
 		for (int i = 0; i < ms.Length; i++) {
 			Color.RGBToHSV (ms [i].color, out H, out S, out V);
-			rend.materials [i].color = Color.HSVToRGB (H, S*healthLeft, V);
+			rend.materials [i].color = Color.HSVToRGB (H, S, Mathf.Max(healthLeft, 0.3f));
 		}
 	}
 }

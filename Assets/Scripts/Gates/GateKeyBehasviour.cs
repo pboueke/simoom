@@ -36,6 +36,7 @@ public class GateKeyBehasviour : MonoBehaviour {
 		if (col.gameObject.name == playerEventColliderName) 
 		{
 			_player.GetComponent<PlayerLevel> ()._hasKey = true;
+            _player.GetComponent<PlayerSounds>().GotKey();
 			GameObject.Find ("KeyIcon").GetComponent<Image> ().enabled = true;
 			gameObject.SetActive (false);
 		}
