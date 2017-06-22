@@ -134,8 +134,6 @@ GameObject:
   - component: {fileID: 114325531127457888}
   - component: {fileID: 114529671712121968}
   - component: {fileID: 114901969750424354}
-  - component: {fileID: 82302802144690846}
-  - component: {fileID: 114357994455553684}
   m_Layer: 10
   m_Name: Karkadann
   m_TagString: Untagged
@@ -153,6 +151,8 @@ GameObject:
   - component: {fileID: 4744063923448708}
   - component: {fileID: 199634876380275660}
   - component: {fileID: 198311133236217982}
+  - component: {fileID: 82783898299743462}
+  - component: {fileID: 114937562006400542}
   m_Layer: 10
   m_Name: KarkadanExplosion
   m_TagString: Untagged
@@ -427,7 +427,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1570739160652806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.342167, y: 0.0000025165932, z: -21.110718}
+  m_LocalPosition: {x: -88.56083, y: 0.000002167943, z: -18.186026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4069395694407472}
@@ -603,12 +603,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.2690268, y: 6.136447, z: 9.399695}
   m_Center: {x: 0, y: 2.8882232, z: 0}
---- !u!82 &82302802144690846
+--- !u!82 &82783898299743462
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1570739160652806}
+  m_GameObject: {fileID: 1638823332721308}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -768,24 +768,6 @@ MonoBehaviour:
   nextWayPoint: 0
   chaseTarget: {fileID: 0}
   stateTimeElapsed: 0
---- !u!114 &114357994455553684
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1570739160652806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36d7ca04fb7730047857de0234226312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hurt: {fileID: 0}
-  _source: {fileID: 0}
-  roars:
-  - {fileID: 8300000, guid: d381fc0f417ea7947a331ef5e208a336, type: 3}
-  - {fileID: 8300000, guid: 08e58b7f1b60dd14f80cd50e30996247, type: 3}
-  shieldHit: {fileID: 8300000, guid: 1780f7b9ae7c43b4eb9e2658f382ef98, type: 3}
-  skinHit: {fileID: 8300000, guid: 068f537c6e6c6d04e8bf5d292cdb4897, type: 3}
 --- !u!114 &114529671712121968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -840,6 +822,25 @@ MonoBehaviour:
   _currentHealth: 0
   _dead: 0
   _sounds: {fileID: 0}
+--- !u!114 &114937562006400542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638823332721308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d7ca04fb7730047857de0234226312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurt: {fileID: 0}
+  death: {fileID: 8300000, guid: dd217d80ac77cd54a8f0e43d2af66b7a, type: 3}
+  _source: {fileID: 0}
+  roars:
+  - {fileID: 8300000, guid: d381fc0f417ea7947a331ef5e208a336, type: 3}
+  - {fileID: 8300000, guid: 08e58b7f1b60dd14f80cd50e30996247, type: 3}
+  shieldHit: {fileID: 8300000, guid: 1780f7b9ae7c43b4eb9e2658f382ef98, type: 3}
+  skinHit: {fileID: 8300000, guid: 068f537c6e6c6d04e8bf5d292cdb4897, type: 3}
 --- !u!135 &135161068607861860
 SphereCollider:
   m_ObjectHideFlags: 1
