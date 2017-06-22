@@ -11,6 +11,7 @@ public class GateController : MonoBehaviour {
 	public string referencedSceneName;
 	public string type;
 	public float transitionTime = 1f;
+    public AudioClip levelChangeSound;
 
 
 	private bool inTrigger = false;
@@ -41,12 +42,15 @@ public class GateController : MonoBehaviour {
 
 		if (!player.GetComponent<PlayerLevel> ()._hasKey) 
 		{
-			StartCoroutine(Blink (gameObject.transform.GetChild(0).gameObject,0.25f,4));
+            StartCoroutine(Blink (gameObject.transform.GetChild(0).gameObject,0.25f,4));
 			return;
 		}
 
-		// disable aim
-		aim.SetActive(false);
+        // play level change sound
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(levelChangeSound);
+
+        // disable aim
+        aim.SetActive(false);
 
 		// new position, as if the camera is following the player direction moving away from the arena
 		Vector3 newPos = transform.position * 3;
