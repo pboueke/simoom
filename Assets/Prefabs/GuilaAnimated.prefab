@@ -429,7 +429,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1669711091604098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.0887256, y: 0.0000011946023, z: -5.3}
+  m_LocalPosition: {x: -64.675705, y: -0.000001053786, z: 8.839799}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4735803067815958}
@@ -687,8 +687,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.5868797, y: 6.941285, z: 10.266075}
-  m_Center: {x: 0, y: 2.534027, z: 0}
+  m_Size: {x: 4.5868797, y: 4.3241186, z: 10.266075}
+  m_Center: {x: 0, y: 1.2254441, z: 0}
 --- !u!82 &82562269051305830
 AudioSource:
   m_ObjectHideFlags: 1

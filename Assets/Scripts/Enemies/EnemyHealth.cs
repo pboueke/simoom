@@ -83,7 +83,7 @@ public class EnemyHealth : MonoBehaviour {
 		float H, S, V;
 		for (int i = 0; i < ms.Length; i++) {
 			Color.RGBToHSV (ms [i].color, out H, out S, out V);
-			rend.materials [i].color = Color.HSVToRGB (H, healthLeft, V*healthLeft);
+			rend.materials [i].color = Color.HSVToRGB (H * healthLeft, S, V);
 		}
 	}
 }
