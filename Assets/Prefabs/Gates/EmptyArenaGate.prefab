@@ -208,6 +208,7 @@ MonoBehaviour:
   referencedSceneName: 
   type: 
   transitionTime: 1
+  levelChangeSound: {fileID: 8300000, guid: 11bc67a480f78da4d99ccad0ec5c068e, type: 3}
 --- !u!212 &212046786607239120
 SpriteRenderer:
   m_ObjectHideFlags: 1
