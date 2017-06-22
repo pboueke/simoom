@@ -14,12 +14,16 @@ public class PlayerLevel : MonoBehaviour {
 
     private PlayerShooting _playerShooting;
 
+    private PlayerSounds _sound;
+
     // Use this for initialization
     void Start () {
         _xp = 0;
         _playerShooting = GetComponent<PlayerShooting>();
 
 		SceneManager.sceneLoaded += OnSceneLoaded;
+
+        _sound = GetComponent<PlayerSounds>();
 
         // starting lvl: 1
         addXp(1);
@@ -32,6 +36,8 @@ public class PlayerLevel : MonoBehaviour {
 
     private void levelUp(int level)
     {
+        _sound.LevelUp();
+
         if (level == 1) return;
         if (level % 2 == 1) {
             // Odd level up - increase power

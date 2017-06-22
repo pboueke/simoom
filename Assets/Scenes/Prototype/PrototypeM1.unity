@@ -1025,7 +1025,7 @@ Transform:
   - {fileID: 966916710}
   - {fileID: 943958394}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &440971950
 Prefab:
@@ -2137,6 +2137,7 @@ GameObject:
   - component: {fileID: 1365027801}
   - component: {fileID: 1365027806}
   - component: {fileID: 1365027807}
+  - component: {fileID: 1365027808}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2246,6 +2247,86 @@ MonoBehaviour:
   windStrengthY: 0.18
   stormSpeed: 0.79
   sandstormShader: {fileID: 4800000, guid: 989f6d37fe7c9b4409f527754d431cb2, type: 3}
+--- !u!82 &1365027808
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365027800}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1375201964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,7 +2398,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4080383862670298, guid: 1b5cf5364e1236f41a387b91428b4db3, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1081699684315938, guid: 1b5cf5364e1236f41a387b91428b4db3, type: 2}
       propertyPath: m_Name
@@ -2635,36 +2716,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
-    - target: {fileID: 114708904056747770, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: playerLevelDisplay
-      value: 
-      objectReference: {fileID: 903246273}
-    - target: {fileID: 114708904056747770, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: playerXpCircle
-      value: 
-      objectReference: {fileID: 1096813113}
-    - target: {fileID: 114797806750002472, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: _slider
-      value: 
-      objectReference: {fileID: 283280004}
-    - target: {fileID: 114797806750002472, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: _fillImage
-      value: 
-      objectReference: {fileID: 1394409078}
-    - target: {fileID: 114796926411144156, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: _slider
-      value: 
-      objectReference: {fileID: 1634223858}
-    - target: {fileID: 114796926411144156, guid: d37d398a02f66124c97729b39126265f,
-        type: 2}
-      propertyPath: _fillImage
-      value: 
-      objectReference: {fileID: 2011557013}
     - target: {fileID: 114502392263905886, guid: d37d398a02f66124c97729b39126265f,
         type: 2}
       propertyPath: _slider
@@ -2675,6 +2726,41 @@ Prefab:
       propertyPath: _fillImage
       value: 
       objectReference: {fileID: 1885405073}
+    - target: {fileID: 114796926411144156, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 1634223858}
+    - target: {fileID: 114796926411144156, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: _fillImage
+      value: 
+      objectReference: {fileID: 2011557013}
+    - target: {fileID: 114797806750002472, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 283280004}
+    - target: {fileID: 114797806750002472, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: _fillImage
+      value: 
+      objectReference: {fileID: 1394409078}
+    - target: {fileID: 114708904056747770, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: playerLevelDisplay
+      value: 
+      objectReference: {fileID: 903246273}
+    - target: {fileID: 114708904056747770, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: playerXpCircle
+      value: 
+      objectReference: {fileID: 1096813113}
+    - target: {fileID: 82280454600666900, guid: d37d398a02f66124c97729b39126265f,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d37d398a02f66124c97729b39126265f, type: 2}
   m_IsPrefabParent: 0

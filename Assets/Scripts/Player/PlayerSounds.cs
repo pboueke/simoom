@@ -7,6 +7,9 @@ public class PlayerSounds : MonoBehaviour {
     public AudioClip[] hurt;
     public AudioClip dash;
     public AudioClip drink;
+    public AudioClip keyGet;
+    public AudioClip levelUp;
+    public AudioClip death;
 
     //states
     bool isDrinking = false;
@@ -21,6 +24,18 @@ public class PlayerSounds : MonoBehaviour {
     private void Awake()
     {
         _source = GetComponent<AudioSource>();
+    }
+
+    public void GotKey() {
+        _source.PlayOneShot(keyGet);
+    }
+
+    public void LevelUp() {
+        _source.PlayOneShot(levelUp);
+    }
+
+    public void Death() {
+        _source.PlayOneShot(death);
     }
 
     public void Hurt()

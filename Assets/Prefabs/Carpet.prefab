@@ -1046,6 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _xp: 0
+  _hasKey: 0
   playerLevelDisplay: {fileID: 0}
   playerXpCircle: {fileID: 0}
 --- !u!114 &114796926411144156
@@ -1102,6 +1103,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 62e0685b9f80afb49a6e9e7d173449ee, type: 3}
   dash: {fileID: 8300000, guid: e242233b2da49554390497102aa7cd19, type: 3}
   drink: {fileID: 8300000, guid: 057d893f6d23039459bfcb4925823482, type: 3}
+  keyGet: {fileID: 8300000, guid: d9d35708b8a134844bc1988c5deeddf9, type: 3}
+  levelUp: {fileID: 8300000, guid: f192cb3b5c38a2d478fd22c34f5e2081, type: 3}
+  death: {fileID: 8300000, guid: c391e1f09770a314a8f829dd6b8dfec0, type: 3}
 --- !u!114 &114879704226493628
 MonoBehaviour:
   m_ObjectHideFlags: 1
