@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour {
 	private GameObject _player;
 	private PlayerHealth _playerHealth;
 	private PlayerLevel _playerLevel;
+	private int EnemyCounter = 0;
 
 	// Enemy Handlers
 	public ScorpioManager scorpios;
@@ -29,6 +30,13 @@ public class EnemyManager : MonoBehaviour {
 	public void AlertDeath(int experienceGained) {
         //add experience
         _playerLevel.addXp(experienceGained);
+
+		EnemyCounter--;
+
+		// Victory!
+		if (_config.finalArena && (EnemyCounter == 0)) {
+			GameObject.Find ("EndGamePanel").GetComponent<EndGamePanelController>().ShowVictoryPanel();
+		}
 	}
 
 	void SpawnAll () {
@@ -40,7 +48,7 @@ public class EnemyManager : MonoBehaviour {
 		int it = 0;
 		// iterates over all the configured spawn points
 		foreach (enemySpawn spawn in _config.spawnPoints) {
-			bool hasKey = (it == selectedKeyHolder);
+			bool hasKey = (it == selectedKeyHolder) && !_config.finalArena;
 			it += 1;
 			// scorpio handler
 			if (spawn.type.IndexOf ("scorpio") > -1) {
@@ -51,13 +59,17 @@ public class EnemyManager : MonoBehaviour {
 					bosses = int.Parse (cfg [1]);
 				}
 				scorpios.Spawn (spawn.position, units, bosses, hasKey);
+				EnemyCounter += units;
 			} else if (spawn.type.IndexOf ("guila") > -1) {
 				guilas.Spawn (spawn.position, hasKey);
+				EnemyCounter++;
 			} else if (spawn.type.IndexOf ("karkadan") > -1) {
 				karkadans.Spawn (spawn.position, hasKey);
+				EnemyCounter++;
 			} else if (spawn.type.IndexOf ("snek") > -1) {
 				int units = int.Parse (spawn.config);
 				sneks.Spawn (spawn.position, units, hasKey);
+				EnemyCounter += units;
 			}
 			// other enemy handlers
 			// else if...
@@ -66,5 +78,6 @@ public class EnemyManager : MonoBehaviour {
 			}
 
 		}
+		EnemyCounter *= 2;
 	}
 }

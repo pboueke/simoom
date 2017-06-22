@@ -39,6 +39,7 @@ public class PlayerHealth : MonoBehaviour {
         gameObject.SetActive(false);
         _camera.GetComponent<AudioSource>().PlayOneShot(_sound.death);
         //Destroy(gameObject);
+		GameObject.Find ("EndGamePanel").GetComponent<EndGamePanelController>().ShowDeathPanel();
     }
 
     private void SetHealthUI()

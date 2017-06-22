@@ -61,7 +61,8 @@ public class KarkadanBehaviour : MonoBehaviour {
         _anim.SetBool("isCharging", true);
 		_nav.enabled = true;
 		_nav.Resume ();
-        _sounds.Roar();
+		if (_sounds != null)
+        	_sounds.Roar();
 		StartCoroutine (EndChargeAfterSeconds (chargePeriodInSeconds));
 		StartCoroutine (ReenableCharging (chargePeriodInSeconds + chargeResetTimeInSeconds));
 	}

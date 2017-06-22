@@ -47,7 +47,10 @@ public class GateController : MonoBehaviour {
 		}
 
         // play level change sound
-        Camera.main.GetComponent<AudioSource>().PlayOneShot(levelChangeSound);
+		try {
+        	Camera.main.GetComponent<AudioSource>().PlayOneShot(levelChangeSound);
+		} catch { // TODO FIX
+		}
 
         // disable aim
         aim.SetActive(false);
