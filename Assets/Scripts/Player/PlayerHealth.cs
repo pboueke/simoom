@@ -36,6 +36,7 @@ public class PlayerHealth : MonoBehaviour {
         _dead = true;
         gameObject.SetActive(false);
         //Destroy(gameObject);
+		GameObject.Find ("EndGamePanel").GetComponent<EndGamePanelController>().ShowDeathPanel();
     }
 
     private void SetHealthUI()
