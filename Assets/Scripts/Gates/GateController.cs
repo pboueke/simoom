@@ -67,21 +67,19 @@ public class GateController : MonoBehaviour {
 		
 	void OnTriggerEnter(Collider col)
 	{
-		inTrigger = true;
-
 		if (col.gameObject.name == playerEventColliderName)
 		{
-			showHighlight();
+            inTrigger = true;
+            showHighlight();
 		}
 	}
 
 	void OnTriggerExit(Collider col)
 	{
-		inTrigger = false;
-
 		if (col.gameObject.name == playerEventColliderName)
 		{
-			hideHighLight();
+            inTrigger = false;
+            hideHighLight();
 		}
 	}
 
