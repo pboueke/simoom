@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour {
 
     public float _startingHealth = 100f;
-    private float _currentHealth;
+	private float _currentHealth;
     private bool _dead;
     public Slider _slider;                             // The slider to represent how much health the tank currently has.
     public Image _fillImage;                           // The image component of the slider.
@@ -17,10 +17,14 @@ public class PlayerHealth : MonoBehaviour {
     private PlayerSounds _sound;
     private Camera _camera;
 
+	// awake is called once gb is activated, so we must maake sure that our health is initialized only once.
+	private int _initiCount = 0;
+
     // Use this for initialization
     private void Awake()
     {
-		_currentHealth = _startingHealth;
+		//_currentHealth = _startingHealth;
+		_initiCount++;
         _sound = GetComponent<PlayerSounds>();
         _camera = Camera.main;
     }
@@ -44,6 +48,10 @@ public class PlayerHealth : MonoBehaviour {
 
     private void SetHealthUI()
     {
+		if (_initiCount == 1) {
+			_currentHealth = _startingHealth;
+			_initiCount++;
+		}
         // Set the slider's value appropriately.
         _slider.value = _currentHealth;
 
