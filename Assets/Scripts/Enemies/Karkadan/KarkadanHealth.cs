@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class KarkadanHealth : EnemyHealth {
 
-    [HideInInspector]
-    new KarkadanSounds _ksounds;
+    KarkadanSounds _ksounds;
 
     private void Awake()
     {

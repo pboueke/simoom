@@ -19,10 +19,12 @@ public class GuilaBehaviour : MonoBehaviour {
 
 	private NavMeshAgent _nav;
     private GuilaSounds _sounds;
+    [HideInInspector]public Animator _anim;
 
     private void Awake()
     {
-        _sounds = GetComponent<GuilaSounds>();
+        _sounds = GetComponentInChildren<GuilaSounds>();
+        _anim = GetComponent<Animator>();
     }
 
     public void Start () 
@@ -31,7 +33,8 @@ public class GuilaBehaviour : MonoBehaviour {
 		target = GameObject.Find (playerObjectName);
 		_nav = GetComponent<NavMeshAgent>();
 		_nav.enabled = false;
-	}
+        _anim.SetFloat("Blend", 1.0f);
+    }
 
 	public void Emerge ()
 	{
@@ -47,6 +50,7 @@ public class GuilaBehaviour : MonoBehaviour {
     {
 		if (_sounds != null)
         	_sounds.Bite();
+        _anim.SetTrigger("Bite");
     }
 
 	private IEnumerator EmergeOverSeconds(float seconds) {

@@ -304,7 +304,7 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: spawnPoints.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4928579801753314, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53, type: 2}
       propertyPath: m_LocalPosition.x
@@ -475,7 +475,7 @@ Prefab:
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
       propertyPath: arenaDiscScale
-      value: 130
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
         type: 2}
@@ -656,6 +656,41 @@ Prefab:
         type: 2}
       propertyPath: finalArena
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: arenaTime
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[6].position.x
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[6].position.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[6].position.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[7].position.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[7].position.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[7].position.z
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53, type: 2}
