@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8207a613eafb2d64398d7d7962020446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _experienceValue: 2
+  _experienceValue: 1
   hasKey: 0
 --- !u!114 &114550505884364216
 MonoBehaviour:
@@ -459,6 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurt: {fileID: 8300000, guid: 7529abd7b59793e47aac90bd45a37922, type: 3}
+  death: {fileID: 0}
   _source: {fileID: 0}
   bite: {fileID: 8300000, guid: 5b3178250e0ad4146bbb5ac62bd9dfd3, type: 3}
 --- !u!137 &137310326105464290
