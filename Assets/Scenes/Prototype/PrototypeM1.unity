@@ -1038,6 +1038,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 024b2512225c940bd965f7ebec4d0102, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &310971456 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1690501558085298, guid: d37d398a02f66124c97729b39126265f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1571003189}
 --- !u!1 &315348058
 GameObject:
   m_ObjectHideFlags: 0
@@ -3525,7 +3530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df04563bf88c1ee4cbcb88b8028d196c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObjectName: Carpet
+  player: {fileID: 310971456}
 --- !u!1 &1340140403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4345,7 +4350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df04563bf88c1ee4cbcb88b8028d196c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObjectName: Carpet
+  player: {fileID: 310971456}
 --- !u!114 &1552481469
 MonoBehaviour:
   m_ObjectHideFlags: 0

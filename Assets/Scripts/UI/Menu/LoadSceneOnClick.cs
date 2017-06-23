@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneOnClick : MonoBehaviour {
 
-	public string playerObjectName = "Carpet";
+	public GameObject player;
 
 	public void LoadByIndex(int sceneIndex)
 	{
@@ -13,15 +13,6 @@ public class LoadSceneOnClick : MonoBehaviour {
 
 	public void ForceLoadByIndex(int sceneIndex)
 	{
-		GameObject player = null;
-		GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>() ;
-		foreach (GameObject go in allObjects) {
-			if (go.name == playerObjectName) {
-				player = go;
-				break;
-			}
-		}
-
 		Destroy (player);
 		Destroy (GameObject.Find ("Canvas").gameObject);
 		Destroy (GameObject.Find ("Main Camera").gameObject);
