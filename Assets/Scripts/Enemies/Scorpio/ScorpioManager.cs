@@ -66,7 +66,7 @@ public class ScorpioManager : MonoBehaviour {
 		ScorpioShooting ss = (ScorpioShooting) instance.GetComponent("ScorpioShooting");
 		hp._startingHealth = hp._startingHealth * _bossMultiplier;
 		hp.SetHealth(hp._startingHealth);
-		xp._experienceValue = (int)((float)xp._experienceValue * _bossMultiplier);
+		xp._experienceValue = (int)((float)xp._experienceValue * 2);
 		ss._boss = true;
 	}
 
