@@ -12,6 +12,8 @@ public class EndGamePanelController : MonoBehaviour {
 	void Start () {
 		death = this.gameObject.transform.GetChild (0).gameObject;
 		victory = this.gameObject.transform.GetChild (1).gameObject;
+		ShowDeathPanel (false);
+		ShowVictoryPanel (false);
 	}
 
 	private void ShowBackground() {
@@ -20,25 +22,35 @@ public class EndGamePanelController : MonoBehaviour {
 		this.GetComponent<Image> ().color = aux;
 	}
 
+	private void HideBackground() {
+		Color aux = this.GetComponent<Image> ().color;
+		aux.a = 0f;
+		this.GetComponent<Image> ().color = aux;
+	}
+
 	private void ShowCursor() {
 		Cursor.visible = true;
 	}
 	
-	public void ShowDeathPanel() {
+	public void ShowDeathPanel(bool active = true) {
 		if (death.activeSelf || victory.activeSelf) {
 			return;
 		}
-		ShowBackground ();
-		ShowCursor ();
-		death.SetActive (true);
+		if (active) {
+			ShowBackground ();
+			ShowCursor ();
+		}
+		death.SetActive (active);
 	}
 
-	public void ShowVictoryPanel() {
+	public void ShowVictoryPanel(bool active = true) {
 		if (death.activeSelf || victory.activeSelf) {
 			return;
 		}
-		ShowBackground ();
-		ShowCursor ();
-		victory.SetActive (true);
+		if (active) {
+			ShowBackground ();
+			ShowCursor ();
+		}
+		victory.SetActive (active);
 	}
 }
