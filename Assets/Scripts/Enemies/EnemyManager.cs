@@ -43,12 +43,20 @@ public class EnemyManager : MonoBehaviour {
 		if (_playerHealth.GetHealth () <= 0f) {
 			return;
 		}
-			
+
+		bool keyIsSet = false;
+		foreach (enemySpawn spawn in _config.spawnPoints) {
+			if (spawn.hasKey) {
+				keyIsSet = true;
+			}
+		}
+		// if key has been set, then ignore the selectedKeyHolder
 		int selectedKeyHolder = Random.Range(0, _config.spawnPoints.Length);
+		selectedKeyHolder = (keyIsSet) ? _config.spawnPoints.Length + 1 : selectedKeyHolder;
 		int it = 0;
 		// iterates over all the configured spawn points
 		foreach (enemySpawn spawn in _config.spawnPoints) {
-			bool hasKey = (it == selectedKeyHolder) && !_config.finalArena;
+			bool hasKey = ((it == selectedKeyHolder) || spawn.hasKey) && !_config.finalArena;
 			it += 1;
 			// scorpio handler
 			if (spawn.type.IndexOf ("scorpio") > -1) {

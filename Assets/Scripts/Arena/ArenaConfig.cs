@@ -7,6 +7,7 @@ public struct enemySpawn {
 	public string type;
 	public string config;
 	public Vector3 position;
+	public bool hasKey;
 }
 
 [System.Serializable]

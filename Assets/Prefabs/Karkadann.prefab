@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8207a613eafb2d64398d7d7962020446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _experienceValue: 10
+  _experienceValue: 4
   hasKey: 0
 --- !u!114 &114901969750424354
 MonoBehaviour:
@@ -814,7 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f95439b547678a468571c7af92adffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingHealth: 230
+  _startingHealth: 360
   _deathParticles: {fileID: 198311133236217982}
   rend: {fileID: 137444636378186934}
   gateKeyGameObject: {fileID: 1089600984044102, guid: 0c33fcb5b0eb0644f887a804a101dad8,
