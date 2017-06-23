@@ -652,6 +652,11 @@ Prefab:
       propertyPath: spawnPoints.Array.data[5].position.z
       value: -70
       objectReference: {fileID: 0}
+    - target: {fileID: 114273687592528846, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53,
+        type: 2}
+      propertyPath: finalArena
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6583fb8eea90d9d49bdcc6d7eadd2c53, type: 2}
   m_IsPrefabParent: 0
@@ -1392,6 +1397,7 @@ MonoBehaviour:
   _eventManager: {fileID: 404382918}
   _gateManager: {fileID: 546461473}
   _arenaFloor: {fileID: 1264296081}
+  percentageTime: 0
 --- !u!1 &971110985
 GameObject:
   m_ObjectHideFlags: 0

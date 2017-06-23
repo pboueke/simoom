@@ -48,7 +48,8 @@ public class GuilaBehaviour : MonoBehaviour {
 
     public void Bite()
     {
-        _sounds.Bite();
+		if (_sounds != null)
+        	_sounds.Bite();
         _anim.SetTrigger("Bite");
     }
 

@@ -56,7 +56,7 @@ public class EnemyHealth : MonoBehaviour {
 		if (exp.hasKey) {
             Vector3 keyPosition = transform.position;
             keyPosition.y = 2.0f;
-            GameObject key = GameObject.Instantiate (gateKeyGameObject, keyPosition, transform.rotation);//GameObject.Find ("GateManager").transform);
+            GameObject.Instantiate (gateKeyGameObject, keyPosition, transform.rotation);//GameObject.Find ("GateManager").transform);
 		}
         //destroy stuff
         Destroy(_deathParticles.gameObject, _deathParticles.main.duration);
