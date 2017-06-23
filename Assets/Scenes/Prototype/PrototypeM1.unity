@@ -2767,6 +2767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca161313421a1d46905d6e611a62edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObjectName: Carpet
   _config: {fileID: 679162887}
   _propManager: {fileID: 1340140405}
   _eventManager: {fileID: 404382918}
