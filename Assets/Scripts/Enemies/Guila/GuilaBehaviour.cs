@@ -22,7 +22,7 @@ public class GuilaBehaviour : MonoBehaviour {
 
     private void Awake()
     {
-        _sounds = GetComponent<GuilaSounds>();
+        _sounds = GetComponentInChildren<GuilaSounds>();
     }
 
     public void Start () 

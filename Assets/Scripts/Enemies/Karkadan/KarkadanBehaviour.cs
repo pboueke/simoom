@@ -35,7 +35,7 @@ public class KarkadanBehaviour : MonoBehaviour {
 
     private void Awake()
     {
-        _sounds = GetComponent<KarkadanSounds>();
+        _sounds = GetComponentInChildren<KarkadanSounds>(); //GetComponent<KarkadanSounds>();
     }
 
     // Update is called once per frame
