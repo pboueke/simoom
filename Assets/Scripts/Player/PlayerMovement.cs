@@ -132,11 +132,13 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void Animating (float h, float v, bool f, bool d) {
+		/*
 		bool running = h!=0f || v!=0f;
 		_anim.SetBool("isRunning", running);
         if (f) {
             _anim.SetTrigger("triggerShot");
         }
+        */
 	}
 
 	public bool InArena (Transform trsfrm, float radius) {
