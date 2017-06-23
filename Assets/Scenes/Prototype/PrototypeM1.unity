@@ -806,11 +806,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4285361976627198, guid: 354b24ea4fec94f3dbd6a49b5f41fe22, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.76
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4285361976627198, guid: 354b24ea4fec94f3dbd6a49b5f41fe22, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4285361976627198, guid: 354b24ea4fec94f3dbd6a49b5f41fe22, type: 2}
       propertyPath: m_LocalRotation.x
@@ -832,36 +832,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
-    - target: {fileID: 114104001080503494, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
-        type: 2}
-      propertyPath: _slider
-      value: 
-      objectReference: {fileID: 552230728}
-    - target: {fileID: 114104001080503494, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
-        type: 2}
-      propertyPath: _fillImage
-      value: 
-      objectReference: {fileID: 1885405073}
-    - target: {fileID: 114119582753152150, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
-        type: 2}
-      propertyPath: _slider
-      value: 
-      objectReference: {fileID: 1634223858}
-    - target: {fileID: 114119582753152150, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
-        type: 2}
-      propertyPath: _fillImage
-      value: 
-      objectReference: {fileID: 2011557013}
-    - target: {fileID: 114828905276995090, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
-        type: 2}
-      propertyPath: _slider
-      value: 
-      objectReference: {fileID: 283280004}
-    - target: {fileID: 114828905276995090, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
-        type: 2}
-      propertyPath: _fillImage
-      value: 
-      objectReference: {fileID: 1394409078}
     - target: {fileID: 114180541767678980, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
         type: 2}
       propertyPath: playerLevelDisplay
@@ -872,6 +842,36 @@ Prefab:
       propertyPath: playerXpCircle
       value: 
       objectReference: {fileID: 1096813113}
+    - target: {fileID: 114828905276995090, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
+        type: 2}
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 283280004}
+    - target: {fileID: 114828905276995090, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
+        type: 2}
+      propertyPath: _fillImage
+      value: 
+      objectReference: {fileID: 1394409078}
+    - target: {fileID: 114119582753152150, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
+        type: 2}
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 1634223858}
+    - target: {fileID: 114119582753152150, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
+        type: 2}
+      propertyPath: _fillImage
+      value: 
+      objectReference: {fileID: 2011557013}
+    - target: {fileID: 114104001080503494, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
+        type: 2}
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 552230728}
+    - target: {fileID: 114104001080503494, guid: 354b24ea4fec94f3dbd6a49b5f41fe22,
+        type: 2}
+      propertyPath: _fillImage
+      value: 
+      objectReference: {fileID: 1885405073}
     - target: {fileID: 1843734308027568, guid: 354b24ea4fec94f3dbd6a49b5f41fe22, type: 2}
       propertyPath: m_Name
       value: Carpet
@@ -1187,7 +1187,7 @@ Transform:
   - {fileID: 966916710}
   - {fileID: 943958394}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &440971950
 Prefab:
@@ -4346,7 +4346,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4080383862670298, guid: 1b5cf5364e1236f41a387b91428b4db3, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1081699684315938, guid: 1b5cf5364e1236f41a387b91428b4db3, type: 2}
       propertyPath: m_Name
