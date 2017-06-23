@@ -11,7 +11,7 @@ public class Sandstorm : UnityStandardAssets.ImageEffects.PostEffectsBase
     public bool flipY;
     [Range(-1.0f, 1.0f)]
     public float vignetteRadius;
-    [Range(1.0f, 10.0f)]
+    [Range(1.0f, 128.0f)]
     public float noiseScale;
     public Color sandstormColor;
 	[Range(-1.0f, 1.0f)]
