@@ -36,25 +36,37 @@ public class PlayerShooting : MonoBehaviour {
         }
 	}
 
-    private void Shoot(float angle, bool secondary) {
-        Rigidbody shotInstance = Instantiate(_shot, _fireTransform.position, _fireTransform.rotation) as Rigidbody;
+    private void Shoot(float angle, float powerDown, Vector3 offset) {
+        Vector3 position = _fireTransform.position + offset;
+        Rigidbody shotInstance = Instantiate(_shot, position, _fireTransform.rotation) as Rigidbody;
         Vector3 velocity = _fireTransform.forward;
         velocity = Quaternion.AngleAxis(angle, Vector3.up) * velocity;
         shotInstance.velocity = _shotVelocity * velocity;
         GreenMagicHit power = shotInstance.GetComponent<GreenMagicHit>();
         power.powerUp(_extraPower);
-        if (secondary) {
-            power.powerDown();
-        }
+        power.powerDown(powerDown);
     }
 
     private void Fire() {
         _timer = 0f;
 
-        Shoot(0f, false);
-        for (int i = 0; i < _density; i++) {
+        Vector3 offset = _fireTransform.forward;
+        offset = Quaternion.AngleAxis(90, Vector3.up) * offset;
+        if (_density >= 4) {
+            Shoot(0f, 0.4f, offset * 0);
+            Shoot(0f, 0.4f, offset * 2);
+            Shoot(0f, 0.4f, offset * -2);
+        }
+        else if (_density >= 1) {
+            Shoot(0f, 0.5f, offset * 1f);
+            Shoot(0f, 0.5f, offset * -1f);
+        }
+        else {
+            Shoot(0f, 1.0f, offset * 0);
+        }
+        for (int i = 0; i < _angles.Count; i++) {
             // Shoot secondary shots
-            Shoot(_angles[i], true);
+            Shoot(_angles[i], 0.2f, offset * 0);
             _angles[i] += _steps[i];
             if (Mathf.Abs(_angles[i]) >= _wideness / 2) {
                 _steps[i] = -_steps[i];
@@ -63,21 +75,19 @@ public class PlayerShooting : MonoBehaviour {
     }
 
     public void increasePower() {
-        _extraPower += 2f;
+        _extraPower += 1.5f;
     }
 
     public void increaseDensity() {
-        _angles.Clear();
-        _steps.Clear();
         _density += 1;
-        float step = _wideness / (_density + 1);
-        float angle = -(_wideness / 2);
-        for (int i = 0; i < _density; i++) {
-            angle += step;
-            _angles.Add(angle);
-            if (angle > 0) _steps.Add(_baseStep);
-            else if (angle < 0) _steps.Add(-_baseStep);
-            else _steps.Add(0f);
+        if (_density == 2 | _density == 3) {
+            _angles.Clear();
+            _steps.Clear();
+            for (int i = 0; i < _density - 1; i++) {
+                _angles.Add(0);
+                if (i % 2 == 0) _steps.Add(_baseStep);
+                else _steps.Add(-_baseStep);
+            }
         }
     }
 }
