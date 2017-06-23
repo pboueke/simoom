@@ -15,11 +15,11 @@ public class GateController : MonoBehaviour {
 
 
 	private bool inTrigger = false;
-	private Renderer rend;
+	public Renderer rend;
 
 	// Use this for initialization
 	void Start () {
-		rend = GetComponent<Renderer>();
+		//rend = GetComponent<Renderer>();
 		hideHighLight();
 		transform.RotateAround (Vector3.zero, Vector3.up, 0);
 	}
