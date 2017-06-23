@@ -37,8 +37,8 @@ public class GreenMagicHit: MonoBehaviour {
         _damage += amount;
     }
 
-    public void powerDown() {
-        _damage /= 2f;
+    public void powerDown(float factor) {
+        _damage *= factor;
     }
 
     // Update is called once per frame
