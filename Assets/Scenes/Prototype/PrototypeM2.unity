@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184be08fab3738a47bce8558b0103427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 1943282949364128, guid: 6d93d6abb9ca03e4f92c851c5b7c35d4,
+  _enemyPrefab: {fileID: 1439033969963878, guid: d2c9ff1f84bb9674c86b4ff906199581,
     type: 2}
   _sneks: []
 --- !u!1 &404382916
@@ -1282,6 +1282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10f80f31d26d494db02340e124bf968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 1008620610499180, guid: 049fbe3a181670945997df416e5dac57,
+  _enemyPrefab: {fileID: 1669711091604098, guid: 99b2edf02216c2948a3d10f7212fcff1,
     type: 2}
   _guilas: []
