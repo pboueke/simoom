@@ -2658,7 +2658,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1316476123}
-        m_MethodName: LoadByIndex
+        m_MethodName: ForceLoadByIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2714,6 +2714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df04563bf88c1ee4cbcb88b8028d196c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObjectName: Carpet
 --- !u!1 &1340140403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,6 +3406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df04563bf88c1ee4cbcb88b8028d196c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObjectName: Carpet
 --- !u!114 &1552481469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3445,7 +3447,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1552481468}
-        m_MethodName: LoadByIndex
+        m_MethodName: ForceLoadByIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
