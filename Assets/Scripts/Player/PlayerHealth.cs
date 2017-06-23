@@ -14,6 +14,9 @@ public class PlayerHealth : MonoBehaviour {
     public Color _fullHealthColor = Color.green;       // The color the health bar will be when on full health.
     public Color _zeroHealthColor = Color.red;         // The color the health bar will be when on no health.
 
+	// Player's Animator Controller
+	private Animator _anim;
+
     private PlayerSounds _sound;
     private Camera _camera;
 
@@ -23,6 +26,7 @@ public class PlayerHealth : MonoBehaviour {
 		_currentHealth = _startingHealth;
         _sound = GetComponent<PlayerSounds>();
         _camera = Camera.main;
+		_anim = GetComponent <Animator> ();
     }
 
     private void OnEnable()
@@ -55,6 +59,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         _currentHealth -= amount;
         _sound.Hurt();
+		_anim.SetTrigger ("Hurt");
 
         // Change the UI elements appropriately.
         SetHealthUI ();
